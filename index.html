@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Open Data Project</title>
-    <script src="plotly-latest.min.js"></script>
-    <script src="d3.v5.js"></script>
-    <script src="xmlToJson.js"></script>
+    <script src="js/plotly-latest.min.js"></script>
+    <script src="js/d3.v5.js"></script>
+    <script src="js/xmlToJson.js"></script>
 </head>
 <body>
     <div id="avg_severity_plot"></div>
     <div id="ghg_emissions_plot"></div>
+    <div id="share_renewable_plot"></div>
     <script>
 
         avg_severity_plot = document.getElementById("avg_severity_plot");
         ghg_emissions_plot = document.getElementById("ghg_emissions_plot");
+        share_renewable_plot = document.getElementById("share_renewable_plot");
 
-        d3.xml("avg_severity.xml")
+
+        d3.xml("processed_data/severity_of_problem/avg_severity.xml")
             .then(function(data) {
                 var dataobj =  xmlToJson.parse(data).root.survey;
                 var surveys = {};
@@ -70,7 +73,7 @@
 
             });
 
-        d3.tsv("../other\ data/ghg_emissions/t2020_rd300.tsv")
+        d3.tsv("processed_data/ghg_emissions/ghg_emissions.tsv")
             .then(function(data) {
 
                 var data_by_country = {};
@@ -111,12 +114,44 @@
 
             });
 
-        d3.tsv("../other\ data/share_renewable/t2020_31.tsv")
+        d3.tsv("processed_data/share_renewable/share_renewable.tsv")
             .then(function(data) {
                 var data_by_country = {};
 
                 var years = [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017];
                 var plot_data = [];
+
+                for (i = 0; i < data.length; i++) {
+                    var country = data[i]["geo\\time"];
+                    for (j = 0; j < years.length; j++) {
+                        var values_by_year = Object.values(data[i]).slice(1, );
+                        data_by_country[country] = values_by_year;
+                    }
+                    var trace = {
+                        x: years,
+                        y: data_by_country[country],
+                        name: country
+                    }
+                    plot_data.push(trace);
+                }
+                var layout = {
+                    xaxis: {
+                        type: 'category',
+                        title: 'Year'
+                    },
+                    yaxis: {
+                        title: 'Share of energy from renewable sources (%)'
+                    },
+                    legend: {
+                        itemclick: 'toggleothers',
+                        itemdoubleclick: 'toggle'
+                    },
+                    hoverinfo: 'text+y',
+                    hovermode: 'closest'
+                };
+
+                Plotly.plot( share_renewable_plot, plot_data, layout, {scrollZoom: true})
+
         });
 
     </script>
