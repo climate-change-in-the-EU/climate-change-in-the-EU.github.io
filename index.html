@@ -1,159 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Open Data Project</title>
-    <script src="js/plotly-latest.min.js"></script>
-    <script src="js/d3.v5.js"></script>
-    <script src="js/xmlToJson.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Scrolling Nav - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  <!-- necessary scripts for data processing and visualization -->
+  <script src="js/plotly-latest.min.js"></script>
+  <script src="js/d3.v5.js"></script>
+  <script src="js/xmlToJson.js"></script>
+
 </head>
-<body>
-    <div id="avg_severity_plot"></div>
-    <div id="ghg_emissions_plot"></div>
-    <div id="share_renewable_plot"></div>
-    <script>
 
-        avg_severity_plot = document.getElementById("avg_severity_plot");
-        ghg_emissions_plot = document.getElementById("ghg_emissions_plot");
-        share_renewable_plot = document.getElementById("share_renewable_plot");
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Europinion on Climate Change</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#introduction">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#visualization">Visualization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#original-datasets">Original datasets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#output-datasets">Output datasets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#documentation">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#license">License</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Europinion on Climate Change</h1>
+      <p class="lead">An overview of the European peoples' judgments and actions concerning climate change</p>
+    </div>
+  </header>
+
+  <section id="introduction">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Introduction</h2>
+          <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+          <ul>
+            <li>Clickable nav links that smooth scroll to page sections</li>
+            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visualization" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Visualization</h2>
+          <div id="avg_severity_plot"></div>
+          <div id="ghg_emissions_plot"></div>
+          <div id="share_renewable_plot"></div>
+          <script>
+
+            avg_severity_plot = document.getElementById("avg_severity_plot");
+            ghg_emissions_plot = document.getElementById("ghg_emissions_plot");
+            share_renewable_plot = document.getElementById("share_renewable_plot");
 
 
-        d3.xml("processed_data/severity_of_problem/avg_severity.xml")
-            .then(function(data) {
-                var dataobj =  xmlToJson.parse(data).root.survey;
-                var surveys = {};
-                for (i = 0; i < dataobj.length; i++) {
-                    var countries = {};
-                    for (j = 0; j < dataobj[i].country.length; j++) {
-                        countries[dataobj[i].country[j].id] = dataobj[i].country[j].avg;
-                    }
-                    surveys[dataobj[i].id] = countries;
+            d3.xml("processed_data/severity_of_problem/avg_severity.xml")
+                    .then(function(data) {
+                      var dataobj =  xmlToJson.parse(data).root.survey;
+                      var surveys = {};
+                      for (i = 0; i < dataobj.length; i++) {
+                        var countries = {};
+                        for (j = 0; j < dataobj[i].country.length; j++) {
+                          countries[dataobj[i].country[j].id] = dataobj[i].country[j].avg;
+                        }
+                        surveys[dataobj[i].id] = countries;
+                      }
+                      return surveys;
+                    }).then(function(surveys) {
+              var data = Object.values(surveys);
+              var surveys =  Object.keys(surveys);
+              var countries = Object.keys(data[0]);
+              var data_by_country = {};
+              for (i = 0; i < countries.length; i++) {
+                data_by_country[countries[i]] = [];
+                for (j = 0; j < surveys.length; j++) {
+                  data_by_country[countries[i]].push(data[j][countries[i]]);
                 }
-                return surveys;
-            }).then(function(surveys) {
-                var data = Object.values(surveys);
-                var surveys =  Object.keys(surveys);
-                var countries = Object.keys(data[0]);
-                var data_by_country = {};
-                for (i = 0; i < countries.length; i++) {
-                    data_by_country[countries[i]] = [];
-                    for (j = 0; j < surveys.length; j++) {
-                        data_by_country[countries[i]].push(data[j][countries[i]]);
-                    }
-                }
+              }
 
-                var layout = {
-                    xaxis: {
-                        type: 'category',
-                        title: 'Eurobarometer Survey'
-                    },
-                    yaxis: {
-                        title: 'Judgment of climate change severity'
-                    },
-                    legend: {
-                        itemclick: 'toggleothers',
-                        itemdoubleclick: 'toggle'
-                    },
-                    hoverinfo: 'text+y',
-                    hovermode: 'closest'
+              var layout = {
+                xaxis: {
+                  type: 'category',
+                  title: 'Eurobarometer Survey'
+                },
+                yaxis: {
+                  title: 'Judgment of climate change severity'
+                },
+                legend: {
+                  itemclick: 'toggleothers',
+                  itemdoubleclick: 'toggle'
+                },
+                hoverinfo: 'text+y',
+                hovermode: 'closest'
+              };
+
+              var plot_data = [];
+              for (i = 0; i < countries.length; i++) {
+                var country_id = Object.keys(data_by_country)[i];
+                var trace = {
+                  x: surveys,
+                  y: data_by_country[country_id],
+                  name: country_id
                 };
+                plot_data.push(trace);
+              }
 
-                var plot_data = [];
-                for (i = 0; i < countries.length; i++) {
-                    var country_id = Object.keys(data_by_country)[i];
-                    var trace = {
-                        x: surveys,
-                        y: data_by_country[country_id],
-                        name: country_id
-                    };
-                    plot_data.push(trace);
-                }
-
-                Plotly.plot( avg_severity_plot, plot_data, layout, {scrollZoom: true})
+              Plotly.plot( avg_severity_plot, plot_data, layout, {scrollZoom: true})
 
             });
 
-        d3.tsv("processed_data/ghg_emissions/ghg_emissions.tsv")
-            .then(function(data) {
+            d3.tsv("processed_data/ghg_emissions/ghg_emissions.tsv")
+                    .then(function(data) {
 
-                var data_by_country = {};
+                      var data_by_country = {};
 
-                var years = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017];
-                var plot_data = [];
+                      var years = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017];
+                      var plot_data = [];
 
-                for (i = 0; i < data.length; i++) {
-                    var country = data[i]["geo\\time"];
-                    for (j = 0; j < years.length; j++) {
-                        var values_by_year = Object.values(data[i]).slice(1, );
-                        data_by_country[country] = values_by_year;
-                    }
-                    var trace = {
-                        x: years,
-                        y: data_by_country[country],
-                        name: country
-                    }
-                    plot_data.push(trace);
-                }
-                var layout = {
-                    xaxis: {
-                        type: 'category',
-                        title: 'Year'
-                    },
-                    yaxis: {
-                        title: 'Emissions (tons per capita)'
-                    },
-                    legend: {
-                      itemclick: 'toggleothers',
-                      itemdoubleclick: 'toggle'
-                    },
-                    hoverinfo: 'text+y',
-                    hovermode: 'closest'
-                };
+                      for (i = 0; i < data.length; i++) {
+                        var country = data[i]["geo\\time"];
+                        for (j = 0; j < years.length; j++) {
+                          var values_by_year = Object.values(data[i]).slice(1, );
+                          data_by_country[country] = values_by_year;
+                        }
+                        var trace = {
+                          x: years,
+                          y: data_by_country[country],
+                          name: country
+                        }
+                        plot_data.push(trace);
+                      }
+                      var layout = {
+                        xaxis: {
+                          type: 'category',
+                          title: 'Year'
+                        },
+                        yaxis: {
+                          title: 'Emissions (tons per capita)'
+                        },
+                        legend: {
+                          itemclick: 'toggleothers',
+                          itemdoubleclick: 'toggle'
+                        },
+                        hoverinfo: 'text+y',
+                        hovermode: 'closest'
+                      };
 
-                Plotly.plot( ghg_emissions_plot, plot_data, layout, {scrollZoom: true})
+                      Plotly.plot( ghg_emissions_plot, plot_data, layout, {scrollZoom: true})
 
-            });
+                    });
 
-        d3.tsv("processed_data/share_renewable/share_renewable.tsv")
-            .then(function(data) {
-                var data_by_country = {};
+            d3.tsv("processed_data/share_renewable/share_renewable.tsv")
+                    .then(function(data) {
+                      var data_by_country = {};
 
-                var years = [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017];
-                var plot_data = [];
+                      var years = [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017];
+                      var plot_data = [];
 
-                for (i = 0; i < data.length; i++) {
-                    var country = data[i]["geo\\time"];
-                    for (j = 0; j < years.length; j++) {
-                        var values_by_year = Object.values(data[i]).slice(1, );
-                        data_by_country[country] = values_by_year;
-                    }
-                    var trace = {
-                        x: years,
-                        y: data_by_country[country],
-                        name: country
-                    }
-                    plot_data.push(trace);
-                }
-                var layout = {
-                    xaxis: {
-                        type: 'category',
-                        title: 'Year'
-                    },
-                    yaxis: {
-                        title: 'Share of energy from renewable sources (%)'
-                    },
-                    legend: {
-                        itemclick: 'toggleothers',
-                        itemdoubleclick: 'toggle'
-                    },
-                    hoverinfo: 'text+y',
-                    hovermode: 'closest'
-                };
+                      for (i = 0; i < data.length; i++) {
+                        var country = data[i]["geo\\time"];
+                        for (j = 0; j < years.length; j++) {
+                          var values_by_year = Object.values(data[i]).slice(1, );
+                          data_by_country[country] = values_by_year;
+                        }
+                        var trace = {
+                          x: years,
+                          y: data_by_country[country],
+                          name: country
+                        }
+                        plot_data.push(trace);
+                      }
+                      var layout = {
+                        xaxis: {
+                          type: 'category',
+                          title: 'Year'
+                        },
+                        yaxis: {
+                          title: 'Share of energy from renewable sources (%)'
+                        },
+                        legend: {
+                          itemclick: 'toggleothers',
+                          itemdoubleclick: 'toggle'
+                        },
+                        hoverinfo: 'text+y',
+                        hovermode: 'closest'
+                      };
 
-                Plotly.plot( share_renewable_plot, plot_data, layout, {scrollZoom: true})
+                      Plotly.plot( share_renewable_plot, plot_data, layout, {scrollZoom: true})
 
-        });
+                    });
 
-    </script>
+          </script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="original-datasets">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Original datasets</h2>
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Eurobarometers on climate change</h5>
+                <div class="card-text">
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1461_69_2_300">Special Eurobarometer 300</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S942_71_1_EBS313">Special Eurobarometer 313</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S703_72_1_EBS322">Special Eurobarometer 322</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1007_75_4_EBS372">Special Eurobarometer 372</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1084_80_2_409">Special Eurobarometer 409</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2060_83_4_435_ENG">Special Eurobarometer 435</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2140_87_1_459_ENG">Special Eurobarometer 459</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2212_91_3_490_ENG">Special Eurobarometer 490</a><br/>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">National data on greenhouse gas emissions</h5>
+                <div class="card-text">
+                  <p><a href="https://data.europa.eu/euodp/en/data/dataset/rc2ELCDeTGfxdpE27gyzow">Eurostat data on Greenhouse gas emissions per capita</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Share of renewable energy</h5>
+                <div class="card-text">
+                  <p><a href="https://data.europa.eu/euodp/en/data/dataset/kLwnawdAsL0qfRS0PzvDfw">Eurostat data on the share of renewable energy in gross final energy consumption</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="output-datasets">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Output datasets</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="documentation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Documentation</h2>
+          <p class="lead">The project was documented extensively along the development process. The documentation can be found within the project's <a href="https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io">Github repository</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="license">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>License</h2>
+          <p class="lead"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">&copy; Elisabeth Reuhl, Lukas Henne 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
 </body>
+
 </html>
