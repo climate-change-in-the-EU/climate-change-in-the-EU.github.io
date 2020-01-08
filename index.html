@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Data Project</title>
+    <script src="plotly-latest.min.js"></script>
+    <script src="d3.v5.js"></script>
+    <script src="xmlToJson.js"></script>
+</head>
+<body>
+    <div id="avg_severity_plot"></div>
+    <div id="ghg_emissions_plot"></div>
+    <script>
+
+        avg_severity_plot = document.getElementById("avg_severity_plot");
+        ghg_emissions_plot = document.getElementById("ghg_emissions_plot");
+
+        d3.xml("avg_severity.xml")
+            .then(function(data) {
+                var dataobj =  xmlToJson.parse(data).root.survey;
+                var surveys = {};
+                for (i = 0; i < dataobj.length; i++) {
+                    var countries = {};
+                    for (j = 0; j < dataobj[i].country.length; j++) {
+                        countries[dataobj[i].country[j].id] = dataobj[i].country[j].avg;
+                    }
+                    surveys[dataobj[i].id] = countries;
+                }
+                return surveys;
+            }).then(function(surveys) {
+                var data = Object.values(surveys);
+                var surveys =  Object.keys(surveys);
+                var countries = Object.keys(data[0]);
+                var data_by_country = {};
+                for (i = 0; i < countries.length; i++) {
+                    data_by_country[countries[i]] = [];
+                    for (j = 0; j < surveys.length; j++) {
+                        data_by_country[countries[i]].push(data[j][countries[i]]);
+                    }
+                }
+
+                var layout = {
+                    xaxis: {
+                        type: 'category',
+                        title: 'Eurobarometer Survey'
+                    },
+                    yaxis: {
+                        title: 'Judgment of climate change severity'
+                    },
+                    legend: {
+                        itemclick: 'toggleothers',
+                        itemdoubleclick: 'toggle'
+                    },
+                    hoverinfo: 'text+y',
+                    hovermode: 'closest'
+                };
+
+                var plot_data = [];
+                for (i = 0; i < countries.length; i++) {
+                    var country_id = Object.keys(data_by_country)[i];
+                    var trace = {
+                        x: surveys,
+                        y: data_by_country[country_id],
+                        name: country_id
+                    };
+                    plot_data.push(trace);
+                }
+
+                Plotly.plot( avg_severity_plot, plot_data, layout, {scrollZoom: true})
+
+            });
+
+        d3.tsv("../other\ data/ghg_emissions/t2020_rd300.tsv")
+            .then(function(data) {
+
+                var data_by_country = {};
+
+                var years = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017];
+                var plot_data = [];
+
+                for (i = 0; i < data.length; i++) {
+                    var country = data[i]["geo\\time"];
+                    for (j = 0; j < years.length; j++) {
+                        var values_by_year = Object.values(data[i]).slice(1, );
+                        data_by_country[country] = values_by_year;
+                    }
+                    var trace = {
+                        x: years,
+                        y: data_by_country[country],
+                        name: country
+                    }
+                    plot_data.push(trace);
+                }
+                var layout = {
+                    xaxis: {
+                        type: 'category',
+                        title: 'Year'
+                    },
+                    yaxis: {
+                        title: 'Emissions (tons per capita)'
+                    },
+                    legend: {
+                      itemclick: 'toggleothers',
+                      itemdoubleclick: 'toggle'
+                    },
+                    hoverinfo: 'text+y',
+                    hovermode: 'closest'
+                };
+
+                Plotly.plot( ghg_emissions_plot, plot_data, layout, {scrollZoom: true})
+
+            });
+
+        d3.tsv("../other\ data/share_renewable/t2020_31.tsv")
+            .then(function(data) {
+                var data_by_country = {};
+
+                var years = [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017];
+                var plot_data = [];
+        });
+
+    </script>
+</body>
+</html>
