@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <survey id="300">
+        <country id="EU2728">
+            <respondents>4060</respondents>
+            <share>0.3</share>
+        </country>
+        <country id="BE">
+            <respondents>155</respondents>
+            <share>0.32</share>
+        </country>
+        <country id="BG">
+            <respondents>103</respondents>
+            <share>0.2</share>
+        </country>
+        <country id="CZ">
+            <respondents>116</respondents>
+            <share>0.23</share>
+        </country>
+        <country id="DK">
+            <respondents>151</respondents>
+            <share>0.31</share>
+        </country>
+        <country id="D-W">
+            <respondents>152</respondents>
+            <share>0.29</share>
+        </country>
+        <country id="DE">
+            <respondents>225</respondents>
+            <share>0.29</share>            
+        </country>
+        <country id="D-E">
+            <respondents>73</respondents>
+            <share>0.29</share>            
+        </country>
+        <country id="EE">
+            <respondents>145</respondents>
+            <share>0.28</share>            
+        </country>
+        <country id="EL">
+            <respondents>227</respondents>
+            <share>0.45</share>            
+        </country>
+        <country id="ES">
+            <respondents>145</respondents>
+            <share>0.26</share>            
+        </country>
+        <country id="FR">
+            <respondents>211</respondents>
+            <share>0.4</share>            
+        </country>
+        <country id="IE">
+            <respondents>151</respondents>
+            <share>0.3</share>            
+        </country>
+        <country id="IT">
+            <respondents>128</respondents>
+            <share>0.25</share>            
+        </country>
+        <country id="CY">
+            <respondents>148</respondents>
+            <share>0.56</share>            
+        </country>
+        <country id="CY-TCC">
+            <respondents>145</respondents>
+            <share>0.56</share>            
+        </country>
+        <country id="LV">
+            <respondents>199</respondents>
+            <share>0.39</share>            
+        </country>
+        <country id="LT">
+            <respondents>139</respondents>
+            <share>0.28</share>            
+        </country>        
+        <country id="LU">
+            <respondents>90</respondents>
+            <share>0.35</share>            
+        </country>
+        <country id="HR">
+            <respondents>131</respondents>
+            <share>0.26</share>            
+        </country>
+        <country id="HU">
+            <respondents>173</respondents>
+            <share>0.35</share>            
+        </country>
+        <country id="MT">
+            <respondents>78</respondents>
+            <share>0.31</share>            
+        </country>
+        <country id="NL">
+            <respondents>124</respondents>
+            <share>0.24</share>            
+        </country>
+        <country id="AT">
+            <respondents>157</respondents>
+            <share>0.32</share>            
+        </country>
+        <country id="PL">
+            <respondents>140</respondents>
+            <share>0.28</share>            
+        </country>
+        <country id="PT">
+            <respondents>117</respondents>
+            <share>0.23</share>            
+        </country>
+        <country id="RO">
+            <respondents>153</respondents>
+            <share>0.31</share>            
+        </country>
+        <country id="SI">
+            <respondents>250</respondents>
+            <share>0.48</share>            
+        </country>
+        <country id="SK">
+            <respondents>164</respondents>
+            <share>0.29</share>            
+        </country>
+        <country id="FI">
+            <respondents>177</respondents>
+            <share>0.38</share>            
+        </country>
+        <country id="SE">
+            <respondents>170</respondents>
+            <share>0.34</share>            
+        </country>
+        <country id="UK">
+            <respondents>204</respondents>
+            <share>0.32</share>            
+        </country>
+        <country id="TR">
+            <respondents>152</respondents>
+            <share>0.3</share>            
+        </country>
+        <country id="MK">
+            <respondents>144</respondents>
+            <share>0.29</share>            
+        </country>
+    </survey>
+
+    <survey id="313">
+        <country id="EU2728">
+            <respondents>4868</respondents>
+            <share>0.18</share>
+        </country>
+        <country id="BE">
+            <respondents>225</respondents>
+            <share>0.22</share>
+        </country>
+        <country id="BG">
+            <respondents>109</respondents>
+            <share>0.11</share>
+        </country>
+        <country id="CZ">
+            <respondents>87</respondents>
+            <share>0.08</share>
+        </country>
+        <country id="DK">
+            <respondents>207</respondents>
+            <share>0.2</share>
+        </country>
+        <country id="D-W">
+            <respondents>243</respondents>
+            <share>0.24</share>
+        </country>
+        <country id="DE">
+            <respondents>357</respondents>
+            <share>0.24</share>            
+        </country>
+        <country id="D-E">
+            <respondents>107</respondents>
+            <share>0.21</share>            
+        </country>
+        <country id="EE">
+            <respondents>143</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="EL">
+            <respondents>206</respondents>
+            <share>0.21</share>            
+        </country>
+        <country id="ES">
+            <respondents>141</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="FR">
+            <respondents>192</respondents>
+            <share>0.19</share>            
+        </country>
+        <country id="IE">
+            <respondents>183</respondents>
+            <share>0.18</share>            
+        </country>
+        <country id="IT">
+            <respondents>157</respondents>
+            <share>0.15</share>            
+        </country>
+        <country id="CY">
+            <respondents>149</respondents>
+            <share>0.3</share>            
+        </country>
+        <country id="CY-TCC">
+            <respondents>124</respondents>
+            <share>0.25</share>            
+        </country>
+        <country id="LV">
+            <respondents>163</respondents>
+            <share>0.16</share>            
+        </country>
+        <country id="LT">
+            <respondents>164</respondents>
+            <share>0.16</share>            
+        </country>        
+        <country id="LU">
+            <respondents>98</respondents>
+            <share>0.19</share>            
+        </country>
+        <country id="HR">
+            <respondents>175</respondents>
+            <share>0.17</share>            
+        </country>
+        <country id="HU">
+            <respondents>189</respondents>
+            <share>0.19</share>            
+        </country>
+        <country id="MT">
+            <respondents>103</respondents>
+            <share>0.21</share>            
+        </country>
+        <country id="NL">
+            <respondents>182</respondents>
+            <share>0.17</share>            
+        </country>
+        <country id="AT">
+            <respondents>269</respondents>
+            <share>0.27</share>            
+        </country>
+        <country id="PL">
+            <respondents>130</respondents>
+            <share>0.13</share>            
+        </country>
+        <country id="PT">
+            <respondents>97</respondents>
+            <share>0.1</share>            
+        </country>
+        <country id="RO">
+            <respondents>170</respondents>
+            <share>0.16</share>            
+        </country>
+        <country id="SI">
+            <respondents>166</respondents>
+            <share>0.17</share>            
+        </country>
+        <country id="SK">
+            <respondents>118</respondents>
+            <share>0.11</share>            
+        </country>
+        <country id="FI">
+            <respondents>257</respondents>
+            <share>0.25</share>            
+        </country>
+        <country id="SE">
+            <respondents>395</respondents>
+            <share>0.39</share>            
+        </country>
+        <country id="UK">
+            <respondents>267</respondents>
+            <share>0.2</share>            
+        </country>
+        <country id="TR">
+            <respondents>142</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="MK">
+            <respondents>133</respondents>
+            <share>0.13</share>            
+        </country>
+    </survey>
+    <survey id="322">
+        <country id="EU2728">
+            <respondents>4519</respondents>
+            <share>0.17</share>
+        </country>
+        <country id="BE">
+            <respondents>198</respondents>
+            <share>0.2</share>
+        </country>
+        <country id="BG">
+            <respondents>99</respondents>
+            <share>0.1</share>
+        </country>
+        <country id="CZ">
+            <respondents>146</respondents>
+            <share>0.14</share>
+        </country>
+        <country id="DK">
+            <respondents>284</respondents>
+            <share>0.28</share>
+        </country>
+        <country id="D-W">
+            <respondents>220</respondents>
+            <share>0.21</share>
+        </country>
+        <country id="DE">
+            <respondents>306</respondents>
+            <share>0.2</share>            
+        </country>
+        <country id="D-E">
+            <respondents>74</respondents>
+            <share>0.15</share>            
+        </country>
+        <country id="EE">
+            <respondents>95</respondents>
+            <share>0.1</share>            
+        </country>
+        <country id="EL">
+            <respondents>245</respondents>
+            <share>0.24</share>            
+        </country>
+        <country id="ES">
+            <respondents>148</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="FR">
+            <respondents>205</respondents>
+            <share>0.2</share>            
+        </country>
+        <country id="IE">
+            <respondents>158</respondents>
+            <share>0.16</share>            
+        </country>
+        <country id="IT">
+            <respondents>127</respondents>
+            <share>0.12</share>            
+        </country>
+        <country id="CY">
+            <respondents>102</respondents>
+            <share>0.2</share>            
+        </country>
+        <country id="LV">
+            <respondents>96</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="LT">
+            <respondents>127</respondents>
+            <share>0.12</share>            
+        </country>        
+        <country id="LU">
+            <respondents>148</respondents>
+            <share>0.29</share>            
+        </country>
+        <country id="HU">
+            <respondents>162</respondents>
+            <share>0.16</share>            
+        </country>
+        <country id="MT">
+            <respondents>110</respondents>
+            <share>0.22</share>            
+        </country>
+        <country id="NL">
+            <respondents>139</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="AT">
+            <respondents>274</respondents>
+            <share>0.27</share>            
+        </country>
+        <country id="PL">
+            <respondents>133</respondents>
+            <share>0.13</share>            
+        </country>
+        <country id="PT">
+            <respondents>92</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="RO">
+            <respondents>115</respondents>
+            <share>0.11</share>            
+        </country>
+        <country id="SI">
+            <respondents>306</respondents>
+            <share>0.3</share>            
+        </country>
+        <country id="SK">
+            <respondents>153</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="FI">
+            <respondents>234</respondents>
+            <share>0.23</share>            
+        </country>
+        <country id="SE">
+            <respondents>365</respondents>
+            <share>0.36</share>            
+        </country>
+        <country id="UK">
+            <respondents>231</respondents>
+            <share>0.17</share>            
+        </country>
+    </survey>
+    <survey id="372">
+        <country id="EU2728">
+            <respondents>5257</respondents>
+            <share>0.2</share>
+        </country>
+        <country id="BE">
+            <respondents>241</respondents>
+            <share>0.24</share>
+        </country>
+        <country id="BG">
+            <respondents>154</respondents>
+            <share>0.15</share>
+        </country>
+        <country id="CZ">
+            <respondents>165</respondents>
+            <share>0.16</share>
+        </country>
+        <country id="DK">
+            <respondents>313</respondents>
+            <share>0.31</share>
+        </country>
+        <country id="D-W">
+            <respondents>248</respondents>
+            <share>0.25</share>
+        </country>
+        <country id="DE">
+            <respondents>396</respondents>
+            <share>0.25</share>            
+        </country>
+        <country id="D-E">
+            <respondents>153</respondents>
+            <share>0.27</share>            
+        </country>
+        <country id="EE">
+            <respondents>138</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="EL">
+            <respondents>148</respondents>
+            <share>0.15</share>            
+        </country>
+        <country id="ES">
+            <respondents>238</respondents>
+            <share>0.24</share>            
+        </country>
+        <country id="FR">
+            <respondents>211</respondents>
+            <share>0.2</share>            
+        </country>
+        <country id="IE">
+            <respondents>127</respondents>
+            <share>0.13</share>            
+        </country>
+        <country id="IT">
+            <respondents>152</respondents>
+            <share>0.15</share>            
+        </country>
+        <country id="CY">
+            <respondents>119</respondents>
+            <share>0.23</share>            
+        </country>
+        <country id="LV">
+            <respondents>227</respondents>
+            <share>0.22</share>            
+        </country>
+        <country id="LT">
+            <respondents>218</respondents>
+            <share>0.21</share>            
+        </country>        
+        <country id="LU">
+            <respondents>170</respondents>
+            <share>0.34</share>            
+        </country>
+        <country id="HU">
+            <respondents>140</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="MT">
+            <respondents>148</respondents>
+            <share>0.3</share>            
+        </country>
+        <country id="NL">
+            <respondents>176</respondents>
+            <share>0.18</share>            
+        </country>
+        <country id="AT">
+            <respondents>190</respondents>
+            <share>0.19</share>            
+        </country>
+        <country id="PL">
+            <respondents>199</respondents>
+            <share>0.2</share>            
+        </country>
+        <country id="PT">
+            <respondents>77</respondents>
+            <share>0.07</share>            
+        </country>
+        <country id="RO">
+            <respondents>168</respondents>
+            <share>0.16</share>            
+        </country>
+        <country id="SI">
+            <respondents>254</respondents>
+            <share>0.25</share>            
+        </country>
+        <country id="SK">
+            <respondents>184</respondents>
+            <share>0.18</share>            
+        </country>
+        <country id="FI">
+            <respondents>187</respondents>
+            <share>0.19</share>            
+        </country>
+        <country id="SE">
+            <respondents>303</respondents>
+            <share>0.3</share>            
+        </country>
+        <country id="UK">
+            <respondents>241</respondents>
+            <share>0.18</share>            
+        </country>
+    </survey>
+    <survey id="409">
+        <country id="EU2728">
+            <respondents>4387</respondents>
+            <share>0.16</share>
+        </country>
+        <country id="BE">
+            <respondents>265</respondents>
+            <share>0.24</share>
+        </country>
+        <country id="BG">
+            <respondents>96</respondents>
+            <share>0.09</share>
+        </country>
+        <country id="CZ">
+            <respondents>112</respondents>
+            <share>0.11</share>
+        </country>
+        <country id="DK">
+            <respondents>309</respondents>
+            <share>0.3</share>
+        </country>
+        <country id="D-W">
+            <respondents>283</respondents>
+            <share>0.27</share>
+        </country>
+        <country id="DE">
+            <respondents>439</respondents>
+            <share>0.27</share>            
+        </country>
+        <country id="D-E">
+            <respondents>157</respondents>
+            <share>0.28</share>            
+        </country>
+        <country id="EE">
+            <respondents>89</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="EL">
+            <respondents>90</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="ES">
+            <respondents>85</respondents>
+            <share>0.08</share>            
+        </country>
+        <country id="FR">
+            <respondents>145</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="IE">
+            <respondents>141</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="IT">
+            <respondents>139</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="CY">
+            <respondents>42</respondents>
+            <share>0.08</share>            
+        </country>
+        <country id="LV">
+            <respondents>91</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="LT">
+            <respondents>125</respondents>
+            <share>0.12</share>            
+        </country>        
+        <country id="LU">
+            <respondents>85</respondents>
+            <share>0.17</share>            
+        </country>
+        <country id="HU">
+            <respondents>163</respondents>
+            <share>0.16</share>            
+        </country>
+        <country id="MT">
+            <respondents>104</respondents>
+            <share>0.1</share>            
+        </country>
+        <country id="NL">
+            <respondents>208</respondents>
+            <share>0.2</share>            
+        </country>
+        <country id="AT">
+            <respondents>241</respondents>
+            <share>0.24</share>            
+        </country>
+        <country id="PL">
+            <respondents>112</respondents>
+            <share>0.11</share>            
+        </country>
+        <country id="PT">
+            <respondents>61</respondents>
+            <share>0.06</share>            
+        </country>
+        <country id="RO">
+            <respondents>102</respondents>
+            <share>0.1</share>            
+        </country>
+        <country id="SI">
+            <respondents>190</respondents>
+            <share>0.17</share>            
+        </country>
+        <country id="SK">
+            <respondents>115</respondents>
+            <share>0.12</share>            
+        </country>
+        <country id="FI">
+            <respondents>222</respondents>
+            <share>0.23</share>            
+        </country>
+        <country id="SE">
+            <respondents>393</respondents>
+            <share>0.39</share>            
+        </country>
+        <country id="UK">
+            <respondents>161</respondents>
+            <share>0.12</share>            
+        </country>
+    </survey>
+    <survey id="435">
+        <country id="EU2728">
+            <respondents>4253</respondents>
+            <share>0.15</share>
+        </country>
+        <country id="BE">
+            <respondents>151</respondents>
+            <share>0.15</share>
+        </country>
+        <country id="BG">
+            <respondents>132</respondents>
+            <share>0.13</share>
+        </country>
+        <country id="CZ">
+            <respondents>84</respondents>
+            <share>0.08</share>
+        </country>
+        <country id="DK">
+            <respondents>302</respondents>
+            <share>0.3</share>
+        </country>
+        <country id="D-W">
+            <respondents>259</respondents>
+            <share>0.26</share>
+        </country>
+        <country id="DE">
+            <respondents>385</respondents>
+            <share>0.26</share>            
+        </country>
+        <country id="D-E">
+            <respondents>123</respondents>
+            <share>0.24</share>            
+        </country>
+        <country id="EE">
+            <respondents>64</respondents>
+            <share>0.06</share>            
+        </country>
+        <country id="EL">
+            <respondents>87</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="ES">
+            <respondents>79</respondents>
+            <share>0.08</share>            
+        </country>
+        <country id="FR">
+            <respondents>178</respondents>
+            <share>0.18</share>            
+        </country>
+        <country id="IE">
+            <respondents>155</respondents>
+            <share>0.15</share>            
+        </country>
+        <country id="IT">
+            <respondents>89</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="CY">
+            <respondents>54</respondents>
+            <share>0.11</share>            
+        </country>
+        <country id="LV">
+            <respondents>68</respondents>
+            <share>0.07</share>            
+        </country>
+        <country id="LT">
+            <respondents>119</respondents>
+            <share>0.12</share>            
+        </country>        
+        <country id="LU">
+            <respondents>89</respondents>
+            <share>0.18</share>            
+        </country>
+        <country id="HU">
+            <respondents>173</respondents>
+            <share>0.17</share>            
+        </country>
+        <country id="MT">
+            <respondents>82</respondents>
+            <share>0.16</share>            
+        </country>
+        <country id="NL">
+            <respondents>156</respondents>
+            <share>0.16</share>            
+        </country>
+        <country id="AT">
+            <respondents>201</respondents>
+            <share>0.19</share>            
+        </country>
+        <country id="PL">
+            <respondents>112</respondents>
+            <share>0.11</share>            
+        </country>
+        <country id="PT">
+            <respondents>48</respondents>
+            <share>0.05</share>            
+        </country>
+        <country id="RO">
+            <respondents>117</respondents>
+            <share>0.12</share>            
+        </country>
+        <country id="SI">
+            <respondents>252</respondents>
+            <share>0.25</share>            
+        </country>
+        <country id="SK">
+            <respondents>129</respondents>
+            <share>0.13</share>            
+        </country>
+        <country id="FI">
+            <respondents>260</respondents>
+            <share>0.26</share>            
+        </country>
+        <country id="SE">
+            <respondents>393</respondents>
+            <share>0.37</share>            
+        </country>
+        <country id="UK">
+            <respondents>186</respondents>
+            <share>0.14</share>            
+        </country>
+    </survey>
+    <survey id="459">
+        <country id="EU2728">
+            <respondents>3442</respondents>
+            <share>0.12</share>
+        </country>
+        <country id="BE">
+            <respondents>177</respondents>
+            <share>0.17</share>
+        </country>
+        <country id="BG">
+            <respondents>70</respondents>
+            <share>0.07</share>
+        </country>
+        <country id="CZ">
+            <respondents>60</respondents>
+            <share>0.06</share>
+        </country>
+        <country id="DK">
+            <respondents>287</respondents>
+            <share>0.29</share>
+        </country>
+        <country id="D-W">
+            <respondents>142</respondents>
+            <share>0.14</share>
+        </country>
+        <country id="DE">
+            <respondents>212</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="D-E">
+            <respondents>69</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="EE">
+            <respondents>91</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="EL">
+            <respondents>40</respondents>
+            <share>0.04</share>            
+        </country>
+        <country id="ES">
+            <respondents>131</respondents>
+            <share>0.13</share>            
+        </country>
+        <country id="FR">
+            <respondents>138</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="IE">
+            <respondents>130</respondents>
+            <share>0.13</share>            
+        </country>
+        <country id="IT">
+            <respondents>70</respondents>
+            <share>0.07</share>            
+        </country>
+        <country id="CY">
+            <respondents>42</respondents>
+            <share>0.08</share>            
+        </country>
+        <country id="LV">
+            <respondents>93</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="LT">
+            <respondents>80</respondents>
+            <share>0.08</share>            
+        </country>        
+        <country id="LU">
+            <respondents>63</respondents>
+            <share>0.12</share>            
+        </country>
+        <country id="HU">
+            <respondents>84</respondents>
+            <share>0.08</share>            
+        </country>
+        <country id="MT">
+            <respondents>63</respondents>
+            <share>0.13</share>            
+        </country>
+        <country id="NL">
+            <respondents>271</respondents>
+            <share>0.27</share>            
+        </country>
+        <country id="AT">
+            <respondents>158</respondents>
+            <share>0.06</share>            
+        </country>
+        <country id="PL">
+            <respondents>65</respondents>
+            <share>0.04</share>            
+        </country>
+        <country id="PT">
+            <respondents>41</respondents>
+            <share>0.04</share>            
+        </country>
+        <country id="RO">
+            <respondents>91</respondents>
+            <share>0.09</share>            
+        </country>
+        <country id="SI">
+            <respondents>117</respondents>
+            <share>0.11</share>            
+        </country>
+        <country id="SK">
+            <respondents>81</respondents>
+            <share>0.08</share>            
+        </country>
+        <country id="FI">
+            <respondents>200</respondents>
+            <share>0.2</share>            
+        </country>
+        <country id="SE">
+            <respondents>377</respondents>
+            <share>0.38</share>            
+        </country>
+        <country id="UK">
+            <respondents>190</respondents>
+            <share>0.14</share>            
+        </country>
+    </survey>
+    <survey id="490">
+        <country id="EU2728">
+            <respondents>6288</respondents>
+            <share>0.23</share>
+        </country>
+        <country id="EU28NOUK">
+            <respondents>5805</respondents>
+            <share>0.22</share>
+        </country>
+        <country id="BE">
+            <respondents>239</respondents>
+            <share>0.23</share>
+        </country>
+        <country id="BG">
+            <respondents>103</respondents>
+            <share>0.10</share>
+        </country>
+        <country id="CZ">
+            <respondents>149</respondents>
+            <share>0.15</share>
+        </country>
+        <country id="DK">
+            <respondents>483</respondents>
+            <share>0.47</share>
+        </country>
+        <country id="D-W">
+            <respondents>341</respondents>
+            <share>0.33</share>
+        </country>
+        <country id="DE">
+            <respondents>465</respondents>
+            <share>0.3</share>            
+        </country>
+        <country id="D-E">
+            <respondents>97</respondents>
+            <share>0.19</share>            
+        </country>
+        <country id="EE">
+            <respondents>161</respondents>
+            <share>0.16</share>            
+        </country>
+        <country id="EL">
+            <respondents>114</respondents>
+            <share>0.11</share>            
+        </country>
+        <country id="ES">
+            <respondents>185</respondents>
+            <share>0.18</share>            
+        </country>
+        <country id="FR">
+            <respondents>233</respondents>
+            <share>0.23</share>            
+        </country>
+        <country id="IE">
+            <respondents>274</respondents>
+            <share>0.26</share>            
+        </country>
+        <country id="IT">
+            <respondents>195</respondents>
+            <share>0.19</share>            
+        </country>
+        <country id="CY">
+            <respondents>72</respondents>
+            <share>0.14</share>            
+        </country>
+        <country id="LV">
+            <respondents>106</respondents>
+            <share>0.11</share>            
+        </country>
+        <country id="LT">
+            <respondents>143</respondents>
+            <share>0.14</share>            
+        </country>        
+        <country id="LU">
+            <respondents>114</respondents>
+            <share>0.23</share>            
+        </country>
+        <country id="HR">
+            <respondents>113</respondents>
+            <share>0.11</share>            
+        </country>
+        <country id="HU">
+            <respondents>173</respondents>
+            <share>0.17</share>            
+        </country>
+        <country id="MT">
+            <respondents>166</respondents>
+            <share>0.33</share>            
+        </country>
+        <country id="NL">
+            <respondents>274</respondents>
+            <share>0.27</share>            
+        </country>
+        <country id="AT">
+            <respondents>277</respondents>
+            <share>0.27</share>            
+        </country>
+        <country id="PL">
+            <respondents>147</respondents>
+            <share>0.15</share>            
+        </country>
+        <country id="PT">
+            <respondents>188</respondents>
+            <share>0.19</share>            
+        </country>
+        <country id="RO">
+            <respondents>113</respondents>
+            <share>0.11</share>            
+        </country>
+        <country id="SI">
+            <respondents>193</respondents>
+            <share>0.19</share>            
+        </country>
+        <country id="SK">
+            <respondents>144</respondents>
+            <share>0.13</share>            
+        </country>
+        <country id="FI">
+            <respondents>336</respondents>
+            <share>0.33</share>            
+        </country>
+        <country id="SE">
+            <respondents>519</respondents>
+            <share>0.5</share>            
+        </country>
+        <country id="UK">
+            <respondents>308</respondents>
+            <share>0.29</share>            
+        </country>
+</root>
