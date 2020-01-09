@@ -85,17 +85,22 @@
   <section id="visualization" class="bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="col-xl-8 mx-auto">
           <h2>Visualization</h2>
           <div id="avg_severity_plot"></div>
+          <div id="map_severity"></div>
           <div id="ghg_emissions_plot"></div>
           <div id="share_renewable_plot"></div>
+          <div id="map_renewables_2017"></div>
+        </div>
+      </div>
           <script>
 
             avg_severity_plot = document.getElementById("avg_severity_plot");
+            map_severity = document.getElementById("map_severity");
             ghg_emissions_plot = document.getElementById("ghg_emissions_plot");
             share_renewable_plot = document.getElementById("share_renewable_plot");
-
+            map_renewables_2017 = document.getElementById("map_renewables_2017");
 
             d3.xml("processed_data/severity_of_problem/avg_severity.xml")
                     .then(function(data) {
@@ -149,6 +154,60 @@
               }
 
               Plotly.plot( avg_severity_plot, plot_data, layout, {scrollZoom: true})
+
+            });
+
+            d3.xml("processed_data/severity_of_problem/avg_severity.xml")
+                    .then(function(data) {
+                      var dataobj =  xmlToJson.parse(data).root.survey;
+                      var surveys = {};
+                      for (i = 0; i < dataobj.length; i++) {
+                        var countries = {};
+                        for (j = 0; j < dataobj[i].country.length; j++) {
+                          countries[dataobj[i].country[j].id] = dataobj[i].country[j].avg;
+                        }
+                        surveys[dataobj[i].id] = countries;
+                      }
+                      return surveys;
+                    }).then(function(surveys) {
+              var data = Object.values(surveys);
+              var surveys =  Object.keys(surveys);
+              var countries = Object.keys(data[0]);
+              var data_by_country = {};
+              for (i = 0; i < countries.length; i++) {
+                data_by_country[countries[i]] = data[7][countries[i]];
+              }
+
+              var trace = {
+                locations: Object.keys(data_by_country),
+                z: Object.values(data_by_country),
+                type: 'choropleth',
+                geo: 'geo',
+                colorscale: [
+                  ['0', 'red'],
+                  ['0.5', 'yellow'],
+                  ['1', 'green']
+                ],
+                reversescale: false
+              }
+
+              var layout = {
+                title: 'How serious do you consider the problem of climate change to be on a scale from 1 to 10?',
+                geo: {
+                  projection: 'mercator',
+                  domain: {
+                    x: [0, 1],
+                    y: [0, 1]
+                  },
+                  lonaxis: { range: [-25, 45] },
+                  lataxis: { range: [30, 80] }
+                },
+                hoverinfo: 'text+y',
+                hovermode: 'closest'
+              };
+
+              data = [trace]
+              Plotly.plot( map_severity, data, layout, {scrollZoom: true})
 
             });
 
@@ -230,6 +289,47 @@
                       };
 
                       Plotly.plot( share_renewable_plot, plot_data, layout, {scrollZoom: true})
+
+                    });
+
+            d3.tsv("processed_data/share_renewable/share_renewable.tsv")
+                    .then(function(data) {
+                      var data_by_country = {};
+
+                      for (i = 0; i < data.length; i++) {
+                        var country = data[i]["geo\\time"];
+                        var values_by_year = Object.values(data[i])[14];
+                        data_by_country[country] = values_by_year;
+                      }
+                        var trace = {
+                          locations: Object.keys(data_by_country),
+                          z: Object.values(data_by_country),
+                          type: 'choropleth',
+                          geo: 'geo',
+                          colorscale: [
+                                  ['0', 'red'],
+                                  ['0.5', 'yellow'],
+                                  ['1', 'green']
+                          ],
+                          reversescale: false
+                        }
+                      var layout = {
+                        title: 'Share of energy consumption from renewable sources in 2017 (in %)',
+                        geo: {
+                          projection: 'mercator',
+                          domain: {
+                            x: [0, 1],
+                            y: [0, 1]
+                          },
+                          lonaxis: { range: [-25, 45] },
+                          lataxis: { range: [30, 80] }
+                        },
+                        hoverinfo: 'text+y',
+                        hovermode: 'closest'
+                      };
+
+                    data = [trace]
+                    Plotly.plot( map_renewables_2017, data, layout, {scrollZoom: true})
 
                     });
 

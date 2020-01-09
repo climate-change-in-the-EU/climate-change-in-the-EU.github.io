@@ -4,91 +4,91 @@
         <country id="EU2728">
             <avg>7.9</avg>
         </country>
-        <country id="BE">
+        <country id="BEL">
             <avg>7.7</avg>
         </country>
-        <country id="BG">
+        <country id="BGR">
             <avg>8.0</avg>
         </country>
-        <country id="CZ">
+        <country id="CZE">
             <avg>7.9</avg>
         </country>
-        <country id="DK">
+        <country id="DNK">
             <avg>7.6</avg>
         </country>
         <country id="D-W">
             <avg>7.9</avg>
         </country>
-        <country id="DE">
+        <country id="DEU">
             <avg>7.9</avg>         
         </country>
         <country id="D-E">
             <avg>7.8</avg>           
         </country>
-        <country id="EE">
+        <country id="EST">
             <avg>7.3</avg>            
         </country>
-        <country id="EL">
+        <country id="GRC">
             <avg>9.1</avg>           
         </country>
-        <country id="ES">
+        <country id="ESP">
           <avg>8.3</avg>          
         </country>
-        <country id="FR">
+        <country id="FRA">
             <avg>8.2</avg>          
         </country>
-        <country id="IE">
+        <country id="IRL">
             <avg>7.7</avg>           
         </country>
-        <country id="IT">
+        <country id="ITA">
             <avg>7.8</avg>           
         </country>
-        <country id="CY">
+        <country id="CYP">
             <avg>9.4</avg>           
         </country>
-        <country id="LV">
+        <country id="LVA">
             <avg>7.8</avg>            
         </country>
-        <country id="LT">
+        <country id="LTU">
             <avg>7.8</avg>           
         </country>        
-        <country id="LU">
+        <country id="LUX">
             <avg>8.0</avg>           
         </country>
-        <country id="HU">
+        <country id="HUN">
             <avg>8.5</avg>            
         </country>
-        <country id="MT">
+        <country id="MNE">
             <avg>8.7</avg>            
         </country>
-        <country id="NL">
+        <country id="NLD">
             <avg>6.8</avg>           
         </country>
-        <country id="AT">
+        <country id="AUT">
             <avg>7.9</avg>           
         </country>
-        <country id="PL">
+        <country id="POL">
             <avg>7.9</avg>           
         </country>
-        <country id="PT">
+        <country id="PRT">
             <avg>7.9</avg>           
         </country>
-        <country id="RO">
+        <country id="ROU">
             <avg>8.2</avg>            
         </country>
-        <country id="SI">
+        <country id="SVN">
             <avg>8.9</avg>            
         </country>
-        <country id="SK">
+        <country id="SVK">
             <avg>8.0</avg>           
         </country>
-        <country id="FI">
+        <country id="FIN">
             <avg>7.5</avg>            
         </country>
-        <country id="SE">
+        <country id="SWE">
             <avg>7.7</avg>           
         </country>
-        <country id="UK">
+        <country id="GBR">
             <avg>7.2</avg>            
         </country>
     </survey>
@@ -97,91 +97,91 @@
         <country id="EU2728">
             <avg>7.4</avg>
         </country>
-        <country id="BE">
+        <country id="BEL">
             <avg>7.2</avg>
         </country>
-        <country id="BG">
+        <country id="BGR">
             <avg>7.6</avg>
         </country>
-        <country id="CZ">
+        <country id="CZE">
             <avg>7.4</avg>
         </country>
-        <country id="DK">
+        <country id="DNK">
             <avg>7.0</avg>
         </country>
         <country id="D-W">
             <avg>7.7</avg>
         </country>
-        <country id="DE">
+        <country id="DEU">
             <avg>7.6</avg>            
         </country>
         <country id="D-E">
             <avg>7.0</avg>            
         </country>
-        <country id="EE">
+        <country id="EST">
             <avg>6.4</avg>            
         </country>
-        <country id="EL">
+        <country id="GRC">
             <avg>8.8</avg>            
         </country>
-        <country id="ES">
+        <country id="ESP">
             <avg>7.4</avg>            
         </country>
-        <country id="FR">
+        <country id="FRA">
             <avg>7.9</avg>           
         </country>
-        <country id="IE">
+        <country id="IRL">
             <avg>7.2</avg>           
         </country>
-        <country id="IT">
+        <country id="ITA">
             <avg>7.4</avg>         
         </country>
-        <country id="CY">
+        <country id="CYP">
             <avg>8.9</avg>          
         </country>
-        <country id="LV">
+        <country id="LVA">
             <avg>6.9</avg>            
         </country>
-        <country id="LT">
+        <country id="LTU">
             <avg>7.4</avg>          
         </country>        
-        <country id="LU">
+        <country id="LUX">
             <avg>7.2</avg>            
         </country>
-        <country id="HU">
+        <country id="HUN">
             <avg>8.1</avg>            
         </country>
-        <country id="MT">
+        <country id="MNE">
             <avg>8.1</avg>            
         </country>
-        <country id="NL">
+        <country id="NLD">
             <avg>6.6</avg>           
         </country>
-        <country id="AT">
+        <country id="AUT">
             <avg>7.1</avg>           
         </country>
-        <country id="PL">
+        <country id="POL">
             <avg>7.0</avg>            
         </country>
-        <country id="PT">
+        <country id="PRT">
             <avg>7.7</avg>           
         </country>
-        <country id="RO">
+        <country id="ROU">
             <avg>8.0</avg>            
         </country>
-        <country id="SI">
+        <country id="SVN">
             <avg>8.4</avg>            
         </country>
-        <country id="SK">
+        <country id="SVK">
             <avg>7.6</avg>            
         </country>
-        <country id="FI">
+        <country id="FIN">
             <avg>7.2</avg>            
         </country>
-        <country id="SE">
+        <country id="SWE">
             <avg>7.3</avg>            
         </country>
-        <country id="UK">
+        <country id="GBR">
             <avg>6.5</avg>           
         </country>
     </survey>
@@ -190,91 +190,91 @@
         <country id="EU2728">
             <avg>7.1</avg>
         </country>
-        <country id="BE">
+        <country id="BEL">
             <avg>7.1</avg>
         </country>
-        <country id="BG">
+        <country id="BGR">
             <avg>7.2</avg>
         </country>
-        <country id="CZ">
+        <country id="CZE">
             <avg>6.9</avg>
         </country>
-        <country id="DK">
+        <country id="DNK">
             <avg>7.0</avg>
         </country>
         <country id="D-W">
             <avg>7.4</avg>
         </country>
-        <country id="DE">
+        <country id="DEU">
             <avg>7.3</avg>            
         </country>
         <country id="D-E">
             <avg>7.0</avg>           
         </country>
-        <country id="EE">
+        <country id="EST">
             <avg>6.0</avg>            
         </country>
-        <country id="EL">
+        <country id="GRC">
             <avg>8.2</avg>            
         </country>
-        <country id="ES">
+        <country id="ESP">
             <avg>7.5</avg>            
         </country>
-        <country id="FR">
+        <country id="FRA">
             <avg>7.5</avg>            
         </country>
-        <country id="IE">
+        <country id="IRL">
             <avg>7.0</avg>          
         </country>
-        <country id="IT">
+        <country id="ITA">
             <avg>7.2</avg>            
         </country>
-        <country id="CY">
+        <country id="CYP">
             <avg>8.4</avg>          
         </country>
-        <country id="LV">
+        <country id="LVA">
             <avg>6.0</avg>            
         </country>
-        <country id="LT">
+        <country id="LTU">
             <avg>6.5</avg>            
         </country>        
-        <country id="LU">
+        <country id="LUX">
             <avg>7.5</avg>           
         </country>
-        <country id="HU">
+        <country id="HUN">
             <avg>7.5</avg>           
         </country>
-        <country id="MT">
+        <country id="MNE">
             <avg>7.8</avg>            
         </country>
-        <country id="NL">
+        <country id="NLD">
             <avg>6.3</avg>           
         </country>
-        <country id="AT">
+        <country id="AUT">
             <avg>7.5</avg>           
         </country>
-        <country id="PL">
+        <country id="POL">
             <avg>6.5</avg>           
         </country>
-        <country id="PT">
+        <country id="PRT">
             <avg>7.0</avg>           
         </country>
-        <country id="RO">
+        <country id="ROU">
             <avg>7.3</avg>           
         </country>
-        <country id="SI">
+        <country id="SVN">
             <avg>8.0</avg>            
         </country>
-        <country id="SK">
+        <country id="SVK">
             <avg>7.3</avg>           
         </country>
-        <country id="FI">
+        <country id="FIN">
             <avg>7.1</avg>            
         </country>
-        <country id="SE">
+        <country id="SWE">
             <avg>7.2</avg>           
         </country>
-        <country id="UK">
+        <country id="GBR">
             <avg>6.5</avg>          
         </country>
     </survey>
@@ -283,91 +283,91 @@
         <country id="EU2728">
             <avg>7.4</avg>
         </country>
-        <country id="BE">
+        <country id="BEL">
             <avg>7.1</avg>
         </country>
-        <country id="BG">
+        <country id="BGR">
             <avg>7.8</avg>
         </country>
-        <country id="CZ">
+        <country id="CZE">
             <avg>7.6</avg>
         </country>
-        <country id="DK">
+        <country id="DNK">
             <avg>6.8</avg>
         </country>
         <country id="D-W">
             <avg>7.4</avg>
         </country>
-        <country id="DE">
+        <country id="DEU">
             <avg>7.3</avg>           
         </country>
         <country id="D-E">
             <avg>7.0</avg>            
         </country>
-        <country id="EE">
+        <country id="EST">
             <avg>6.1</avg>            
         </country>
-        <country id="EL">
+        <country id="GRC">
             <avg>8.6</avg>            
         </country>
-        <country id="ES">
+        <country id="ESP">
             <avg>8.0</avg>           
         </country>
-        <country id="FR">
+        <country id="FRA">
             <avg>7.4</avg>            
         </country>
-        <country id="IE">
+        <country id="IRL">
             <avg>7.0</avg>            
         </country>
-        <country id="IT">
+        <country id="ITA">
             <avg>7.8</avg>            
         </country>
-        <country id="CY">
+        <country id="CYP">
             <avg>8.9</avg>           
         </country>
-        <country id="LV">
+        <country id="LVA">
             <avg>7.0</avg>            
         </country>
-        <country id="LT">
+        <country id="LTU">
             <avg>7.1</avg>            
         </country>        
-        <country id="LU">
+        <country id="LUX">
             <avg>7.6</avg>            
         </country>
-        <country id="HU">
+        <country id="HUN">
             <avg>8.0</avg>          
         </country>
-        <country id="MT">
+        <country id="MNE">
             <avg>8.0</avg>           
         </country>
-        <country id="NL">
+        <country id="NLD">
             <avg>6.5</avg>            
         </country>
-        <country id="AT">
+        <country id="AUT">
             <avg>7.7</avg>            
         </country>
-        <country id="PL">
+        <country id="POL">
             <avg>7.3</avg>           
         </country>
-        <country id="PT">
+        <country id="PRT">
             <avg>7.7</avg>            
         </country>
-        <country id="RO">
+        <country id="ROU">
             <avg>8.0</avg>            
         </country>
-        <country id="SI">
+        <country id="SVN">
             <avg>7.7</avg>            
         </country>
-        <country id="SK">
+        <country id="SVK">
             <avg>8.2</avg>            
         </country>
-        <country id="FI">
+        <country id="FIN">
             <avg>6.4</avg>            
         </country>
-        <country id="SE">
+        <country id="SWE">
             <avg>6.9</avg>           
         </country>
-        <country id="UK">
+        <country id="GBR">
             <avg>6.4</avg>           
         </country>
     </survey>
@@ -376,91 +376,91 @@
         <country id="EU2728">
             <avg>7.3</avg>
         </country>
-        <country id="BE">
+        <country id="BEL">
             <avg>7.2</avg>
         </country>
-        <country id="BG">
+        <country id="BGR">
             <avg>7.5</avg>
         </country>
-        <country id="CZ">
+        <country id="CZE">
             <avg>7.3</avg>
         </country>
-        <country id="DK">
+        <country id="DNK">
             <avg>6.8</avg>
         </country>
         <country id="D-W">
             <avg>7.6</avg>
         </country>
-        <country id="DE">
+        <country id="DEU">
             <avg>7.6</avg>            
         </country>
         <country id="D-E">
             <avg>7.5</avg>
         </country>
-        <country id="EE">
+        <country id="EST">
             <avg>5.6</avg>            
         </country>
-        <country id="EL">
+        <country id="GRC">
             <avg>8.0</avg>            
         </country>
-        <country id="ES">
+        <country id="ESP">
             <avg>7.9</avg>           
         </country>
-        <country id="FR">
+        <country id="FRA">
             <avg>7.1</avg>            
         </country>
-        <country id="IE">
+        <country id="IRL">
             <avg>6.5</avg>           
         </country>
-        <country id="IT">
+        <country id="ITA">
             <avg>8.2</avg>            
         </country>
-        <country id="CY">
+        <country id="CYP">
             <avg>7.6</avg>           
         </country>
-        <country id="LV">
+        <country id="LVA">
             <avg>6.0</avg>           
         </country>
-        <country id="LT">
+        <country id="LTU">
             <avg>7.0</avg>           
         </country>        
-        <country id="LU">
+        <country id="LUX">
             <avg>7.2</avg>            
         </country>
-        <country id="HU">
+        <country id="HUN">
             <avg>8.0</avg>            
         </country>
-        <country id="MT">
+        <country id="MNE">
             <avg>7.5</avg>           
         </country>
-        <country id="NL">
+        <country id="NLD">
             <avg>6.5</avg>           
         </country>
-        <country id="AT">
+        <country id="AUT">
             <avg>7.9</avg>            
         </country>
-        <country id="PL">
+        <country id="POL">
             <avg>7.0</avg>           
         </country>
-        <country id="PT">
+        <country id="PRT">
             <avg>7.8</avg>            
         </country>
-        <country id="RO">
+        <country id="ROU">
             <avg>7.2</avg>           
         </country>
-        <country id="SI">
+        <country id="SVN">
             <avg>7.7</avg>            
         </country>
-        <country id="SK">
+        <country id="SVK">
             <avg>7.9</avg>            
         </country>
-        <country id="FI">
+        <country id="FIN">
             <avg>6.6</avg>            
         </country>
-        <country id="SE">
+        <country id="SWE">
             <avg>7.3</avg>            
         </country>
-        <country id="UK">
+        <country id="GBR">
             <avg>6.1</avg>            
         </country>
     </survey>
@@ -469,91 +469,91 @@
         <country id="EU2728">
             <avg>7.3</avg>
         </country>
-        <country id="BE">
+        <country id="BEL">
             <avg>7.2</avg>
         </country>
-        <country id="BG">
+        <country id="BGR">
             <avg>8.2</avg>
         </country>
-        <country id="CZ">
+        <country id="CZE">
             <avg>7.0</avg>
         </country>
-        <country id="DK">
+        <country id="DNK">
             <avg>7.0</avg>
         </country>
         <country id="D-W">
             <avg>7.5</avg>
         </country>
-        <country id="DE">
+        <country id="DEU">
             <avg>7.5</avg>            
         </country>
         <country id="D-E">
             <avg>7.6</avg>            
         </country>
-        <country id="EE">
+        <country id="EST">
             <avg>5.7</avg>           
         </country>
-        <country id="EL">
+        <country id="GRC">
             <avg>8.2</avg>            
         </country>
-        <country id="ES">
+        <country id="ESP">
             <avg>7.8</avg>            
         </country>
-        <country id="FR">
+        <country id="FRA">
             <avg>7.3</avg>            
         </country>
-        <country id="IE">
+        <country id="IRL">
             <avg>6.8</avg>            
         </country>
-        <country id="IT">
+        <country id="ITA">
             <avg>7.9</avg>            
         </country>
-        <country id="CY">
+        <country id="CYP">
             <avg>7.8</avg>            
         </country>
-        <country id="LV">
+        <country id="LVA">
             <avg>5.8</avg>            
         </country>
-        <country id="LT">
+        <country id="LTU">
             <avg>7.0</avg>            
         </country>        
-        <country id="LU">
+        <country id="LUX">
             <avg>7.3</avg>           
         </country>
-        <country id="HU">
+        <country id="HUN">
             <avg>7.7</avg>            
         </country>
-        <country id="MT">
+        <country id="MNE">
             <avg>7.4</avg>            
         </country>
-        <country id="NL">
+        <country id="NLD">
             <avg>6.6</avg>            
         </country>
-        <country id="AT">
+        <country id="AUT">
             <avg>7.3</avg>            
         </country>
-        <country id="PL">
+        <country id="POL">
             <avg>6.8</avg>            
         </country>
-        <country id="PT">
+        <country id="PRT">
             <avg>7.8</avg>            
         </country>
-        <country id="RO">
+        <country id="ROU">
             <avg>7.9</avg>            
         </country>
-        <country id="SI">
+        <country id="SVN">
             <avg>7.4</avg>            
         </country>
-        <country id="SK">
+        <country id="SVK">
             <avg>7.3</avg>            
         </country>
-        <country id="FI">
+        <country id="FIN">
             <avg>7.0</avg>            
         </country>
-        <country id="SE">
+        <country id="SWE">
             <avg>7.3</avg>            
         </country>
-        <country id="UK">
+        <country id="GBR">
             <avg>6.5</avg>            
         </country>
     </survey>
@@ -562,91 +562,91 @@
         <country id="EU2728">
             <avg>7.7</avg>
         </country>
-        <country id="BE">
+        <country id="BEL">
             <avg>7.5</avg>
         </country>
-        <country id="BG">
+        <country id="BGR">
             <avg>7.9</avg>
         </country>
-        <country id="CZ">
+        <country id="CZE">
             <avg>6.9</avg>
         </country>
-        <country id="DK">
+        <country id="DNK">
             <avg>7.9</avg>
         </country>
         <country id="D-W">
             <avg>7.8</avg>
         </country>
-        <country id="DE">
+        <country id="DEU">
             <avg>7.7</avg>            
         </country>
         <country id="D-E">
             <avg>7.4</avg>            
         </country>
-        <country id="EE">
+        <country id="EST">
             <avg>6.3</avg>            
         </country>
-        <country id="EL">
+        <country id="GRC">
             <avg>8.2</avg>           
         </country>
-        <country id="ES">
+        <country id="ESP">
             <avg>8.2</avg>           
         </country>
-        <country id="FR">
+        <country id="FRA">
             <avg>8.1</avg>            
         </country>
-        <country id="IE">
+        <country id="IRL">
             <avg>7.3</avg>            
         </country>
-        <country id="IT">
+        <country id="ITA">
             <avg>8.1</avg>            
         </country>
-        <country id="CY">
+        <country id="CYP">
             <avg>7.9</avg>          
         </country>
-        <country id="LV">
+        <country id="LVA">
             <avg>6.6</avg>            
         </country>
-        <country id="LT">
+        <country id="LTU">
             <avg>7.6</avg>            
         </country>        
-        <country id="LU">
+        <country id="LUX">
             <avg>7.8</avg>            
         </country>
-        <country id="HU">
+        <country id="HUN">
             <avg>8.1</avg>            
         </country>
-        <country id="MT">
+        <country id="MNE">
             <avg>8.0</avg>            
         </country>
-        <country id="NL">
+        <country id="NLD">
             <avg>7.6</avg>            
         </country>
-        <country id="AT">
+        <country id="AUT">
             <avg>7.4</avg>            
         </country>
-        <country id="PL">
+        <country id="POL">
             <avg>7.0</avg>            
         </country>
-        <country id="PT">
+        <country id="PRT">
             <avg>8.0</avg>            
         </country>
-        <country id="RO">
+        <country id="ROU">
             <avg>7.6</avg>            
         </country>
-        <country id="SI">
+        <country id="SVN">
             <avg>7.6</avg>            
         </country>
-        <country id="SK">
+        <country id="SVK">
             <avg>7.5</avg>            
         </country>
-        <country id="FI">
+        <country id="FIN">
             <avg>7.5</avg>            
         </country>
-        <country id="SE">
+        <country id="SWE">
             <avg>8.0</avg>            
         </country>
-        <country id="UK">
+        <country id="GBR">
             <avg>7.2</avg>            
         </country>
     </survey>
@@ -655,91 +655,91 @@
         <country id="EU2728">
             <avg>8.0</avg>
         </country>
-        <country id="BE">
+        <country id="BEL">
             <avg>7.5</avg>
         </country>
-        <country id="BG">
+        <country id="BGR">
             <avg>8.2</avg>
         </country>
-        <country id="CZ">
+        <country id="CZE">
             <avg>7.6</avg>
         </country>
-        <country id="DK">
+        <country id="DNK">
             <avg>8.3</avg>
         </country>
         <country id="D-W">
             <avg>8.2</avg>
         </country>
-        <country id="DE">
+        <country id="DEU">
             <avg>8.1</avg>            
         </country>
         <country id="D-E">
             <avg>7.7</avg>           
         </country>
-        <country id="EE">
+        <country id="EST">
             <avg>6.8</avg>            
         </country>
-        <country id="EL">
+        <country id="GRC">
             <avg>8.5</avg>           
         </country>
-        <country id="ES">
+        <country id="ESP">
             <avg>8.5</avg>           
         </country>
-        <country id="FR">
+        <country id="FRA">
             <avg>8.1</avg>            
         </country>
-        <country id="IE">
+        <country id="IRL">
             <avg>7.9</avg>            
         </country>
-        <country id="IT">
+        <country id="ITA">
             <avg>8.3</avg>            
         </country>
-        <country id="CY">
+        <country id="CYP">
             <avg>8.3</avg>           
         </country>
-        <country id="LV">
+        <country id="LVA">
             <avg>6.9</avg>            
         </country>
-        <country id="LT">
+        <country id="LTU">
             <avg>7.6</avg>            
         </country>        
-        <country id="LU">
+        <country id="LUX">
             <avg>8.0</avg>            
         </country>
-        <country id="HU">
+        <country id="HUN">
             <avg>8.3</avg>            
         </country>
-        <country id="MT">
+        <country id="MNE">
             <avg>8.9</avg>            
         </country>
-        <country id="NL">
+        <country id="NLD">
             <avg>7.4</avg>            
         </country>
-        <country id="AT">
+        <country id="AUT">
             <avg>7.5</avg>            
         </country>
-        <country id="PL">
+        <country id="POL">
             <avg>7.6</avg>           
         </country>
-        <country id="PT">
+        <country id="PRT">
             <avg>8.3</avg>           
         </country>
-        <country id="RO">
+        <country id="ROU">
             <avg>7.6</avg>            
         </country>
-        <country id="SI">
+        <country id="SVN">
             <avg>7.9</avg>            
         </country>
-        <country id="SK">
+        <country id="SVK">
             <avg>7.8</avg>            
         </country>
-        <country id="FI">
+        <country id="FIN">
             <avg>7.6</avg>           
         </country>
-        <country id="SE">
+        <country id="SWE">
             <avg>8.1</avg>            
         </country>
-        <country id="UK">
+        <country id="GBR">
             <avg>7.8</avg>           
         </country>
     </survey>
