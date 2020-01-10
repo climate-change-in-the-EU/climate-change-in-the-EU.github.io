@@ -87,6 +87,7 @@
       <div class="row">
         <div class="col-xl-8 mx-auto">
           <h2>Visualization</h2>
+          <div id="comparison_problem_renewables_eu"></div>
           <div id="most_serious_problem_plot"></div>
           <div id="avg_severity_plot"></div>
           <div id="map_severity"></div>
@@ -97,12 +98,90 @@
       </div>
           <script>
 
+            comparison_problem_renewables_eu = document.getElementById("comparison_problem_renewables_eu")
             most_serious_problem_plot = document.getElementById("most_serious_problem_plot");
             avg_severity_plot = document.getElementById("avg_severity_plot");
             map_severity = document.getElementById("map_severity");
             ghg_emissions_plot = document.getElementById("ghg_emissions_plot");
             share_renewable_plot = document.getElementById("share_renewable_plot");
             map_renewables_2017 = document.getElementById("map_renewables_2017");
+
+            Promise.all([
+                        d3.xml("processed_data/most_serious_problem/most_serious_problem.xml"),
+                        d3.tsv("processed_data/share_renewable/share_renewable.tsv")
+                      ]).then(function(data) {
+                        plot_data = [];
+                        var dataobj_problem = xmlToJson.parse(data[0]).root.survey;
+                        var surveys = {};
+                        for (i = 0; i < dataobj_problem.length; i++) {
+                          var countries = {};
+                          for (j = 0; j < dataobj_problem[i].country.length; j++) {
+                            countries[dataobj_problem[i].country[j].id] = dataobj_problem[i].country[j].share;
+                          }
+                          surveys[dataobj_problem[i].date] = countries;
+                        }
+
+              var dataobj_renewable = data[1];
+              var years = [2008,2009,2010,2011,2012,2013,2014,2015,2016,2017]
+              var data_by_country = {};
+              for (i = 4; i < dataobj_renewable.length; i++) {
+                var country = dataobj_renewable[i]["geo\\time"];
+                for (j = 0; j < years.length; j++) {
+                  var values_by_year = Object.values(dataobj_renewable[i]).slice(1, );
+                  data_by_country[country] = values_by_year;
+                }
+              }
+              var trace1 = {
+                x: years,
+                y: data_by_country['EU2728']
+              }
+              plot_data.push(trace1);
+
+              return surveys;
+            }).then(function(surveys) {
+              var data = Object.values(surveys);
+              var surveys = Object.keys(surveys);
+              var countries = Object.keys(data[0]);
+              var data_by_country = {};
+              for (i = 0; i < countries.length; i++) {
+                data_by_country[countries[i]] = [];
+                for (j = 0; j < surveys.length; j++) {
+                  data_by_country[countries[i]].push(data[j][countries[i]]);
+                }
+              }
+
+              var layout = {
+                xaxis: {
+                  type: 'date'
+                },
+                yaxis: {
+                  ticksuffix: '%',
+                  range: [5, 35],
+                  title: 'consumption share of renewable energy'
+                },
+                yaxis2: {
+                  tickformat: ',.0%',
+                  range: [0.05, 0.35],
+                  overlaying: 'y',
+                  side: 'right',
+                  title: '\"climate change is most significant problem\"'
+                },
+                showlegend: false,
+                hoverinfo: 'text+y',
+                hovermode: 'closest'
+              };
+
+                var country_id = Object.keys(data_by_country)[0];
+                var trace2 = {
+                  x: surveys,
+                  y: data_by_country[country_id],
+                  yaxis: 'y2'
+                };
+                plot_data.push(trace2)
+
+              Plotly.plot( comparison_problem_renewables_eu, plot_data, layout, {scrollZoom: true})
+
+            });
 
             d3.xml("processed_data/most_serious_problem/most_serious_problem.xml")
               .then(function(data) {

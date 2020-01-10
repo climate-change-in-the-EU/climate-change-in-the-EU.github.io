@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-    <survey id="300">
+    <survey id="300" date="2008-09">
         <country id="EU2728">
             <respondents>4060</respondents>
             <share>0.3</share>
@@ -127,7 +127,7 @@
         </country>
     </survey>
 
-    <survey id="313">
+    <survey id="313" date="2009-07">
         <country id="EU2728">
             <respondents>4868</respondents>
             <share>0.18</share>
@@ -253,7 +253,7 @@
             <share>0.2</share>            
         </country>
     </survey>
-    <survey id="322">
+    <survey id="322" date="2009-11">
         <country id="EU2728">
             <respondents>4519</respondents>
             <share>0.17</share>
@@ -375,7 +375,7 @@
             <share>0.17</share>            
         </country>
     </survey>
-    <survey id="372">
+    <survey id="372" date="2011-10">
         <country id="EU2728">
             <respondents>5257</respondents>
             <share>0.2</share>
@@ -497,7 +497,7 @@
             <share>0.18</share>            
         </country>
     </survey>
-    <survey id="409">
+    <survey id="409" date="2014-03">
         <country id="EU2728">
             <respondents>4387</respondents>
             <share>0.16</share>
@@ -619,7 +619,7 @@
             <share>0.12</share>            
         </country>
     </survey>
-    <survey id="435">
+    <survey id="435" date="2015-11">
         <country id="EU2728">
             <respondents>4253</respondents>
             <share>0.15</share>
@@ -741,7 +741,7 @@
             <share>0.14</share>            
         </country>
     </survey>
-    <survey id="459">
+    <survey id="459" date="2017-09">
         <country id="EU2728">
             <respondents>3442</respondents>
             <share>0.12</share>
@@ -863,7 +863,7 @@
             <share>0.14</share>            
         </country>
     </survey>
-    <survey id="490">
+    <survey id="490" date="2019-09">
         <country id="EU2728">
             <respondents>6288</respondents>
             <share>0.23</share>
