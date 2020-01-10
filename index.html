@@ -87,6 +87,7 @@
       <div class="row">
         <div class="col-xl-8 mx-auto">
           <h2>Visualization</h2>
+          <div id="most_serious_problem_plot"></div>
           <div id="avg_severity_plot"></div>
           <div id="map_severity"></div>
           <div id="ghg_emissions_plot"></div>
@@ -96,11 +97,68 @@
       </div>
           <script>
 
+            most_serious_problem_plot = document.getElementById("most_serious_problem_plot");
             avg_severity_plot = document.getElementById("avg_severity_plot");
             map_severity = document.getElementById("map_severity");
             ghg_emissions_plot = document.getElementById("ghg_emissions_plot");
             share_renewable_plot = document.getElementById("share_renewable_plot");
             map_renewables_2017 = document.getElementById("map_renewables_2017");
+
+            d3.xml("processed_data/most_serious_problem/most_serious_problem.xml")
+              .then(function(data) {
+                var dataobj = xmlToJson.parse(data).root.survey;
+                var surveys = {};
+                for (i = 0; i < dataobj.length; i++) {
+                  var countries = {};
+                  for (j = 0; j < dataobj[i].country.length; j++) {
+                    countries[dataobj[i].country[j].id] = dataobj[i].country[j].share;
+                  }
+                  surveys[dataobj[i].id] = countries;
+                }
+                return surveys;
+              }).then(function(surveys) {
+                var data = Object.values(surveys);
+                var surveys = Object.keys(surveys);
+                var countries = Object.keys(data[0]);
+                var data_by_country = {};
+                for (i = 0; i < countries.length; i++) {
+                  data_by_country[countries[i]] = [];
+                  for (j = 0; j < surveys.length; j++) {
+                    data_by_country[countries[i]].push(data[j][countries[i]]);
+                  }
+                }
+
+                var layout = {
+                  xaxis: {
+                    type: 'category',
+                    title: 'Eurobarometer Survey'
+                  },
+                  yaxis: {
+                    tickformat: ',.0%',
+                    title: 'Share of Climate Change as most significan problem'
+                  },
+                  legend: {
+                    itemclick: 'toggleothers',
+                    itemdoubleclick: 'toggle'
+                  },
+                  hoverinfo: 'text+y',
+                  hovermode: 'closest'
+                };
+
+                var plot_data = [];
+                for (i = 0; i < countries.length; i++) {
+                  var country_id = Object.keys(data_by_country)[i];
+                  var trace = {
+                    x: surveys,
+                    y: data_by_country[country_id],
+                    name: country_id
+                  };
+                  plot_data.push(trace);
+                }
+
+                Plotly.plot( most_serious_problem_plot, plot_data, layout, {scrollZoom: true})
+
+            });
 
             d3.xml("processed_data/severity_of_problem/avg_severity.xml")
                     .then(function(data) {
@@ -132,6 +190,7 @@
                   title: 'Eurobarometer Survey'
                 },
                 yaxis: {
+                  range: [5,10],
                   title: 'Judgment of climate change severity'
                 },
                 legend: {
