@@ -8,38 +8,46 @@ import xlrd
 # "In your opinion, who within the EU is responsible for tackling climate change?"
 # "Have you personally taken any action to fight climate change over the past six months?"
 sheets_interesting = {'most_serious_problem': ['QA1a', 'QB1a', 'QC1a', 'QE1a1', 'QE1a', 'QD1a'],
-                      'how_serious': ['QA2.1', 'QA2', 'QB2', 'QC2', 'QE2a.1', 'QE2', 'QB2.1'],
+                      'severity_of_problem': ['QA2.1', 'QA2', 'QB2', 'QC2', 'QE2a.1', 'QE2', 'QB2.1'],
                       'who_is_responsible': ['QA3', 'QB3', 'QC3'],
                       'personally_taken_action': ['QA5', 'QB5', 'QC5']}
 
 # Directory for input/original data and output/processed data
 dir_original_eb = 'original_data/special_eb/'
-dir_processed_eb = 'processed_data/special_eb/'
+dir_processed_eb = 'processed_data/special_eb/data/'
 
 
 def extract_to_csv(special_eb_file, sheet, question_short):
-    question = []
+    """
+    Extract the cells from a selected sheet and write to CSV file
+    """
+
     answers = []
 
-    # Get the cell containing the question in English
-    if sheet.cell(2, 11).value != "":
-        question.append(sheet.cell(2, 11).value)
-    else:
-        question.append(sheet.cell(2, 10).value)
-
-    # Get the rows containing the answers (Answers always fill the sheet from row 8 until the last row)
+    # Get the rows containing the answers (they always fill the sheet from row 8 until the last row)
     for i in range(8, sheet.nrows):
-        answers.append(sheet.row_values(i))
+        # For the first row which contains the countries
+        if i == 8:
+            row_values = sheet.row_values(i)
+            row_values.insert(0, '')
+        else:
+            row_values = sheet.row_values(i)
+            row_values[0] = special_eb_file
+            row_values.insert(0, question_short)
+        answers.append(row_values)
 
     # Write to CSV file
-    csv_filename = dir_processed_eb + special_eb_file + '_' + question_short + '.csv'
+    csv_filename = dir_processed_eb + question_short + '/' + special_eb_file + '_' + question_short + '.csv'
     with open(csv_filename, 'wt') as f:
         csv_writer = csv.writer(f)
-        csv_writer.writerow(question)
         csv_writer.writerows(answers)
 
 
-def process_special_eb():
+def filter_interesting_sheets():
+    """"
+    Select the sheets with the questions we are interested in
+    """
+
     # Go through all files in the directory
     for special_eb_file in os.listdir(dir_original_eb):
 
@@ -56,4 +64,5 @@ def process_special_eb():
                     extract_to_csv(special_eb_file, sheet, question_short)
 
 
-process_special_eb()
+# Execute functions
+filter_interesting_sheets()
