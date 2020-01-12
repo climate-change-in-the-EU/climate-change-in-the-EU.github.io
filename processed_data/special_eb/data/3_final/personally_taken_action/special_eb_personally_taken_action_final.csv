@@ -1,1 +1,9 @@
-
+source,question,answer/countries,"UE28
+EU28",BE,BG,CZ,DK,D-W,DE,D-E,EE,IE,EL,ES,FR,HR,IT,CY,LV,LT,LU,HU,MT,NL,AT,PL,PT,RO,SI,SK,FI,SE,UK,"UE27
+EU27","UE28-UK
+EU28-UK"
+special_eb_459_volume_A.xls,personally_taken_action,Yes (percentage),0.49,0.47,0.21,0.38,0.6,0.65,0.65,0.64,0.34,0.5,0.5,0.62,0.58,0.38,0.34,0.54,0.31,0.48,0.74,0.48,0.75,0.59,0.6,0.3,0.6,0.2,0.66,0.44,0.65,0.79,0.4,,
+special_eb_322_volume_A.xls,personally_taken_action,"You have purchased a car that consumes less fuel, or is more environmentally friendly (percentage)",,0.26,0.14,0.11,0.27,0.38,0.36,0.27,0.2,0.14,0.06,0.05,0.23,,0.2,0.11,0.12,0.12,0.4,0.06,0.15,0.22,0.17,0.14,0.04,0.12,0.21,0.14,0.24,0.31,0.22,0.2,
+special_eb_409_volume_A.xls,personally_taken_action,Yes (percentage),0.5,0.49,0.27,0.38,0.56,0.65,0.65,0.65,0.25,0.5,0.52,0.61,0.5,0.41,0.43,0.54,0.3,0.35,0.72,0.49,0.6,0.54,0.62,0.32,0.53,0.23,0.71,0.45,0.57,0.8,0.46,,
+special_eb_435_volume_A.xls,personally_taken_action,Yes (percentage),0.49,0.51,0.19,0.36,0.53,0.66,0.66,0.67,0.28,0.52,0.4,0.66,0.57,0.38,0.34,0.48,0.23,0.38,0.71,0.52,0.58,0.47,0.54,0.3,0.56,0.25,0.72,0.43,0.66,0.76,0.45,,
+special_eb_490_volume_A.xls,personally_taken_action,Yes (percentage),0.6,0.63,0.32,0.45,0.75,0.73,0.71,0.65,0.47,0.62,0.54,0.79,0.64,0.53,0.52,0.62,0.43,0.54,0.81,0.65,0.88,0.64,0.66,0.4,0.74,0.29,0.79,0.66,0.82,0.84,0.55,,0.61

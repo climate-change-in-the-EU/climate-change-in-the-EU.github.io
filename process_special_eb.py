@@ -12,6 +12,8 @@ sheets_interesting = {'most_serious_problem': ['QA1a', 'QB1a', 'QC1a', 'QE1a1', 
                       'severity_of_problem': ['QA2.1', 'QA2', 'QB2', 'QC2', 'QE2a.1', 'QE2', 'QB2.1'],
                       'who_is_responsible': ['QA3', 'QB3', 'QC3'],
                       'personally_taken_action': ['QA5', 'QB5', 'QC5']}
+# TODO: QB5 from special_eb_322 is not usable because it is a differently worded question/answers,
+#  but this sheet name is correct for special_eb_490
 
 # Directory for input/original data and output/processed data
 dir_original_eb = 'original_data/special_eb/'
@@ -76,7 +78,8 @@ def filter_interesting_sheets():
 
 def filter_interesting_data():
     """
-    Select the data needed for visualizations
+    Process the files depending on the table structure of the question they are about and the part of the data
+    needed for the visualizations, i.e. take only specific rows from the CSV file
     """
 
     # Go through all sub-directories in the directory
@@ -87,8 +90,7 @@ def filter_interesting_data():
             csv_reader_filename = dir_processed_eb + '1_all_answers/' + question_short + '/' + all_data_csv
             csv_writer_filename = dir_processed_eb + '2_selected_answers/' + question_short + '/' + all_data_csv + '_selection.csv'
 
-            # Process the file depending on the table structure of the question it is about and the part of the data
-            # which we want to visualize from it, i.e. take only specific rows from the CSV file
+            # Wanted from this question: the percentage of respondents from each country who said "climate change"
             if question_short == 'most_serious_problem':
                 rows = []
                 with open(csv_reader_filename, 'r') as f:
@@ -101,6 +103,50 @@ def filter_interesting_data():
                             rows.append(row)
 
                 # Write to CSV file
+                write_to_csv(csv_writer_filename, rows)
+
+            # Wanted from this question: the average rating given by the respondents from each country
+            elif question_short == 'severity_of_problem':
+                rows = []
+                with open(csv_reader_filename, 'r') as f:
+                    csv_reader = csv.reader(f)
+                    last_row = []
+                    for i, row in enumerate(csv_reader):
+                        if i == 0:
+                            rows.append(row)
+                        else:
+                            last_row = row
+                            last_row[2] = 'Average'
+                    rows.append(last_row)
+
+                write_to_csv(csv_writer_filename, rows)
+
+            # Wanted from this question: the percentage of respondents from each country for the five main answers
+            elif question_short == 'who_is_responsible':
+                rows = []
+                with open(csv_reader_filename, 'r') as f:
+                    csv_reader = csv.reader(f)
+                    for i, row in enumerate(csv_reader):
+                        if i == 0:
+                            rows.append(row)
+                        if i in [3, 5, 9, 11, 13]:
+                            row[2] += ' (percentage)'
+                            rows.append(row)
+
+                write_to_csv(csv_writer_filename, rows)
+
+            # Wanted from this question: the percentage of respondents from each country who said "yes"
+            elif question_short == 'personally_taken_action':
+                rows = []
+                with open(csv_reader_filename, 'r') as f:
+                    csv_reader = csv.reader(f)
+                    for i, row in enumerate(csv_reader):
+                        if i == 0:
+                            rows.append(row)
+                        if i == 3:
+                            row[2] += ' (percentage)'
+                            rows.append(row)
+
                 write_to_csv(csv_writer_filename, rows)
 
 
