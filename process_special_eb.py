@@ -1,5 +1,6 @@
 import csv
 import os
+import pandas as pd
 import xlrd
 
 # The names of the sheets with the questions we are interested in:
@@ -19,7 +20,7 @@ dir_processed_eb = 'processed_data/special_eb/data/'
 
 def extract_all_to_csv(special_eb_file, sheet, question_short):
     """
-    Extract the cells from a selected sheet and write to CSV file
+    Extract the cells from a selected XLS sheet and write to CSV file
     """
 
     answers = []
@@ -30,7 +31,7 @@ def extract_all_to_csv(special_eb_file, sheet, question_short):
         if i == 8:
             row_values = sheet.row_values(i)
             row_values[0] = 'question'
-            row_values[1] = 'answer/countries:'
+            row_values[1] = 'answer/countries'
             row_values.insert(0, 'source')
         else:
             row_values = sheet.row_values(i)
@@ -39,7 +40,7 @@ def extract_all_to_csv(special_eb_file, sheet, question_short):
         answers.append(row_values)
 
     # Write to CSV file
-    csv_filename = dir_processed_eb + 'all_answers/' + question_short + '/' + special_eb_file + '_' + question_short + '.csv'
+    csv_filename = dir_processed_eb + '1_all_answers/' + question_short + '/' + special_eb_file + '_' + question_short + '.csv'
     with open(csv_filename, 'wt') as f:
         csv_writer = csv.writer(f)
         csv_writer.writerows(answers)
@@ -74,8 +75,8 @@ def filter_interesting_data():
     for question_short in sheets_interesting.keys():
 
         if question_short == 'most_serious_problem':
-            for special_eb_file in os.listdir(dir_processed_eb + 'all_answers/' + question_short):
-                csv_reader_filename = dir_processed_eb + 'all_answers/' + question_short + '/' + special_eb_file
+            for special_eb_file in os.listdir(dir_processed_eb + '1_all_answers/' + question_short):
+                csv_reader_filename = dir_processed_eb + '1_all_answers/' + question_short + '/' + special_eb_file
 
                 rows = []
 
@@ -88,12 +89,30 @@ def filter_interesting_data():
                             row[2] += ' (percentage)'
                             rows.append(row)
 
-                csv_writer_filename = dir_processed_eb + 'selected_answers/' + question_short + '/' + special_eb_file + '_selection.csv'
+                csv_writer_filename = dir_processed_eb + '2_selected_answers/' + question_short + '/' + special_eb_file + '_selection.csv'
                 with open(csv_writer_filename, 'wt') as f:
                     csv_writer = csv.writer(f)
                     csv_writer.writerows(rows)
 
 
+def combine_data():
+    for question_short in os.listdir(dir_processed_eb + '2_selected_answers/'):
+        dataframes = []
+        combined_data = pd.DataFrame()
+
+        for selected_data_csv in os.listdir(dir_processed_eb + '2_selected_answers/' + question_short):
+            csv_read_filename = dir_processed_eb + '2_selected_answers/' + question_short + '/' + selected_data_csv
+            dataframe = pd.read_csv(csv_read_filename)
+            dataframes.append(dataframe)
+
+        for df in dataframes:
+            combined_data = combined_data.append(df, ignore_index=True, sort=False)
+
+        csv_write_filename = dir_processed_eb + '3_final/' + question_short + '/' + 'special_eb_' + question_short + '_final.csv'
+        combined_data.to_csv(csv_write_filename, index=None, header=True)
+
+
 # Execute functions
 filter_interesting_sheets()
 filter_interesting_data()
+combine_data()
