@@ -43,6 +43,7 @@ By comparing the responses of EU citizens to this question, both between countri
 
 The following datasets were used for this purpose:
 
+#### D1
 1. [Special Eurobarometer 300 (September 2008)](https://data.europa.eu/euodp/en/data/dataset/S1461_69_2_300)
 2. [Special Eurobarometer 313 (July 2009)](https://data.europa.eu/euodp/en/data/dataset/S942_71_1_EBS313)
 3. [Special Eurobarometer 322 (November 2009)](https://data.europa.eu/euodp/en/data/dataset/S703_72_1_EBS322)
@@ -54,26 +55,42 @@ The following datasets were used for this purpose:
 
 Additionally, we gathered some statistical resources on various issues pertaining to structural energy questions which we deem to be somewhat connected to the issue of climate change.
 These are:
+
+#### D2
 1. [Greenhouse gas emissions per capita (2000-2017)](https://data.europa.eu/euodp/en/data/dataset/rc2ELCDeTGfxdpE27gyzow)
 2. [Share of renewable energy in gross final energy consumption (2004-2017)](https://data.europa.eu/euodp/en/data/dataset/kLwnawdAsL0qfRS0PzvDfw)
 
 ## 4. Quality analysis of the datasets
-Firstly, we deem the data from the datasets to be generally trustworthy due to its provenience from one the central EU portals for open data.
-The _Eurobarometer_ surveys are planned by the [GESIS Leibniz Institute for the Social Sciences](https://www.gesis.org), and carried out in the member states by national partners.
-Our attempts at thoroughly checking the methodology behind the data have been hindered signicantly by the fact that the GESIS catalogue database [had been hacked](https://www.gesis.org/en/institute/press-and-media/press-releases-details/article/zugangsdaten-des-datenbestandskatalogs-von-gesis-gehackt), and accordingly the primary survey data on which the datasets are based was not available to us.
-We thus had to accept other versions of the same surveys, which were less convenient to deal with (see section _Technical analysis_).
+Firstly, we deem the data from the datasets to be generally trustworthy due to their provenance from one of the central EU portals for open data.
+The _Eurobarometer_ surveys are planned by the [GESIS Leibniz Institute for the Social Sciences](https://www.gesis.org), and carried out in the member states by the institute's national partners.
+Our attempts at thoroughly checking the methodology behind the data have been hindered signicantly by the fact that the GESIS catalogue database [was hacked](https://www.gesis.org/en/institute/press-and-media/press-releases-details/article/zugangsdaten-des-datenbestandskatalogs-von-gesis-gehackt), and accordingly the primary survey data on which the datasets are based was not available to us.
+We thus had to accept other electronic versions of the same surveys, which were less convenient to deal with (see section _Technical analysis_).
+
+In addition, it has to be mentioned that the irregularity in publication dates of the Eurobarometers may threaten the comparability of the data.
+While generally, the Eurobarometer data does cover the timespan between 2008 and 2019, there are several years in between which do not have corresponding data.
+The data in D2, on the other hand, is strictly annual, which allows for significantly more reliable analyses.
 
 ## 5. Legal analysis (privacy, license, purpose, etc.)
+The data in D1 is not provided under a concise formal license, instead they are handled as documents of the European Commission and thus subject to the [Commission Decision of 12 December 2011 on the reuse of Commission documents.](https://eur-lex.europa.eu/eli/dec/2011/833/oj)
+
+The data in D2 is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), which allows free sharing, reusing and modifying of the resources, as long as their source is explicitly credited.
 
 ## 6. Ethics analysis
 
-## 7. Technical analysis (formats, metadata, URI, provenance)
+## 7. Technical analysis
+The _Eurobarometer_ datasets were only available as Microsoft Office Excel spreadsheets (_.xls_ filetype).
+Furthermore, all results of an individual survey were summarized in one _.xls_ file, in which they where organized across numerous sheets, each usually representing the distribution of the respondents' answers to an individual question.
+This data format posed significant hurdles to the automatic processing we had intended.
+
+The statistical data D2 is comprised of were available as _tab-separated value_ (TSV) files providing a text-only representation of the corresponding spreadsheet.
+These files were far easier to process, as they were not as structurally complex, and simpler to manipulate for the purpose of visualization.
 
 ## 8. Sustainability of the update the datasets over the time
 More data of the kind we have used is likely to be published somewhat regularly on the EU Open Data portal.
 Eurobarometers have been in active publication since the 1970s, and as the issue of climate change becomes more publicly present and significant, we would expect the interest in dedicated surveys on this topic to continue to increase as well.
 
 The mashup dataset will not be updated for the time being, as it already covers a comprehensive timespan and the statistical data of GHG emissions and the share of renewable energy need to 'catch up' to the year 2019, in which the most recent _Eurobarometer_ was published.
+We expect that an equivalent can be created for a corresponding timespan in future years, affording at most an equal amount of processing work, or indeed less work as soon as the primary data is once again available from the GESIS portal.
 
 ## 9. Visualization
 
