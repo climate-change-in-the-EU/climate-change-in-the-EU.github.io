@@ -18,21 +18,22 @@ dir_original_eb = 'original_data/special_eb/'
 dir_processed_eb = 'processed_data/special_eb/data/'
 
 
-def extract_all_to_csv(special_eb_file, sheet, question_short):
+def extract_to_csv(special_eb_file, sheet, question_short):
     """
-    Extract the cells from a selected XLS sheet and write to CSV file
+    Helper function to extract cells from a selected XLS sheet and write them to a CSV file
     """
 
     answers = []
 
     # Get the rows containing the answers (they always fill the sheet from row 8 until the last row)
     for i in range(8, sheet.nrows):
-        # For the first row which contains the countries
+        # For the first row which contains the countries, insert headings for more columns
         if i == 8:
             row_values = sheet.row_values(i)
             row_values[0] = 'question'
             row_values[1] = 'answer/countries'
             row_values.insert(0, 'source')
+        # Add the file it was taken from and short form of the question to each row
         else:
             row_values = sheet.row_values(i)
             row_values[0] = question_short
@@ -44,6 +45,12 @@ def extract_all_to_csv(special_eb_file, sheet, question_short):
     with open(csv_filename, 'wt') as f:
         csv_writer = csv.writer(f)
         csv_writer.writerows(answers)
+
+
+def write_to_csv(output_path, data):
+    with open(output_path, 'wt') as f:
+        csv_writer = csv.writer(f)
+        csv_writer.writerows(data)
 
 
 def filter_interesting_sheets():
@@ -64,7 +71,7 @@ def filter_interesting_sheets():
             # Filter out a sheet and extract its data to CSV if it contains one of the specified questions
             for question_short, sheet_interesting in sheets_interesting.items():
                 if sheet_name in sheet_interesting:
-                    extract_all_to_csv(special_eb_file, sheet, question_short)
+                    extract_to_csv(special_eb_file, sheet, question_short)
 
 
 def filter_interesting_data():
@@ -72,14 +79,18 @@ def filter_interesting_data():
     Select the data needed for visualizations
     """
 
-    for question_short in sheets_interesting.keys():
+    # Go through all sub-directories in the directory
+    for question_short in os.listdir(dir_processed_eb + '1_all_answers/'):
 
-        if question_short == 'most_serious_problem':
-            for special_eb_file in os.listdir(dir_processed_eb + '1_all_answers/' + question_short):
-                csv_reader_filename = dir_processed_eb + '1_all_answers/' + question_short + '/' + special_eb_file
+        # Go through all files in the directory
+        for all_data_csv in os.listdir(dir_processed_eb + '1_all_answers/' + question_short):
+            csv_reader_filename = dir_processed_eb + '1_all_answers/' + question_short + '/' + all_data_csv
+            csv_writer_filename = dir_processed_eb + '2_selected_answers/' + question_short + '/' + all_data_csv + '_selection.csv'
 
+            # Process the file depending on the table structure of the question it is about and the part of the data
+            # which we want to visualize from it, i.e. take only specific rows from the CSV file
+            if question_short == 'most_serious_problem':
                 rows = []
-
                 with open(csv_reader_filename, 'r') as f:
                     csv_reader = csv.reader(f)
                     for i, row in enumerate(csv_reader):
@@ -89,26 +100,34 @@ def filter_interesting_data():
                             row[2] += ' (percentage)'
                             rows.append(row)
 
-                csv_writer_filename = dir_processed_eb + '2_selected_answers/' + question_short + '/' + special_eb_file + '_selection.csv'
-                with open(csv_writer_filename, 'wt') as f:
-                    csv_writer = csv.writer(f)
-                    csv_writer.writerows(rows)
+                # Write to CSV file
+                write_to_csv(csv_writer_filename, rows)
 
 
 def combine_data():
+    """
+    Combine each question's data into a single file
+    """
+
+    # Go through all sub-directories in the directory
     for question_short in os.listdir(dir_processed_eb + '2_selected_answers/'):
         dataframes = []
         combined_data = pd.DataFrame()
+        csv_write_filename = dir_processed_eb + '3_final/' + question_short + '/' + 'special_eb_' + question_short + '_final.csv'
 
+        # Go through all files in the directory
         for selected_data_csv in os.listdir(dir_processed_eb + '2_selected_answers/' + question_short):
             csv_read_filename = dir_processed_eb + '2_selected_answers/' + question_short + '/' + selected_data_csv
+
+            # Read the CSV file into a Pandas DataFrame; store DataFrames in a list
             dataframe = pd.read_csv(csv_read_filename)
             dataframes.append(dataframe)
 
+        # Combine all DataFrames into one, Pandas takes into account the sometimes differing columns between them
         for df in dataframes:
             combined_data = combined_data.append(df, ignore_index=True, sort=False)
 
-        csv_write_filename = dir_processed_eb + '3_final/' + question_short + '/' + 'special_eb_' + question_short + '_final.csv'
+        # Write the DataFrame to a CSV file
         combined_data.to_csv(csv_write_filename, index=None, header=True)
 
 
