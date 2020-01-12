@@ -17,7 +17,7 @@ dir_original_eb = 'original_data/special_eb/'
 dir_processed_eb = 'processed_data/special_eb/data/'
 
 
-def extract_to_csv(special_eb_file, sheet, question_short):
+def extract_all_to_csv(special_eb_file, sheet, question_short):
     """
     Extract the cells from a selected sheet and write to CSV file
     """
@@ -29,15 +29,17 @@ def extract_to_csv(special_eb_file, sheet, question_short):
         # For the first row which contains the countries
         if i == 8:
             row_values = sheet.row_values(i)
-            row_values.insert(0, '')
+            row_values[0] = 'question'
+            row_values[1] = 'answer/countries:'
+            row_values.insert(0, 'source')
         else:
             row_values = sheet.row_values(i)
-            row_values[0] = special_eb_file
-            row_values.insert(0, question_short)
+            row_values[0] = question_short
+            row_values.insert(0, special_eb_file)
         answers.append(row_values)
 
     # Write to CSV file
-    csv_filename = dir_processed_eb + question_short + '/' + special_eb_file + '_' + question_short + '.csv'
+    csv_filename = dir_processed_eb + 'all_answers/' + question_short + '/' + special_eb_file + '_' + question_short + '.csv'
     with open(csv_filename, 'wt') as f:
         csv_writer = csv.writer(f)
         csv_writer.writerows(answers)
@@ -61,8 +63,37 @@ def filter_interesting_sheets():
             # Filter out a sheet and extract its data to CSV if it contains one of the specified questions
             for question_short, sheet_interesting in sheets_interesting.items():
                 if sheet_name in sheet_interesting:
-                    extract_to_csv(special_eb_file, sheet, question_short)
+                    extract_all_to_csv(special_eb_file, sheet, question_short)
+
+
+def filter_interesting_data():
+    """
+    Select the data needed for visualizations
+    """
+
+    for question_short in sheets_interesting.keys():
+
+        if question_short == 'most_serious_problem':
+            for special_eb_file in os.listdir(dir_processed_eb + 'all_answers/' + question_short):
+                csv_reader_filename = dir_processed_eb + 'all_answers/' + question_short + '/' + special_eb_file
+
+                rows = []
+
+                with open(csv_reader_filename, 'r') as f:
+                    csv_reader = csv.reader(f)
+                    for i, row in enumerate(csv_reader):
+                        if i == 0:
+                            rows.append(row)
+                        if i == 3:
+                            row[2] += ' (percentage)'
+                            rows.append(row)
+
+                csv_writer_filename = dir_processed_eb + 'selected_answers/' + question_short + '/' + special_eb_file + '_selection.csv'
+                with open(csv_writer_filename, 'wt') as f:
+                    csv_writer = csv.writer(f)
+                    csv_writer.writerows(rows)
 
 
 # Execute functions
 filter_interesting_sheets()
+filter_interesting_data()
