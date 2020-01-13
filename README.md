@@ -34,57 +34,96 @@ From an outside view, multiple tendencies are often supposed when considering th
 Some of the open data offered on [EU Open Data Portal](https://data.europa.eu/euodp/en/home) show numerous kinds of potential for insights into the reality of the European people's attitude towards climate change.
 Using parts of this data, we have attempted 
 
-## 3. Original dataset and mashup datasets
-Firstly, the project makes use of data gathered from eight Special Eurobarometer surveys that were all conducted with a dedicated focus on climate change.
-All of these surveys lead with the same fundamental question, in almost identical wording:
-
-> Which of the following do you consider to be the single most serious problem facing the world as a whole? (_Special Eurobarometer 409_)
-
-By comparing the responses of EU citizens to this question, both between countries and along the course of time, we can track the development of possiby diverging (or converging?) attitudes towards the issue.
-
-The following datasets were used for this purpose:
+## 3. Original datasets and mashup datasets
+### 3.1. Original datasets 
+Firstly, the project makes use of data gathered from eight Special Eurobarometer surveys that were all conducted with a dedicated focus on climate change between the years of 2008 and 2019. This data is stored [here](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/tree/master/data/original_data/special_eb).
+Data from the following datasets was used:
 
 #### D1
-1. [Special Eurobarometer 300 (September 2008)](https://data.europa.eu/euodp/en/data/dataset/S1461_69_2_300)
-2. [Special Eurobarometer 313 (July 2009)](https://data.europa.eu/euodp/en/data/dataset/S942_71_1_EBS313)
-3. [Special Eurobarometer 322 (November 2009)](https://data.europa.eu/euodp/en/data/dataset/S703_72_1_EBS322)
-4. [Special Eurobarometer 372 (October 2011)](https://data.europa.eu/euodp/en/data/dataset/S1007_75_4_EBS372)
-5. [Special Eurobarometer 409 (March 2014)](https://data.europa.eu/euodp/en/data/dataset/S1084_80_2_409)
-6. [Special Eurobarometer 435 (November 2015)](https://data.europa.eu/euodp/en/data/dataset/S2060_83_4_435_ENG)
-7. [Special Eurobarometer 459 (September 2017)](https://data.europa.eu/euodp/en/data/dataset/S2140_87_1_459_ENG)
-8. [Special Eurobarometer 490 (September 2019)](https://data.europa.eu/euodp/en/data/dataset/S2212_91_3_490_ENG)
+| Dataset ID in the EU Open Data Portal | Year | Reference Number | Title                                         | Fieldwork Conducted |
+|------------------------------------|------|-----------|-----------------------------------------------|---------------|
+| [S2212_91_3_490_ENG](https://data.europa.eu/euodp/en/data/dataset/S2212_91_3_490_ENG) | 2019 | 490       | Climate Change                                | April 2019    |
+| [S2140_87_1_459_ENG](https://data.europa.eu/euodp/en/data/dataset/S2140_87_1_459_ENG) | 2017 | 459       | Climate change                                | March 2017    |
+| [S2060_83_4_435_ENG](https://data.europa.eu/euodp/en/data/dataset/S2060_83_4_435_ENG) | 2015 | 435       | Climate change                                | May 2015      |
+| [S1084_80_2_409](https://data.europa.eu/euodp/en/data/dataset/S1084_80_2_409) | 2014 | 409       | Climate change                                | November 2013 |
+| [S1007_75_4_EBS372](https://data.europa.eu/euodp/en/data/dataset/S1007_75_4_EBS372) | 2011 | 372       | Climate change                                | June 2011     |
+| [S703_72_1_EBS322](https://data.europa.eu/euodp/en/data/dataset/S703_72_1_EBS322) | 2009 | 322       | Europeans'attitudes towards climate change    | August 2009   |
+| [S942_71_1_EBS313](https://data.europa.eu/euodp/en/data/dataset/S942_71_1_EBS313) | 2009 | 313       | Europeans’ attitudes towards climate change   | January 2009  |
+| [S1461_69_2_300](https://data.europa.eu/euodp/en/data/dataset/S1461_69_2_300) | 2008 | 300       | Europeans' attitudes towards climate change   | March 2008    |
 
-Additionally, we gathered some statistical resources on various issues pertaining to structural energy questions which we deem to be somewhat connected to the issue of climate change.
+All of these surveys contain mostly the same questions. We have picked out four questions which were present in many surveys and which we found suitable for further analysis:
+* "Which of the following do you consider to be the single most serious problem facing the world as a whole?" (**'most_serious_problem'**)
+* "And how serious a problem do you think climate change is at this moment?" (**'severity_of_problem'**)
+* "In your opinion, who within the EU is responsible for tackling climate change?" (**'who_is_responsible'**)
+* "Have you personally taken any action to fight climate change over the past six months?" (**'personally_taken_action'**)
+For easier handling during the data processing, we gave each of them a shorter name, denoted above in parentheses.
+
+By comparing the responses of EU citizens to these questions, both between countries and along the course of time, we can track the development of possiby diverging (or converging?) attitudes towards the issue of climate change.
+
+
+Additionally, we chose some statistical resources pertaining to greenhouse gas emissions and the use of renewable energy, which we deem to be connected to the issue of climate change. This data is stored [here](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/tree/master/data/original_data/statistical_data).
 These are:
 
 #### D2
 1. [Greenhouse gas emissions per capita (2000-2017)](https://data.europa.eu/euodp/en/data/dataset/rc2ELCDeTGfxdpE27gyzow)
 2. [Share of renewable energy in gross final energy consumption (2004-2017)](https://data.europa.eu/euodp/en/data/dataset/kLwnawdAsL0qfRS0PzvDfw)
 
+### 3.2. Mashup dataset
+The mashup dataset is stored [here](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/tree/master/data/processed_data/mashup).
+
+
 ## 4. Quality analysis of the datasets
-Firstly, we deem the data from the datasets to be generally trustworthy due to their provenance from one of the central EU portals for open data.
+Firstly, we deem the data from the datasets to be generally trustworthy due to their provenance from one of the central EU portals for open data, and due to being conducted on behalf of the European Commission and published by the Directorate-General for Communication of the European Commission.
+
 The _Eurobarometer_ surveys are planned by the [GESIS Leibniz Institute for the Social Sciences](https://www.gesis.org), and carried out in the member states by the institute's national partners.
 Our attempts at thoroughly checking the methodology behind the data have been hindered signicantly by the fact that the GESIS catalogue database [was hacked](https://www.gesis.org/en/institute/press-and-media/press-releases-details/article/zugangsdaten-des-datenbestandskatalogs-von-gesis-gehackt), and accordingly the primary survey data on which the datasets are based was not available to us.
-We thus had to accept other electronic versions of the same surveys, which were less convenient to deal with (see section _Technical analysis_).
+We thus had to accept other electronic versions of the same surveys, which were less convenient to deal with (see section [7. Technical analysis (formats, metadata, URI, provenance)](#7.-Technical-analysis)).
 
-In addition, it has to be mentioned that the irregularity in publication dates of the Eurobarometers may threaten the comparability of the data.
-While generally, the Eurobarometer data does cover the timespan between 2008 and 2019, there are several years in between which do not have corresponding data.
+In addition, it has to be mentioned that the irregularity in publication dates of the Special Eurobarometers may threaten the comparability of the data, as compared to the regularly conducted Standard Eurobarometers.
+While generally, the Special Eurobarometer data does cover the timespan between 2008 and 2019, there are several years in between which do not have corresponding data.
+
 The data in D2, on the other hand, is strictly annual, which allows for significantly more reliable analyses.
 
 ## 5. Legal analysis (privacy, license, purpose, etc.)
-The data in D1 is not provided under a concise formal license, instead they are handled as documents of the European Commission and thus subject to the [Commission Decision of 12 December 2011 on the reuse of Commission documents.](https://eur-lex.europa.eu/eli/dec/2011/833/oj)
+The data in D1 is not provided under a concise formal license, instead they are handled as documents of the European Commission and thus subject to the [Commission Decision of 12 December 2011 on the reuse of Commission documents.](https://eur-lex.europa.eu/eli/dec/2011/833/oj). Compared to Creative Commons licenses, this license is quite hard to understand for lay people as is only presented in the form of the document published in the Official Journal of the European Union, which requires a good reading comprehension for legal documents.
 
 The data in D2 is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), which allows free sharing, reusing and modifying of the resources, as long as their source is explicitly credited.
 
 ## 6. Ethics analysis
+As explained in section [4. Quality analysis of the datasets](#4.-Quality-analysis-of-the-datasets), the datasets can be deemed generally trustworthy.
+
+However, a valid point of criticism is that the commissioner of the Eurobarometers (European Commission) is also the topic of the survey, since respondents are asked about their opinions about the EU. In their article Martin Höpner and Bojan Jurczyk, researchers of the Max Planck Institute for the Study of Societies, criticize this and list multiple instances of manipulative tendencies, suggestive questions, or unequally distributed positive/negative answer possibilities. 
+(Höpner, Martin; Jurczyk, Bojan. 2012. Kritik des Eurobarometers. Über die Verwischung der Grenze zwischen seriöser Demoskopie und interessengeleiteter Propaganda. In: Leviathan 40, 3, 326–349. [PDF](https://www.leviathan.nomos.de/fileadmin/leviathan/doc/Aufsatz_Leviathan_12_03.pdf))
+
+In the case of the four questions selected by us (see [D1](#D1)), we did not notice definite instances of this. Similar questions about survey design and the validity or significance of questions and their answers would likely have to be raised for most data collected in surveys. For the scope of our project we believe that the data is ethically justifiable.
+
+We do not have ethical concerns with regard to the protection of respondents' personal information, since answers are never presented for the scope of a single person but only the combined data for all respondents from a country, which is usually around 1000 people.
 
 ## 7. Technical analysis
-The _Eurobarometer_ datasets were only available as Microsoft Office Excel spreadsheets (_.xls_ filetype).
-Furthermore, all results of an individual survey were summarized in one _.xls_ file, in which they where organized across numerous sheets, each usually representing the distribution of the respondents' answers to an individual question.
+The _Eurobarometer_ datasets (D1) is only available as Microsoft Office Excel spreadsheets (_XLS_ filetype).
+Furthermore, all results of an individual survey were summarized in one _XLS_ file, in which they where organized across numerous sheets, each usually representing the distribution of the respondents' answers to an individual question.
 This data format posed significant hurdles to the automatic processing we had intended.
 
-The statistical data D2 is comprised of were available as _tab-separated value_ (TSV) files providing a text-only representation of the corresponding spreadsheet.
-These files were far easier to process, as they were not as structurally complex, and simpler to manipulate for the purpose of visualization.
+The statistical data (D2) is available as _tab-separated value_ (TSV) files providing a text-only representation of the corresponding spreadsheet.
+These files were far easier to process and did not need to be modified much in order to be used for the purpose of visualization, as they were not as structurally complex.
+
+### 7.1. Processing of the datasets
+The original datasets from the Special Eurobarometer surveys on climate change (D1) required a relatively complex processing. This is handled by the Python file [process_special_eb.py](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/blob/master/python_scripts/process_special_eb.py). There are three steps to the processing:
+1. Converting the sheets containing interesting questions from _XLS_ to _CSV_
+2. Extracting selected data from the _CSV_ files of step 1
+3. Combining the data of step 2 into a single _CSV_ file
+
+The steps are more precisely documented by comments inside the code. 
+The files created in each step can be found in the folder [data/processed_data/special_eb](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/tree/master/data/processed_data/special_eb).
+
+While the processing is generally automated with the script, it was neccessary to define some variables based on our visual inspection of the orginal _XLS_ and preliminary _CSV_ files: 
+For example for step 1, it was neccessary to list the names of the sheets for each of the questions we were interested in (the codes of the questions), as they sometimes changed between surveys. Furthermore, the section of the spreadsheets containing the actual data had to be defined. We also hard coded the rows of data that we wanted to extract from each of the questions' data during step 2. 
+
+The Python libraries 'xlrd', 'csv', and 'pandas' have been chosen for reading in data from _XLS_ files, writing to/reading from _CSV_ files, and converging multiple tables, respectively.
+
+### 7.2. Creating the mashup dataset
+The creation of a mashup containing all data is done by the Python file [mashup.py](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/blob/master/python_scripts/mashup.py). Using features of the powerful 'pandas' data analysis library, the data is concatenated and transformed to a single _XML_ file. 
+The _XML_ (_Extensible Markup Language_) format was chosen because it allows the creation of a structured and well human-readable file which at the same time contains data which itself is somewhat differently structured in each case of the original datasets.
 
 ## 8. Sustainability of the update the datasets over the time
 More data of the kind we have used is likely to be published somewhat regularly on the EU Open Data portal.
