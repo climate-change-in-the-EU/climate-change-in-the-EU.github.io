@@ -20,6 +20,14 @@
   <script src="js/plotly-latest.min.js"></script>
   <script src="js/d3.v5.js"></script>
   <script src="js/xmlToJson.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+          integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+          crossorigin=""></script>
+  <script src="js/leaflet.ajax.min.js"></script>
+  <script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>
 
 </head>
 
@@ -85,8 +93,303 @@
   <section id="visualization" class="bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-xl-8 mx-auto">
+        <div class="col-xl-16">
           <h2>Visualization</h2>
+
+        <div class="row">
+          <div class="col">
+            <div class="card"><div id="geomap" style="height:400px; width: 500px"></div></div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-title">Eurobarometer question: What is the most important problem facing the world today?</div>
+              <div class="card-body">
+                <div id="eb_plot_1"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">Eurobarometer question: And how serious a problem do you think climate change is at the moment? (scale 1-10)</div>
+              <div class="card-body">
+                <div id="eb_plot_2"></div>
+              </div>
+            </div>
+            <div class="card"><div id="stats_plot_1"></div></div>
+            <div class="card"><div id="stats_plot_2"></div></div>
+          </div>
+            <script>
+              eb_plot_1_div = document.getElementById('eb_plot_1');
+              eb_plot_2_div = document.getElementById('eb_plot_2');
+              var eb_plot_1 = function(inputid) {
+                d3.xml("processed_data/mashup/mashup.xml")
+                        .then(function (data) {
+                          var country_id = inputid;
+                          var dataobj = xmlToJson.parse(data).root.country;
+                          var country_data = dataobj.filter(obj => {
+                            return obj.id === country_id
+                          })[0];
+                          return country_data;
+                        }).then(function (data) {
+                  var surveys = {};
+                  for (i = 0; i < data.eurobarometer.survey.length; i++) {
+                    var survey = data.eurobarometer.survey[i];
+                    if (Array.isArray(survey.question)) {
+                      for (q in survey.question) {
+                        var question = survey.question[q].id;
+                        if (question === 'severity_of_problem') {
+                          surveys[survey.id] = survey.question[q].response;
+                        }
+                      }
+                    } else {
+                      var question = survey.question.id;
+                      if (question === 'severity_of_problem') {
+                        surveys[survey.id] = survey.question.response;
+                      }
+                    }
+                  }
+                  var layout = {
+                    xaxis: {
+                      type: 'category',
+                      title: 'Eurobarometer Survey'
+                    },
+                    yaxis: {},
+                    legend: {
+                      itemclick: 'toggleothers',
+                      itemdoubleclick: 'toggle'
+                    },
+                    hoverinfo: 'text+y',
+                    hovermode: 'closest'
+                  };
+
+                  var trace = [{
+                    x: Object.keys(surveys),
+                    y: Object.values(surveys)
+                  }]
+                  Plotly.plot(eb_plot_1_div, trace, layout, {scrollZoom: true})
+                });
+              }
+              var eb_plot_2 = function(inputid) {
+                d3.xml("processed_data/mashup/mashup.xml")
+                        .then(function(data) {
+                          var country_id = inputid;
+                          var dataobj =  xmlToJson.parse(data).root.country;
+                          var country_data = dataobj.filter(obj => {
+                            return obj.id === country_id
+                          })[0];
+                          return country_data;
+                        }).then(function(data) {
+                  var surveys = {};
+                  for (i = 0; i < data.eurobarometer.survey.length; i++) {
+                    var survey = data.eurobarometer.survey[i];
+                    if (Array.isArray(survey.question)) {
+                      surveys[survey.id] = survey.question[0].response;
+                    } else {
+                      surveys[survey.id] = survey.question.response;
+                    }
+                  }
+                  var layout = {
+                    title: '"Climate change is the most significant problem facing the world today."',
+                    xaxis: {
+                      type: 'category',
+                      title: 'Eurobarometer Survey'
+                    },
+                    yaxis: {
+                      tickformat: ',.0%'
+                    },
+                    legend: {
+                      itemclick: 'toggleothers',
+                      itemdoubleclick: 'toggle'
+                    },
+                    hoverinfo: 'text+y',
+                    hovermode: 'closest'
+                  };
+
+                  var trace = [{
+                    x: Object.keys(surveys),
+                    y: Object.values(surveys)
+                  }]
+                  Plotly.plot( eb_plot_2_div, trace, layout, {scrollZoom: true})
+                });
+              }
+              var id;
+              var main_map = L.map('geomap').setView([54,10], 3);
+              function onMapClick(e) {
+                clicked_coords = e.latlng;
+                  var poly = leafletPip.pointInLayer(clicked_coords, main_map);
+                  id = poly[0].feature.properties.iso_a2;
+                  eb_plot_1(id);
+                  eb_plot_2(id);
+              }
+              L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                accessToken: 'pk.eyJ1IjoibGhlbm5lIiwiYSI6ImNrNWJsaXhidDFoeDczcGxqaGxrbnJ2Y20ifQ.U1dvdEcuMIcf41VGJNC6zQ'
+              }).addTo(main_map);
+              var geojsonLayer = L.geoJson.ajax("europe.geojson");
+              geojsonLayer.addTo(main_map);
+              main_map.on('click', onMapClick);
+            </script>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="original-datasets">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Original datasets</h2>
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Eurobarometers on climate change</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1461_69_2_300">Eurobarometer 300</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S942_71_1_EBS313">Eurobarometer 313</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S703_72_1_EBS322">Eurobarometer 322</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1007_75_4_EBS372">Eurobarometer 372</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1084_80_2_409">Eurobarometer 409</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2060_83_4_435_ENG">Eurobarometer 435</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2140_87_1_459_ENG">Eurobarometer 459</a><br/>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2212_91_3_490_ENG">Eurobarometer 490</a><br/>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Data on greenhouse gas emissions</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <p><a href="https://data.europa.eu/euodp/en/data/dataset/rc2ELCDeTGfxdpE27gyzow">Eurostat data on Greenhouse gas emissions per capita</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Share of renewable energy</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <p><a href="https://data.europa.eu/euodp/en/data/dataset/kLwnawdAsL0qfRS0PzvDfw">Eurostat data on the share of renewable energy in gross final energy consumption</a></p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="output-datasets">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Output datasets</h2>
+          <p class="lead"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="documentation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Documentation</h2>
+          <p class="lead">The project was documented extensively along the development process. The documentation can be found within the project's <a href="https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io">Github repository</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="license">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>License</h2>
+          <p class="lead"><i>Scrolling Nav</i> Bootstrap template is licensed under The MIT License (MIT), &copy; 2013-2019 Blackrock Digital LLC.</p>
+          <p class="lead">Datasets licensed under the Creative Commons 4.0 License:</p>
+          <p class="lead">Datasets licensed according to the European Commission's legal guidelines:</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">&copy; Elisabeth Reuhl, Lukas Henne 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
+
+/* OLD PLOTS */
+
+<div class="card-body">
+
+  <!-- <script>
+      d3.xml("processed_data/mashup/mashup.xml")
+              .then(function(data) {
+                var country_id = input_country;
+                var dataobj =  xmlToJson.parse(data).root.country;
+                var country_data = dataobj.filter(obj => {
+                  return obj.id === country_id
+                })[0];
+                return country_data;
+              }).then(function(data) {
+        var surveys = {};
+        for (i = 0; i < data.eurobarometer.survey.length; i++) {
+          var survey = data.eurobarometer.survey[i];
+          if (Array.isArray(survey.question)) {
+            surveys[survey.id] = survey.question[0].response;
+          } else {
+            surveys[survey.id] = survey.question.response;
+          }
+        }
+        var layout = {
+          title: '"Climate change is the most significant problem facing the world today."',
+          xaxis: {
+            type: 'category',
+            title: 'Eurobarometer Survey'
+          },
+          yaxis: {
+            tickformat: ',.0%'
+          },
+          legend: {
+            itemclick: 'toggleothers',
+            itemdoubleclick: 'toggle'
+          },
+          hoverinfo: 'text+y',
+          hovermode: 'closest'
+        };
+
+        var trace = [{
+          x: Object.keys(surveys),
+          y: Object.values(surveys)
+        }]
+        Plotly.plot( eb_plot_1, trace, layout, {scrollZoom: true})
+      });
+    }
+  </script> -->
+          <!--
           <div id="comparison_problem_renewables_eu"></div>
           <div id="most_serious_problem_plot"></div>
           <div id="avg_severity_plot"></div>
@@ -94,8 +397,6 @@
           <div id="ghg_emissions_plot"></div>
           <div id="share_renewable_plot"></div>
           <div id="map_renewables_2017"></div>
-        </div>
-      </div>
           <script>
 
             comparison_problem_renewables_eu = document.getElementById("comparison_problem_renewables_eu")
@@ -237,6 +538,10 @@
 
                 Plotly.plot( most_serious_problem_plot, plot_data, layout, {scrollZoom: true})
 
+                alert("You clicked " + e.latlng());
+              }
+
+              L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}
             });
 
             d3.xml("processed_data/severity_of_problem/avg_severity.xml")
@@ -472,112 +777,5 @@
                     });
 
           </script>
-        </div>
-      </div>
-    </div>
-  </section>
+        </div> -->
 
-  <section id="original-datasets">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Original datasets</h2>
-          <div class="card-deck">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title">Eurobarometers on climate change</h5>
-              </div>
-              <div class="card-body">
-                <div class="card-text">
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1461_69_2_300">Eurobarometer 300</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S942_71_1_EBS313">Eurobarometer 313</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S703_72_1_EBS322">Eurobarometer 322</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1007_75_4_EBS372">Eurobarometer 372</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1084_80_2_409">Eurobarometer 409</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2060_83_4_435_ENG">Eurobarometer 435</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2140_87_1_459_ENG">Eurobarometer 459</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2212_91_3_490_ENG">Eurobarometer 490</a><br/>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title">Data on greenhouse gas emissions</h5>
-              </div>
-              <div class="card-body">
-                <div class="card-text">
-                  <p><a href="https://data.europa.eu/euodp/en/data/dataset/rc2ELCDeTGfxdpE27gyzow">Eurostat data on Greenhouse gas emissions per capita</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title">Share of renewable energy</h5>
-              </div>
-              <div class="card-body">
-                <div class="card-text">
-                  <p><a href="https://data.europa.eu/euodp/en/data/dataset/kLwnawdAsL0qfRS0PzvDfw">Eurostat data on the share of renewable energy in gross final energy consumption</a></p>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="output-datasets">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Output datasets</h2>
-          <p class="lead"></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="documentation">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Documentation</h2>
-          <p class="lead">The project was documented extensively along the development process. The documentation can be found within the project's <a href="https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io">Github repository</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="license">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>License</h2>
-          <p class="lead"><i>Scrolling Nav</i> Bootstrap template is licensed under The MIT License (MIT), &copy; 2013-2019 Blackrock Digital LLC.</p>
-          <p class="lead">Datasets licensed under the Creative Commons 4.0 License:</p>
-          <p class="lead">Datasets licensed according to the European Commission's legal guidelines:</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">&copy; Elisabeth Reuhl, Lukas Henne 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom JavaScript for this theme -->
-  <script src="js/scrolling-nav.js"></script>
-
-</body>
-
-</html>
