@@ -28,7 +28,7 @@
           crossorigin=""></script>
   <script src="js/leaflet.ajax.min.js"></script>
   <script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -102,23 +102,55 @@
           </div>
           <div class="col">
             <div class="card">
-              <div class="card-title">Eurobarometer question: What is the most important problem facing the world today?</div>
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" id="vis-list" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#eb_plot_1" role="tab" aria-controls="eb_plot_1" aria-selected="true">Most important problem facing the world today</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#eb_plot_2" role="tab" aria-controls="eb_plot_2" aria-selected="false">Severity of the climate change problem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#stats_plot_1" role="tab" aria_controls="stats_plot_1" aria-selected="false">Greenhouse gas emissions per capita</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#stats_plot_2" role="tab" aria_controls="stats_plot_2" aria-selected="false">Share of energy consumption from renewable sources</a>
+                  </li>
+                </ul>
+              </div>
               <div class="card-body">
                 <div id="eb_plot_1"></div>
               </div>
-            </div>
-            <div class="card">
-              <div class="card-title">Eurobarometer question: And how serious a problem do you think climate change is at the moment? (scale 1-10)</div>
               <div class="card-body">
-                <div id="eb_plot_2"></div>
+                <div class="tab-content mt-3">
+                  <div class="tab-pane active" id="eb_plot_1" role="tabpanel" style="height:400px; width: 500px">
+                    <div id="plotspace1"></div>
+                  </div>
+                  <div class="tab-pane" id="eb_plot_2" role="tabpanel" aria-labelledby="eb_plot_2-tab" style="height:400px; width: 500px">
+                    <div id="plotspace2"></div>
+                  </div>
+                  <div class="tab-pane" id="stats_plot_1" role="tabpanel" aria-labelledby="stats_plot_1-tab" style="height:400px; width: 500px">
+                    <div id="plotspace3"></div>
+                  </div>
+                  <div class="tab-pane" id="stats_plot_2" role="tabpanel" aria-labelledby="stats_plot_2-tab" style="height:400px; width: 500px">
+                    <div id="plotspace4"></div>
+                  </div>
               </div>
             </div>
-            <div class="card"><div id="stats_plot_1"></div></div>
-            <div class="card"><div id="stats_plot_2"></div></div>
           </div>
+        </div>
             <script>
-              eb_plot_1_div = document.getElementById('eb_plot_1');
-              eb_plot_2_div = document.getElementById('eb_plot_2');
+              $('#vis-list a').on('click', function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+              });
+            </script>
+            <script>
+              eb_plot_1_div = document.getElementById('plotspace1');
+              eb_plot_2_div = document.getElementById('plotspace2');
+              stats_plot_1_div = document.getElementById('plotspace3');
+              stats_plot_2_div = document.getElementById('plotspace4');
+
               var eb_plot_1 = function(inputid) {
                 d3.xml("processed_data/mashup/mashup.xml")
                         .then(function (data) {
@@ -164,9 +196,10 @@
                     x: Object.keys(surveys),
                     y: Object.values(surveys)
                   }]
-                  Plotly.plot(eb_plot_1_div, trace, layout, {scrollZoom: true})
+                  Plotly.plot(eb_plot_1_div, trace, layout)
                 });
-              }
+              };
+
               var eb_plot_2 = function(inputid) {
                 d3.xml("processed_data/mashup/mashup.xml")
                         .then(function(data) {
@@ -207,9 +240,10 @@
                     x: Object.keys(surveys),
                     y: Object.values(surveys)
                   }]
-                  Plotly.plot( eb_plot_2_div, trace, layout, {scrollZoom: true})
+                  Plotly.plot( eb_plot_2_div, trace, layout)
                 });
-              }
+              };
+
               var id;
               var main_map = L.map('geomap').setView([54,10], 3);
               function onMapClick(e) {

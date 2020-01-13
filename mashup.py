@@ -6,9 +6,10 @@ most_serious_problem = pd.read_csv("processed_data/special_eb/data/3_final/most_
 personally_taken_action = pd.read_csv("processed_data/special_eb/data/3_final/personally_taken_action/special_eb_personally_taken_action_final.csv")
 severity_of_problem = pd.read_csv("processed_data/special_eb/data/3_final/severity_of_problem/special_eb_severity_of_problem_final.csv")
 who_is_responsible = pd.read_csv("processed_data/special_eb/data/3_final/who_is_responsible/special_eb_who_is_responsible_final.csv")
-share_renewable = pd.read_csv("processed_data/share_renewable/share_renewable.tsv", sep="\t")
+share_renewable = pd.read_csv("original_data/share_renewable/share_renewable.tsv", sep="\t|,")
+share_renewable.drop(share_renewable.columns[[0,1]], axis=1, inplace=True)
 share_renewable['source'] = 'share_renewable'
-ghg_emissions = pd.read_csv("processed_data/ghg_emissions/ghg_emissions.tsv", sep="\t")
+ghg_emissions = pd.read_csv("original_data/ghg_emissions/ghg_emissions.tsv", sep="\t")
 ghg_emissions['source'] = 'ghg_emissions'
 
 data = [share_renewable, ghg_emissions]
@@ -44,7 +45,6 @@ for country in data_annuals['geo\\time']:
     cur_country_node = root.find('country[@id="%s"]' % country)
     if not cur_country_node == None:
         country_data = data_annuals.loc[data_annuals['geo\\time'] == country]
-        print(country_data)
         colnames = list(country_data)
         for index, row in country_data.iterrows():
             if row.source == 'share_renewable':
@@ -63,8 +63,8 @@ for country in data_annuals['geo\\time']:
                         i += 1
 
 tree = ET.ElementTree(root)
-tree.write('mashup.xml')
-x = etree.parse('mashup.xml')
+tree.write('processed_data/mashup/mashup.xml')
+x = etree.parse('processed_data/mashup/mashup.xml')
 x = etree.tostring(x, pretty_print=True, encoding='unicode')
 out = open('processed_data/mashup/mashup.xml', 'w+')
 out.write(x)

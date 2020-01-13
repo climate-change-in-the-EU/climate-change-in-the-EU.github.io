@@ -6,7 +6,7 @@
 [4. Quality analysis of the datasets](#4.-Quality-analysis-of-the-datasets)  
 [5. Legal analysis (privacy, license, purpose, etc.)](#5.-Legal-analysis-(privacy,-license,-purpose,-etc.))  
 [6. Ethics analysis](#6.-Ethics-analysis)  
-[7. Technical analysis (formats, metadata, URI, provenance)](#7.-Technical-analysis-(formats,-metadata,-URI,-provenance))  
+[7. Technical analysis (formats, metadata, URI, provenance)](#7.-Technical-analysis)  
 [8. Sustainability of the update the datasets over the time](#8.-Sustainability-of-the-update-the-datasets-over-the-time)  
 [9. Visualization](#9.-Visualization)  
 [10. RDF assertion of the metadata](#10.-RDF-assertion-of-the-metadata)  
@@ -21,8 +21,8 @@ The leading questions these reports address are as follows:
 * Generally, how serious do Europeans deem the problem of climate change to be?
 * Does the concern for climate change reflect in national consumption statistics, e.g. greenhouse gas emissions or the share of energy generated from renewable sources?
 
-The project website aims to both present the user with a possibility to explore datasets sourced from the [EU Open Data Portal](https://data.europa.eu/euodp/en/home), as well as offering some further results of our own consultation of the data.
-For this reason, there are separate sections for free access to the data in visualized form, and to reports on some findings from working with these data.
+The project website aims to present the user with a possibility to explore datasets sourced from the [EU Open Data Portal](https://data.europa.eu/euodp/en/home).
+Beside basic access to the mashup dataset in file form, it can also be explored visually in correspondence to the countries of the EU as they are located on an interactive map.
 
 ## 2. Scenario
 From an outside view, multiple tendencies are often supposed when considering the EU's response to the problem of climate change:
@@ -31,7 +31,8 @@ From an outside view, multiple tendencies are often supposed when considering th
 * There seem to be fundamental differences in what structural actions the national governments of the EU consider appropriate in this situation, with some governments making great efforts to invest in progressive technologies ensuring energy sustainability and less pollutive energy generation, while others do not push for changes away from fossil fuels.
 * The government's view and structural action doesn't always represent its own people's position on the issue, meaning that e.g. the population of a country may be very aware of the severity of the problem while the government does not take decisive action.
 
-Some of the open data offered on [EU Open Data Portal](https://data.europa.eu/euodp/en/home) shows numerous kinds of potential for insights into the reality of the European people's attitude towards climate change.
+Some of the open data offered on [EU Open Data Portal](https://data.europa.eu/euodp/en/home) show numerous kinds of potential for insights into the reality of the European people's attitude towards climate change.
+Using parts of this data, we have attempted 
 
 ## 3. Original dataset and mashup datasets
 Firstly, the project makes use of data gathered from eight Special Eurobarometer surveys that were all conducted with a dedicated focus on climate change.
