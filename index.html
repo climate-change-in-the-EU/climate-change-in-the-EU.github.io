@@ -20,6 +20,13 @@
   <script src="js/plotly-latest.min.js"></script>
   <script src="js/d3.v5.js"></script>
   <script src="js/xmlToJson.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+          integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+          crossorigin=""></script>
+  <script src="js/leaflet.ajax.min.js"></script>
 
 </head>
 
@@ -87,6 +94,7 @@
       <div class="row">
         <div class="col-xl-8 mx-auto">
           <h2>Visualization</h2>
+          <!--
           <div id="comparison_problem_renewables_eu"></div>
           <div id="most_serious_problem_plot"></div>
           <div id="avg_severity_plot"></div>
@@ -94,8 +102,6 @@
           <div id="ghg_emissions_plot"></div>
           <div id="share_renewable_plot"></div>
           <div id="map_renewables_2017"></div>
-        </div>
-      </div>
           <script>
 
             comparison_problem_renewables_eu = document.getElementById("comparison_problem_renewables_eu")
@@ -472,6 +478,32 @@
                     });
 
           </script>
+        </div> -->
+
+        <div class="row">
+          <div class="col">
+            <div id="geomap" style="height:600px; width: 600px"></div>
+            <script>
+              var main_map = L.map('geomap').setView([54,10], 3);
+              function onMapClick(e) {
+                alert("You clicked " + e.layer);
+              }
+
+              L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                accessToken: 'pk.eyJ1IjoibGhlbm5lIiwiYSI6ImNrNWJsaXhidDFoeDczcGxqaGxrbnJ2Y20ifQ.U1dvdEcuMIcf41VGJNC6zQ'
+              }).addTo(main_map);
+              var geojsonLayer = new L.GeoJSON.AJAX("europe.geojson");
+              geojsonLayer.addTo(main_map);
+              main_map.on('click', onMapClick);
+            </script>
+          </div>
+          <div class="col">
+
+          </div>
+        </div>
         </div>
       </div>
     </div>
