@@ -6,9 +6,9 @@ most_serious_problem = pd.read_csv("processed_data/special_eb/data/3_final/most_
 personally_taken_action = pd.read_csv("processed_data/special_eb/data/3_final/personally_taken_action/special_eb_personally_taken_action_final.csv")
 severity_of_problem = pd.read_csv("processed_data/special_eb/data/3_final/severity_of_problem/special_eb_severity_of_problem_final.csv")
 who_is_responsible = pd.read_csv("processed_data/special_eb/data/3_final/who_is_responsible/special_eb_who_is_responsible_final.csv")
-share_renewable = pd.read_csv("processed_data/share_renewable/share_renewable.tsv", sep="\t")
+share_renewable = pd.read_csv("processed_data/statistical_data/share_renewable/share_renewable.tsv", sep="\t")
 share_renewable['source'] = 'share_renewable'
-ghg_emissions = pd.read_csv("processed_data/ghg_emissions/ghg_emissions.tsv", sep="\t")
+ghg_emissions = pd.read_csv("processed_data/statistical_data/ghg_emissions/ghg_emissions.tsv", sep="\t")
 ghg_emissions['source'] = 'ghg_emissions'
 
 data = [share_renewable, ghg_emissions]
