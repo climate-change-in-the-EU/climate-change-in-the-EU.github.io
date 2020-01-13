@@ -16,10 +16,10 @@ sheets_interesting = {'most_serious_problem': ['QA1a', 'QB1a', 'QC1a', 'QE1a1', 
 #  but this sheet name is correct for special_eb_490
 
 # Directory for original data and processed data
-dir_original_eb = 'original_data/special_eb/'
-dir_processed_eb_step1 = 'processed_data/special_eb/data/1_all_answers/'
-dir_processed_eb_step2 = 'processed_data/special_eb/data/2_selected_answers/'
-dir_processed_eb_step3 = 'processed_data/special_eb/data/3_final/'
+dir_original_eb = 'data/original_data/special_eb/'
+dir_processed_eb_step1 = 'data/processed_data/special_eb/data/1_all_answers/'
+dir_processed_eb_step2 = 'data/processed_data/special_eb/data/2_selected_answers/'
+dir_processed_eb_step3 = 'data/processed_data/special_eb/data/3_final/'
 
 
 def convert_interesting_sheets():

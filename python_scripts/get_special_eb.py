@@ -4,7 +4,7 @@ import requests
 datasets_interesting = ['S1084_80_2_409', 'S2060_83_4_435_ENG', 'S2140_87_1_459_ENG', 'S2212_91_3_490_ENG']
 
 # Directory for output/RDF data
-dir_processed_eb_rdf = '../climatechange/processed_data/special_eb/rdf/'
+dir_processed_eb_rdf = 'data/processed_data/special_eb/rdf/'
 
 
 def api_request(dataset_ids):
