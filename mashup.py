@@ -63,8 +63,8 @@ for country in data_annuals['geo\\time']:
                         i += 1
 
 tree = ET.ElementTree(root)
-tree.write('test.xml')
-x = etree.parse('test.xml')
+tree.write('mashup.xml')
+x = etree.parse('mashup.xml')
 x = etree.tostring(x, pretty_print=True, encoding='unicode')
 out = open('processed_data/mashup/mashup.xml', 'w+')
 out.write(x)
