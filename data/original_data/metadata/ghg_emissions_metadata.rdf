@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dcatapop="http://data.europa.eu/88u/ontology/dcatapop#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema="http://schema.org/"
+   xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/3d17c677-fd82-4f2c-87e8-4d25e23822a5">
+    <foaf:topic rdf:resource="default_topic_foaf"/>
+    <dcterms:type rdf:resource="default_type_dcterms"/>
+    <schema:url>http://ec.europa.eu/eurostat/help/support</schema:url>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <dcterms:title xml:lang="en">title_default_values</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/dataset/rc2ELCDeTGfxdpE27gyzow">
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/8c19fcca-194f-4059-b314-61c21649b999"/>
+    <dcterms:temporal rdf:resource="http://purl.org/dc/terms/PeriodOfTime/2865302c-46c7-40f3-a590-a0c35d5178ef"/>
+    <dcterms:title xml:lang="fr">Emissions de gaz à effet de serre par habitant</dcterms:title>
+    <dcterms:description xml:lang="en">The indicator measures total national emissions of the so called ‘Kyoto basket’ of greenhouse gases, including carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), and the so-called F-gases (hydrofluorocarbons, perfluorocarbons, nitrogen triflouride (NF3) and sulphur hexafluoride (SF6)). Using each gas’ individual global warming potential (GWP), they are being integrated into a single indicator expressed in units of CO2 equivalents. Emissions data are submitted annually by the EU Member States as part of the reporting under the United Nations Framework Convention on Climate Change (UNFCCC). The average population of the reference year (calculated as the arithmetic mean of the population on 1st January of two consecutive years) is used as denominator (per capita). The indicator does not include emissions and removals related to land use, land-use change and forestry (LULUCF); it does not include emissions reported as a memorandum item according to UNFCCC Guidelines but does include emissions from international aviation as well as indirect CO2 emissions.</dcterms:description>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/2f2e7189-cd8f-4097-b907-115be8159462"/>
+    <dcat:contactPoint rdf:resource="http://www.w3.org/2006/vcard/ns#Kind/34be782b-a4d9-45fe-a409-c3d06308ec20"/>
+    <dcatapop:ckanName>rc2ELCDeTGfxdpE27gyzow</dcatapop:ckanName>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/STATISTICAL"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/68f10084-8fef-4e82-944f-b4f11d0d2550"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/a54c7fdd-8126-427b-b240-687e832ae1dc"/>
+    <dcterms:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/ESTAT"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/HEAL"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/ba97a190-4258-4592-91c5-9f7e73c5ec4a"/>
+    <dcterms:description xml:lang="de">Der Indikator misst die nationalen Gesamtemissionen des so genannten „Kyoto Basket“ von Treibhausgasen, einschließlich Kohlendioxid (CO2), Methan (CH4), Distickstoffoxid (N2O) und die sogenannten F-Gase (Fluorkohlenwasserstoffe, Perfluorkohlenwasserstoffe, Stickstofftriflourid (NF3) und Schwefelhexafluorid (SF6)). Unter Verwendung des individuellen globalen Treibhauspotenzials (GWP) jedes Gases werden sie in einen einzelnen Indikator, ausgedrückt in Einheiten von CO2-Äquivalenten, integriert. Emissionsdaten werden jährlich von den EU-Mitgliedstaaten im Rahmen der Berichterstattung nach dem Rahmenübereinkommen der Vereinten Nationen über Klimaänderungen (United Nations Framework Convention on Climate Change - UNFCCC) übermittelt. Die Durchschnittsbevölkerung des Bezugsjahres (berechnet als arithmetisches Mittel der Bevölkerung am 1. Januar von zwei aufeinander folgenden Jahren) wird als Nenner (pro Kopf) verwendet. Der Indikator gibt keinerlei Aufschluss über die Emissionen und deren Senkung im Zusammenhang mit Flächennutzung, geänderter Flächennutzung und Forstwirtschaft (Land Use, Land-Use Change and Forestry - LULUCF), nicht enthalten sind Emissionen, die gemäß den UNFCCC-Richtlinien als Memorandum gemeldet wurden, sondern Emissionen aus der internationalen Luftfahrt sowie indirekte CO2-Emissionen.</dcterms:description>
+    <dcterms:title xml:lang="de">Treibhausgasemissionen pro Kopf</dcterms:title>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcterms:title xml:lang="en">Greenhouse gas emissions per capita</dcterms:title>
+    <dcterms:description xml:lang="fr">Cet indicateur mesure le total national d’émissions de gaz à effet de serre contenus dans le « panier de Kyoto », incluant le dioxyde de carbone (CO2), le méthane (CH4), l'oxyde nitreux (N2O) et les gaz dits fluorés (hydrofluorocarbures, perfluorocarbures, trifluorure d'azote (NF3) et hexafluorure de soufre (SF6)). Utilisant le potentiel de réchauffement planétaire (PRP) de chaque gaz, ils sont regroupés en un seul indicateur exprimé en unités équivalent CO2. Les données d’émissions sont fournies annuellement par les Etats membres de l’UE dans le cadre du rapport sous la Convention-cadre des Nations Unies sur les changements climatiques (CCNUCC). La population moyenne pour l’année de référence (calculée comme la moyenne arithmétique de la population au 1er Janvier de deux années consécutives) est utilisée comme dénominateur (par habitant). L'indicateur ne comprend pas les émissions et les absorptions liées à l'utilisation des terres, au changement d'affectation des terres et à la foresterie (UTCATF) ; il ne comprend pas non plus les émissions reportées comme « pour mémoire » selon les directives de la CCNUCC mais comprend bien les émissions de l'aviation internationale ainsi que les émissions indirectes de CO2.</dcterms:description>
+    <dcat:landingPage rdf:resource="http://data.europa.eu/88u/document/02e0cead-f6ae-4edd-a6e2-9e0c8dfbfd07"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/6e3913fd-a297-498d-a61a-0039b4b1e50c"/>
+    <foaf:page rdf:resource="http://data.europa.eu/88u/document/78d1d62f-aa87-4f5a-81b4-c5b80f84cd2b"/>
+    <foaf:page rdf:resource="http://data.europa.eu/88u/document/8a8dd219-30a3-4f04-822a-4459ace78377"/>
+    <foaf:page rdf:resource="http://data.europa.eu/88u/document/b1167d27-f2c8-4989-80ed-797ce54806e8"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-11-06</dcterms:modified>
+    <dcterms:identifier>t2020_rd300</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/6e3913fd-a297-498d-a61a-0039b4b1e50c">
+    <dcterms:title xml:lang="en">Graph</dcterms:title>
+    <dcterms:title xml:lang="de">Graph</dcterms:title>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:title xml:lang="fr">Graphique</dcterms:title>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/VISUALIZATION"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</dcatapop:numberOfDownloads>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/eurostat/tgm/graph.do?tab=graph&amp;plugin=1&amp;language=en&amp;pcode=t2020_rd300"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/68f10084-8fef-4e82-944f-b4f11d0d2550">
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</dcatapop:numberOfDownloads>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO"/>
+    <dcterms:title xml:lang="en">Map</dcterms:title>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+    <dcterms:title xml:lang="fr">Carte</dcterms:title>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/VISUALIZATION"/>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/eurostat/tgm/mapToolClosed.do?tab=map&amp;init=1&amp;plugin=1&amp;language=en&amp;pcode=t2020_rd300"/>
+    <dcterms:title xml:lang="de">Karte</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/8c19fcca-194f-4059-b314-61c21649b999">
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/t2020_rd300.tsv.gz"/>
+    <dcterms:title xml:lang="en">Default_Title</dcterms:title>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:description xml:lang="en">Download dataset in TSV format</dcterms:description>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</dcatapop:numberOfDownloads>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/file-type/TSV">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Kind/34be782b-a4d9-45fe-a409-c3d06308ec20">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:organisation-name>Eurostat, the statistical office of the European Union</vcard:organisation-name>
+    <foaf:homePage rdf:resource="http://data.europa.eu/88u/document/3d17c677-fd82-4f2c-87e8-4d25e23822a5"/>
+    <vcard:hasTelephone rdf:resource="http://www.w3.org/2006/vcard/ns#Voice/023704c1-19ca-4b28-9237-bd419fe8d207"/>
+    <vcard:hasAddress rdf:resource="http://www.w3.org/2006/vcard/ns#Address/d303e372-691c-459a-a621-3cb4bcef4784"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/a54c7fdd-8126-427b-b240-687e832ae1dc">
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</dcatapop:numberOfDownloads>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:title xml:lang="en">Table</dcterms:title>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+    <dcterms:title xml:lang="de">Tabelle</dcterms:title>
+    <dcterms:title xml:lang="fr">Tableau</dcterms:title>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/eurostat/tgm/table.do?tab=table&amp;plugin=1&amp;language=en&amp;pcode=t2020_rd300"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/VISUALIZATION"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/8a8dd219-30a3-4f04-822a-4459ace78377">
+    <dcterms:title xml:lang="en">More information on Eurostat Website</dcterms:title>
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/rc2ELCDeTGfxdpE27gyzow"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/documentation-type/WEBPAGE_RELATED"/>
+    <schema:url xml:lang="en">http://ec.europa.eu/eurostat/web/products-datasets/-/t2020_rd300</schema:url>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/b1167d27-f2c8-4989-80ed-797ce54806e8">
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO"/>
+    <schema:url xml:lang="en">http://ec.europa.eu/eurostat/cache/metadata/en/t2020_rd300_esmsip2.htm</schema:url>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/rc2ELCDeTGfxdpE27gyzow"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN"/>
+    <dcterms:title xml:lang="en">ESMS metadata (Euro-SDMX Metadata structure) HTML</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/2f2e7189-cd8f-4097-b907-115be8159462">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</dcatapop:numberOfDownloads>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/t2020_rd300.sdmx.zip"/>
+    <dcterms:title xml:lang="en">Default_Title</dcterms:title>
+    <dcterms:description xml:lang="en">Download dataset in SDMX-ML format</dcterms:description>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/ba97a190-4258-4592-91c5-9f7e73c5ec4a">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/t2020_rd300.tsv.gz&amp;unzip=true"/>
+    <dcterms:title xml:lang="en">Default_Title</dcterms:title>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</dcatapop:numberOfDownloads>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/TSV"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:description xml:lang="en">Download dataset in TSV format (unzipped)</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/02e0cead-f6ae-4edd-a6e2-9e0c8dfbfd07">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <dcterms:type rdf:resource="default_type_dcterms"/>
+    <schema:url>http://ec.europa.eu/eurostat/web/products-datasets/-/t2020_rd300</schema:url>
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/rc2ELCDeTGfxdpE27gyzow"/>
+    <dcterms:title xml:lang="en">title_http://ec.europa.eu/eurostat/web/products-datasets/-/t2020_rd300</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Voice/023704c1-19ca-4b28-9237-bd419fe8d207">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Voice"/>
+    <vcard:hasValue rdf:resource="+352430136789"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/record/7151bdb7-0c1e-4895-b37a-9011927a2459">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    <foaf:primaryTopic rdf:resource="http://data.europa.eu/88u/dataset/rc2ELCDeTGfxdpE27gyzow"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2020-01-10T11:44:13</dcterms:modified>
+    <dcatapop:numberOfViews rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">774</dcatapop:numberOfViews>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2015-10-16 12:08:57.079178</dcterms:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/corporate-body/ESTAT">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/78d1d62f-aa87-4f5a-81b4-c5b80f84cd2b">
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/rc2ELCDeTGfxdpE27gyzow"/>
+    <schema:url xml:lang="en">http://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=metadata/t2020_rd300_esmsip2.sdmx.zip</schema:url>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/documentation-type/WEBPAGE_RELATED"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <dcterms:title xml:lang="en">ESMS metadata (Euro-SDMX Metadata structure) SDMX</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address/d303e372-691c-459a-a621-3cb4bcef4784">
+    <vcard:street-address>Joseph Bech building, 5 Rue Alphonse Weicker, L-2721 Luxembourg</vcard:street-address>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/file-type/ZIP">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/data-theme/SOCI">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/data-theme/EDUC">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/PeriodOfTime/2865302c-46c7-40f3-a590-a0c35d5178ef">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+    <schema:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000</schema:startDate>
+    <schema:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017</schema:endDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/data-theme/HEAL">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+</rdf:RDF>

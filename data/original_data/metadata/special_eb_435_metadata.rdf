@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dcatapop="http://data.europa.eu/88u/ontology/dcatapop#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema="http://schema.org/"
+   xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/record/732fb5fd-d1b0-4e1b-928e-c54cfee4751a">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2019-07-10T09:49:12</dcterms:modified>
+    <dcatapop:numberOfViews rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1931</dcatapop:numberOfViews>
+    <foaf:primaryTopic rdf:resource="http://data.europa.eu/88u/dataset/S2060_83_4_435_ENG"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-11-26 08:44:18.885248</dcterms:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/81ac6a00-5d04-41a3-b105-dc4b707ff783">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:description xml:lang="en">VolumeAAEB834CLIMAclimatechange20150611_xls</dcterms:description>
+    <dcterms:title xml:lang="en">Link to VolumeAAEB834CLIMAclimatechange20150611_xls.zip</dcterms:title>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?44BBA6200BC231CF6193EAC28DEC9BC6"/>
+    <dcterms:issued xml:lang="en">2015-11-25</dcterms:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/dataset/S2060_83_4_435_ENG">
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/HUN"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SVK"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ITA"/>
+    <dcat:keyword xml:lang="en">special eurobarometer</dcat:keyword>
+    <owl:versionInfo>v1.00</owl:versionInfo>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/PRT"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LTU"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/CYP"/>
+    <dcatapop:ckanName>S2060_83_4_435_ENG</dcatapop:ckanName>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ESP"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/BGR"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/EST"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LVA"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/BEL"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SVN"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/GBR"/>
+    <dcterms:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COMMU"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/a42b279b-27d8-4f7a-926f-5b2d967b7b8d"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/IRL"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/POL"/>
+    <foaf:page rdf:resource="http://data.europa.eu/88u/document/bbe20bfb-de2f-4b65-b219-ebd24a7a046c"/>
+    <dcterms:title xml:lang="en">Special Eurobarometer 435: Climate change</dcterms:title>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/DEU"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/MLT"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/FRA"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ROU"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/81ac6a00-5d04-41a3-b105-dc4b707ff783"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/FIN"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/DNK"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/19e9d981-05f6-411f-a459-a3959839d411"/>
+    <dcterms:identifier>S2060_83_4_435_ENG</dcterms:identifier>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/CZE"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-25</dcterms:issued>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/GRC"/>
+    <dcterms:description xml:lang="en">Climate change is one of the greatest challenges of the modern age. As Europe takes action to meet its objectives, it is important to understand the attitudes and behaviour of EU citizens towards climate change and their expectations for the future. This Eurobarometer survey measures these and compares them with the last poll on this issue carried out in 2013.
+#####The results by volumes are distributed as follows:
+* Volume A: Countries
+* Volume AA: Groups of countries
+* Volume A' (AP): Trends
+* Volume AA' (AAP): Trends of groups of countries
+* Volume B: EU/socio-demographics
+* Volume B' (BP) : Trends of EU/ socio-demographics 
+* Volume C: Country/socio-demographics
+  ----
+Researchers may also contact GESIS - Leibniz Institute for the Social Sciences: [https://www.gesis.org/eurobarometer](https://www.gesis.org/eurobarometer)</dcterms:description>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/NLD"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LUX"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/564892d2-e518-4962-916b-cfdf40e18808"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/5357311f-8455-4e19-9895-48f230ad4a98"/>
+    <dcatapop:isPartOfCatalog rdf:resource="http://data.europa.eu/88u/catalog/euodp"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/AUT"/>
+    <dcterms:creator rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COMMU"/>
+    <dcat:landingPage rdf:resource="http://data.europa.eu/88u/document/d82e2faa-43c7-48b5-aa15-2f251c1fc5a0"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/HRV"/>
+    <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/3b27891c-6f1b-4c90-b26d-196d60042a8a"/>
+    <dcat:contactPoint rdf:resource="http://www.w3.org/2006/vcard/ns#Kind/0b6d679b-f805-42a8-8b09-e5dc3f5dfdb1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/19e9d981-05f6-411f-a459-a3959839d411">
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?053F19C9475124797AEB2E188E9429E6"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcterms:description xml:lang="en">VolumesCEB834CLIMAclimatechangexls20150615_xls</dcterms:description>
+    <dcterms:title xml:lang="en">Link to VolumesCEB834CLIMAclimatechangexls20150615_xls.zip</dcterms:title>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:issued xml:lang="en">2015-11-25</dcterms:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/5357311f-8455-4e19-9895-48f230ad4a98">
+    <dcterms:description xml:lang="en">VolumeAEB834CLIMAclimatechange20150611_xls</dcterms:description>
+    <dcterms:issued xml:lang="en">2015-11-25</dcterms:issued>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?52FF63DFA4309C3D0F9727641DEB482C"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:title xml:lang="en">Link to VolumeAEB834CLIMAclimatechange20150611_xls.zip</dcterms:title>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Kind/0b6d679b-f805-42a8-8b09-e5dc3f5dfdb1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:hasAddress rdf:resource="http://www.w3.org/2006/vcard/ns#Address/ef708b11-5f4c-4fc9-af5e-4f6b7f01e012"/>
+    <vcard:hasEmail rdf:resource="Eurobarometer@ec.europa.eu"/>
+    <foaf:homePage rdf:resource="http://data.europa.eu/88u/document/f07d5bc7-e7e9-400b-b215-9b85ced3f486"/>
+    <vcard:organisation-name>DG COMM</vcard:organisation-name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/a42b279b-27d8-4f7a-926f-5b2d967b7b8d">
+    <dcterms:description xml:lang="en">VolumeBEB834CLIMAclimatechange20150611_xls</dcterms:description>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?488D26703A7B9DFE16D66258938E9B2E"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:issued xml:lang="en">2016-01-14</dcterms:issued>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:title xml:lang="en">Link to VolumeBEB834CLIMAclimatechange20150611_xls.zip</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/d82e2faa-43c7-48b5-aa15-2f251c1fc5a0">
+    <dcterms:title xml:lang="en">title_http://data.europa.eu/euodp/en/data/dataset/S2060_83_4_435_ENG</dcterms:title>
+    <dcterms:type rdf:resource="default_type_dcterms"/>
+    <schema:url>http://data.europa.eu/euodp/en/data/dataset/S2060_83_4_435_ENG</schema:url>
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/S2060_83_4_435_ENG"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address/ef708b11-5f4c-4fc9-af5e-4f6b7f01e012">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <vcard:street-address>Rue de La Loi, 56, Brussels</vcard:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/564892d2-e518-4962-916b-cfdf40e18808">
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:title xml:lang="en">Link to VolumeAAPEB834CLIMAclimatechange20150611_xls.zip</dcterms:title>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:description xml:lang="en">VolumeAAPEB834CLIMAclimatechange20150611_xls</dcterms:description>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcterms:issued xml:lang="en">2015-11-25</dcterms:issued>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?BFD423C45EFC62A4B34AC0A3C06646AD"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/bbe20bfb-de2f-4b65-b219-ebd24a7a046c">
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <dcterms:title xml:lang="en">Detailed information on public opinion website</dcterms:title>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO"/>
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/S2060_83_4_435_ENG"/>
+    <schema:url xml:lang="en">https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/Survey/getSurveyDetail/instruments/SPECIAL/surveyKy/2060</schema:url>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/3b27891c-6f1b-4c90-b26d-196d60042a8a">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?D9584359B5CA96C9A5495FDD8D4000A4"/>
+    <dcterms:issued xml:lang="en">2015-11-25</dcterms:issued>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:title xml:lang="en">Link to VolumeAPEB834CLIMAclimatechange20150611_xls.zip</dcterms:title>
+    <dcterms:description xml:lang="en">VolumeAPEB834CLIMAclimatechange20150611_xls</dcterms:description>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/f07d5bc7-e7e9-400b-b215-9b85ced3f486">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <schema:url>https://ec.europa.eu/commfrontoffice/publicopinion</schema:url>
+    <foaf:topic rdf:resource="default_topic_foaf"/>
+    <dcterms:title xml:lang="en">title_default_values</dcterms:title>
+    <dcterms:type rdf:resource="default_type_dcterms"/>
+  </rdf:Description>
+</rdf:RDF>

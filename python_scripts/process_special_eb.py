@@ -12,8 +12,6 @@ sheets_interesting = {'most_serious_problem': ['QA1a', 'QB1a', 'QC1a', 'QE1a1', 
                       'severity_of_problem': ['QA2.1', 'QA2', 'QB2', 'QC2', 'QE2a.1', 'QE2', 'QB2.1'],
                       'who_is_responsible': ['QA3', 'QB3', 'QC3'],
                       'personally_taken_action': ['QA5', 'QB5', 'QC5']}
-# TODO: QB5 from special_eb_322 is not usable because it is a differently worded question/answers,
-#  but this sheet name is correct for special_eb_490
 
 # Directory for original data and processed data
 dir_original_eb = 'data/original_data/special_eb/'

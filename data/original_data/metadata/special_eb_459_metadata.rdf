@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dcatapop="http://data.europa.eu/88u/ontology/dcatapop#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema="http://schema.org/"
+   xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/dataset/S2140_87_1_459_ENG">
+    <dcterms:title xml:lang="en">Special Eurobarometer 459: Climate change</dcterms:title>
+    <dcterms:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COMMU"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/PRT"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/CZE"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/FRA"/>
+    <foaf:page rdf:resource="http://data.europa.eu/88u/document/3bf64f45-484a-4261-9393-41c1e38d2349"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/c2096229-47de-41e0-92f5-b22398d49d42"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/e78af043-4a60-4da1-812f-5f98aa1fcf99"/>
+    <dcat:landingPage rdf:resource="http://data.europa.eu/88u/document/ad0f2645-5c32-4eba-bd86-f2978f091848"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/GBR"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/GRC"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+    <dcat:keyword xml:lang="en">special eurobarometer</dcat:keyword>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/1ee103e8-9392-4baa-b972-7c6b1a155323"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ITA"/>
+    <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/HRV"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SVN"/>
+    <dcatapop:ckanName>S2140_87_1_459_ENG</dcatapop:ckanName>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SVK"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/NLD"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/FIN"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/HUN"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/BGR"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/DNK"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/EST"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ROU"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/IRL"/>
+    <dcterms:creator rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COMMU"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/DEU"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LUX"/>
+    <dcat:contactPoint rdf:resource="http://www.w3.org/2006/vcard/ns#Kind/357c75b5-9779-45e7-ab37-03e14a56c197"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/4a14bfe7-a283-4936-9ea1-eee21c82ddfb"/>
+    <dcterms:identifier>S2140_87_1_459_ENG</dcterms:identifier>
+    <dcatapop:isPartOfCatalog rdf:resource="http://data.europa.eu/88u/catalog/euodp"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/AUT"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/POL"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/dc773f4e-0471-4a61-bfe3-14f41255c97f"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ESP"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/MLT"/>
+    <dcterms:description xml:lang="en">Climate change is one of the biggest challenges facing the world. As the EU continues to act to meet its climate objectives, it is important to understand  the views, expectations and behaviour of its citizens concerning climate change.
+This Eurobarometer survey measures these and compares them with the previous poll on climate change carried out in 2015.
+#####The results by volumes are distributed as follows:
+* Volume A: Countries
+* Volume AA: Groups of countries
+* Volume A' (AP): Trends
+* Volume AA' (AAP): Trends of groups of countries
+* Volume B: EU/socio-demographics
+* Volume B' (BP) : Trends of EU/ socio-demographics 
+* Volume C: Country/socio-demographics
+  ----
+Researchers may also contact GESIS - Leibniz Institute for the Social Sciences: [https://www.gesis.org/eurobarometer](https://www.gesis.org/eurobarometer)</dcterms:description>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-15</dcterms:issued>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/CYP"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/BEL"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LVA"/>
+    <owl:versionInfo>v1.00</owl:versionInfo>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LTU"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/a02ed76b-b3e5-400b-ac4f-fba32a7b1959">
+    <foaf:topic rdf:resource="default_topic_foaf"/>
+    <dcterms:title xml:lang="en">title_default_values</dcterms:title>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <schema:url>https://ec.europa.eu/commfrontoffice/publicopinion</schema:url>
+    <dcterms:type rdf:resource="default_type_dcterms"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/ad0f2645-5c32-4eba-bd86-f2978f091848">
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/S2140_87_1_459_ENG"/>
+    <dcterms:title xml:lang="en">title_http://data.europa.eu/euodp/en/data/dataset/S2140_87_1_459_ENG</dcterms:title>
+    <schema:url>http://data.europa.eu/euodp/en/data/dataset/S2140_87_1_459_ENG</schema:url>
+    <dcterms:type rdf:resource="default_type_dcterms"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/record/a65b029d-a344-44c5-890a-7c65a854274c">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2019-07-10T09:49:34</dcterms:modified>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-18 07:24:37.143078</dcterms:issued>
+    <foaf:primaryTopic rdf:resource="http://data.europa.eu/88u/dataset/S2140_87_1_459_ENG"/>
+    <dcatapop:numberOfViews rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1268</dcatapop:numberOfViews>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/4a14bfe7-a283-4936-9ea1-eee21c82ddfb">
+    <dcterms:description xml:lang="en">SP459 - Volume AP_xls</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:title xml:lang="en">Link to SP459 - Volume AP_xls.zip</dcterms:title>
+    <dcterms:issued xml:lang="en">2017-09-15</dcterms:issued>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?8CD9D6DDCDA4C2216EF04284295CB5A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/dc773f4e-0471-4a61-bfe3-14f41255c97f">
+    <dcterms:issued xml:lang="en">2017-09-15</dcterms:issued>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?418BC73F433A0EA6A1FBE1407C86A8FA"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:description xml:lang="en">SP459 - Volumes C_xls</dcterms:description>
+    <dcterms:title xml:lang="en">Link to SP459 - Volumes C_xls.zip</dcterms:title>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/1ee103e8-9392-4baa-b972-7c6b1a155323">
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:title xml:lang="en">Link to SP459 - Volume B_xls.zip</dcterms:title>
+    <dcterms:description xml:lang="en">SP459 - Volume B_xls</dcterms:description>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:issued xml:lang="en">2017-09-15</dcterms:issued>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?BC480FF4A7D2644383D38892C0DF4678"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/e78af043-4a60-4da1-812f-5f98aa1fcf99">
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?EDF58044ED9853D2D3B510AA8B3ED100"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:issued xml:lang="en">2017-09-15</dcterms:issued>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dcatapop:numberOfDownloads>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:description xml:lang="en">SP459 - Volume AA_xls</dcterms:description>
+    <dcterms:title xml:lang="en">Link to SP459 - Volume AA_xls.zip</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/3bf64f45-484a-4261-9393-41c1e38d2349">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <schema:url xml:lang="en">https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/Survey/getSurveyDetail/instruments/SPECIAL/surveyKy/2140</schema:url>
+    <dcterms:title xml:lang="en">Detailed information on public opinion website</dcterms:title>
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/S2140_87_1_459_ENG"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/c2096229-47de-41e0-92f5-b22398d49d42">
+    <dcterms:issued xml:lang="en">2017-09-15</dcterms:issued>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:title xml:lang="en">Link to SP459 - Volume A_xls.zip</dcterms:title>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?6778C2B3C868ECF7288771279355637F"/>
+    <dcterms:description xml:lang="en">SP459 - Volume A_xls</dcterms:description>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Kind/357c75b5-9779-45e7-ab37-03e14a56c197">
+    <foaf:homePage rdf:resource="http://data.europa.eu/88u/document/a02ed76b-b3e5-400b-ac4f-fba32a7b1959"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:organisation-name>DG COMM</vcard:organisation-name>
+    <vcard:hasEmail rdf:resource="Eurobarometer@ec.europa.eu"/>
+    <vcard:hasAddress rdf:resource="http://www.w3.org/2006/vcard/ns#Address/135b2e7b-c6dc-4407-9e30-eb9aaf728076"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address/135b2e7b-c6dc-4407-9e30-eb9aaf728076">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <vcard:street-address>Rue de La Loi, 56, Brussels</vcard:street-address>
+  </rdf:Description>
+</rdf:RDF>

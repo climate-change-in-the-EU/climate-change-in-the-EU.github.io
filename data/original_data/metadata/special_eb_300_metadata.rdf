@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dcatapop="http://data.europa.eu/88u/ontology/dcatapop#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema="http://schema.org/"
+   xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/dataset/S1461_69_2_300">
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/FRA"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/AUT"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/CZE"/>
+    <dcat:keyword xml:lang="en">polls</dcat:keyword>
+    <dcat:landingPage rdf:resource="http://data.europa.eu/88u/document/0b29e3ff-bbab-4d31-aa16-ed22ec90bbe6"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/BEL"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ROU"/>
+    <dcat:keyword xml:lang="en">climate</dcat:keyword>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/EST"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/HRV"/>
+    <dcat:keyword xml:lang="en">change</dcat:keyword>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ITA"/>
+    <dcat:keyword xml:lang="en">special</dcat:keyword>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LVA"/>
+    <foaf:page rdf:resource="http://data.europa.eu/88u/document/5308368e-44db-4e47-9e42-910c001c97c3"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/GBR"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LUX"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/DNK"/>
+    <dcat:keyword xml:lang="en">attitudes</dcat:keyword>
+    <dcterms:title xml:lang="en">Special Eurobarometer 300: Europeans' attitudes towards climate change</dcterms:title>
+    <dcatapop:isPartOfCatalog rdf:resource="http://data.europa.eu/88u/catalog/euodp"/>
+    <dcat:keyword xml:lang="en">europeans</dcat:keyword>
+    <dcatapop:ckanName>S1461_69_2_300</dcatapop:ckanName>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SVN"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/GRC"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/DEU"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/BGR"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/IRL"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/POL"/>
+    <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LTU"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/47985fde-3eff-4ae1-a255-c6cb2577c790"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/HUN"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcterms:alternative xml:lang="en">Europeans' attitudes towards climate change</dcterms:alternative>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/MLT"/>
+    <dcat:keyword xml:lang="en">surveys</dcat:keyword>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/CYP"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SVK"/>
+    <dcterms:identifier>S1461_69_2_300</dcterms:identifier>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ESP"/>
+    <dcterms:creator rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COMMU"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-12-10</dcterms:issued>
+    <owl:versionInfo>v1.00</owl:versionInfo>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/PRT"/>
+    <dcterms:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COMMU"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/d42f088d-a093-4583-947a-b309ce588da8"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/FIN"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/NLD"/>
+    <dcterms:description xml:lang="en">This Eurobarometer survey was commissioned by the Directorate General for Communication of the European Commission, on behalf of the European Parliament and the European Commission. It was carried out by TNS opinion &amp; social network between the 25th of March and the 4th of May 2008.
+The issue of climate change has not only raised concern at the political top levels. Intense (international) media attention has fostered a lively public debate. It is in this light that this Eurobarometer survey has been conducted, with the overarching aim of exploring European citizens’ attitudes towards climate change. Its focus is on:
+- Measuring the impact of the terminological differences between global
+warming and climate change on citizens’ perception.
+- Citizens’ perceptions of the seriousness of global warming / climate change.
+- The extent to which citizens feel informed about climate change.
+- Citizens' attitudes towards climate change and ways of combating it.
+- Actions aimed at fighting climate change.
+- Targets for reducing emissions and increasing the share of renewable energy.
+
+#####The results by volumes are distributed as follows:
+* Volume A: Countries
+* Volume AA: Groups of countries
+* Volume A' (AP): Trends
+* Volume AA' (AAP): Trends of groups of countries
+* Volume B: EU/socio-demographics
+* Volume B' (BP) : Trends of EU/ socio-demographics 
+* Volume C: Country/socio-demographics
+  ----
+Researchers may also contact GESIS - Leibniz Institute for the Social Sciences: [https://www.gesis.org/eurobarometer](https://www.gesis.org/eurobarometer)</dcterms:description>
+    <dcat:contactPoint rdf:resource="http://www.w3.org/2006/vcard/ns#Kind/5066dffe-0ff6-4e63-af51-1e629407cf9a"/>
+    <dcat:keyword xml:lang="en">opinion</dcat:keyword>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/record/4ef0533a-89c5-43dd-94fd-42874f45cace">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2019-07-10T08:25:17</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    <foaf:primaryTopic rdf:resource="http://data.europa.eu/88u/dataset/S1461_69_2_300"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-07-29 08:31:42.594979</dcterms:issued>
+    <dcatapop:numberOfViews rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">915</dcatapop:numberOfViews>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/d42f088d-a093-4583-947a-b309ce588da8">
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:issued xml:lang="en">2014-12-10</dcterms:issued>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?0DFBEEA9BE7BBA5F0DD72297D402B02B"/>
+    <dcterms:description xml:lang="en">Volume: VolumeAAEB692PARLclimatechange20080514</dcterms:description>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:title xml:lang="en">Link to OP_VolumeAAEB692PARLclimatechange20080514.zip</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/5308368e-44db-4e47-9e42-910c001c97c3">
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO"/>
+    <schema:url xml:lang="en">https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/Survey/getSurveyDetail/instruments/SPECIAL/surveyKy/1461</schema:url>
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/S1461_69_2_300"/>
+    <dcterms:title xml:lang="en">Detailed information on public opinion website</dcterms:title>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/0b29e3ff-bbab-4d31-aa16-ed22ec90bbe6">
+    <dcterms:type rdf:resource="default_type_dcterms"/>
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/S1461_69_2_300"/>
+    <dcterms:title xml:lang="en">title_http://ec.europa.eu/public_opinion/archives/eb_special_320_300_en.htm#300</dcterms:title>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <schema:url>http://ec.europa.eu/public_opinion/archives/eb_special_320_300_en.htm#300</schema:url>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/2878de14-d992-4ec5-991a-b28e5b152270">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <dcterms:title xml:lang="en">title_default_values</dcterms:title>
+    <dcterms:type rdf:resource="default_type_dcterms"/>
+    <foaf:topic rdf:resource="default_topic_foaf"/>
+    <schema:url>https://ec.europa.eu/commfrontoffice/publicopinion</schema:url>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/47985fde-3eff-4ae1-a255-c6cb2577c790">
+    <dcterms:title xml:lang="en">Link to OP_VolumeAEB692PARLclimatechange20080513.zip</dcterms:title>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:description xml:lang="en">Volume: VolumeAEB692PARLclimatechange20080513</dcterms:description>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcat:accessURL rdf:resource="https://ec.europa.eu/commfrontoffice/downloadODP/?2D0FB80C56631C4761579AA81ED165FC"/>
+    <dcterms:issued xml:lang="en">2014-12-10</dcterms:issued>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Kind/5066dffe-0ff6-4e63-af51-1e629407cf9a">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <foaf:homePage rdf:resource="http://data.europa.eu/88u/document/2878de14-d992-4ec5-991a-b28e5b152270"/>
+    <vcard:organisation-name>DG COMM</vcard:organisation-name>
+    <vcard:hasAddress rdf:resource="http://www.w3.org/2006/vcard/ns#Address/74a9e8e6-da6a-4146-b90a-839e2140b79e"/>
+    <vcard:hasEmail rdf:resource="Eurobarometer@ec.europa.eu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address/74a9e8e6-da6a-4146-b90a-839e2140b79e">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <vcard:street-address>Rue de La Loi, 56, Brussels</vcard:street-address>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dcatapop="http://data.europa.eu/88u/ontology/dcatapop#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema="http://schema.org/"
+   xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/a9d9e316-0b64-4541-b9d8-cc28ee721308">
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/commfrontoffice/downloadODP/?D2A7E98899CAC43466054A7FAC0F6CBA"/>
+    <dcterms:description xml:lang="en">ebs_490_volume_B_xls</dcterms:description>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:title xml:lang="en">Link to ebs_490_volume_B_xls.zip</dcterms:title>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:issued xml:lang="en">2019-09-04</dcterms:issued>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/80848dcf-21ec-40ad-80ac-1c3531ac2977">
+    <dcterms:issued xml:lang="en">2019-09-04</dcterms:issued>
+    <dcterms:description xml:lang="en">ebs_490_volume_AA_xls</dcterms:description>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:title xml:lang="en">Link to ebs_490_volume_AA_xls.zip</dcterms:title>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/commfrontoffice/downloadODP/?4404955F2C73A2398BFDB4D29EACBB49"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/dataset/S2212_91_3_490_ENG">
+    <dcterms:subject rdf:resource="http://eurovoc.europa.eu/2152"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ROU"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LUX"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/FIN"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/GBR"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/EST"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/5381131f-7d84-4df7-9a5d-3789ea212be3"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SVN"/>
+    <dcterms:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COMMU"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/HUN"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/POL"/>
+    <dcterms:subject rdf:resource="http://eurovoc.europa.eu/4214"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/ae5d09d7-c3fa-4f99-936e-cda70d45a879"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/CZE"/>
+    <dcat:contactPoint rdf:resource="http://www.w3.org/2006/vcard/ns#Kind/f4814af2-ba6c-48f5-a70b-a2cb36ae2cea"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/HRV"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/NLD"/>
+    <dcterms:identifier>S2212_91_3_490_ENG</dcterms:identifier>
+    <dcterms:description xml:lang="en">DGs CLIMA and ENER have published new Eurobarometer surveys showing strong public support for EU climate and energy policies.&#13;
+The surveys asked citizens from all EU Member States a variety of questions on current climate and energy policies and their wishes for future European action.&#13;
+Results were extremely encouraging with positive trends for citizens’ awareness of climate change, their desire for the EU and Member States to act, and willingness to take personal action to fight climate change. They also support prioritising an EU energy sector which is cleaner, more secure and more affordable. &#13;
+These surveys will be invaluable in shaping our climate and energy policies over the next five years. &#13;
+The survey results on EU climate policies is available in the reports on the Special Eurobarometer webpage.&#13;
+#####The results by volumes are distributed as follows:&#13;
+* Volume A: Countries&#13;
+* Volume AA: Groups of countries&#13;
+* Volume A' (AP): Trends&#13;
+* Volume AA' (AAP): Trends of groups of countries&#13;
+* Volume B: EU/socio-demographics&#13;
+* Volume B' (BP) : Trends of EU/ socio-demographics &#13;
+* Volume C: Country/socio-demographics&#13;
+  ----&#13;
+Researchers may also contact GESIS - Leibniz Institute for the Social Sciences: [https://www.gesis.org/eurobarometer](https://www.gesis.org/eurobarometer)</dcterms:description>
+    <dcat:keyword xml:lang="en">opinion polls</dcat:keyword>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LTU"/>
+    <dcterms:subject rdf:resource="http://eurovoc.europa.eu/5605"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/MLT"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/AUT"/>
+    <dcterms:subject rdf:resource="http://eurovoc.europa.eu/6011"/>
+    <dcat:keyword xml:lang="en">climate change</dcat:keyword>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-09-11</dcterms:issued>
+    <dcat:keyword xml:lang="en">eurobarometer</dcat:keyword>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/19c770c8-8d61-4030-a29e-27c994ce6c35"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/PRT"/>
+    <owl:versionInfo>v1.00</owl:versionInfo>
+    <dcterms:subject rdf:resource="http://eurovoc.europa.eu/2470"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/DEU"/>
+    <dcterms:subject rdf:resource="http://eurovoc.europa.eu/c_d8d35f08"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SVK"/>
+    <dcterms:title xml:lang="en">Special Eurobarometer 490: Climate change</dcterms:title>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/FRA"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/66810036-ce0b-4538-bd61-e3bdd037a399"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/a9d9e316-0b64-4541-b9d8-cc28ee721308"/>
+    <dcatapop:ckanName>S2212_91_3_490_ENG</dcatapop:ckanName>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/5aba29ec-016c-42a6-b498-8beec85a8caf"/>
+    <dcatapop:isPartOfCatalog rdf:resource="http://data.europa.eu/88u/catalog/euodp"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/BGR"/>
+    <dcat:keyword xml:lang="en">climate policy</dcat:keyword>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/BEL"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/DNK"/>
+    <dcterms:subject rdf:resource="http://eurovoc.europa.eu/c_749f2ce9"/>
+    <dcterms:subject rdf:resource="http://eurovoc.europa.eu/5482"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/CYP"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ESP"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/GRC"/>
+    <foaf:page rdf:resource="http://data.europa.eu/88u/document/18ab59aa-e343-4b6c-8075-51bca3f15db7"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/LVA"/>
+    <dcat:distribution rdf:resource="http://data.europa.eu/88u/distribution/80848dcf-21ec-40ad-80ac-1c3531ac2977"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/ITA"/>
+    <dcterms:temporal rdf:resource="http://purl.org/dc/terms/PeriodOfTime/a99d66c0-93e6-4e17-b65a-ff5925c42708"/>
+    <dcterms:subject rdf:resource="http://eurovoc.europa.eu/434743"/>
+    <dcterms:subject rdf:resource="http://eurovoc.europa.eu/5650"/>
+    <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dcat:landingPage rdf:resource="http://data.europa.eu/88u/document/9d68afdc-2056-44f1-8c23-c49b3fe129b3"/>
+    <dcterms:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/IRL"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/5aba29ec-016c-42a6-b498-8beec85a8caf">
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/commfrontoffice/downloadODP/?4C7E61FC0B5A3182F0A541B4649E296A"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:issued xml:lang="en">2019-09-04</dcterms:issued>
+    <dcterms:title xml:lang="en">Link to ebs_490_volumes_C_xls.zip</dcterms:title>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:description xml:lang="en">ebs_490_volumes_C_xls</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/66810036-ce0b-4538-bd61-e3bdd037a399">
+    <dcterms:title xml:lang="en">Link to ebs_490_volume_AAP_xls.zip</dcterms:title>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:issued xml:lang="en">2019-09-04</dcterms:issued>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:description xml:lang="en">ebs_490_volume_AAP_xls</dcterms:description>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/commfrontoffice/downloadODP/?5B8A5961CC3BEC8129AA458995D9E83B"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/256028b1-b157-45e3-9e84-34e4dacf666b">
+    <schema:url>https://ec.europa.eu/commfrontoffice/publicopinion</schema:url>
+    <dcterms:title xml:lang="en">title_default_values</dcterms:title>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <dcterms:type rdf:resource="default_type_dcterms"/>
+    <foaf:topic rdf:resource="default_topic_foaf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/ae5d09d7-c3fa-4f99-936e-cda70d45a879">
+    <dcterms:title xml:lang="en">Link to ebs_490_volume_BP_xls.zip</dcterms:title>
+    <dcterms:issued xml:lang="en">2019-10-07</dcterms:issued>
+    <dcterms:description xml:lang="en">ebs_490_volume_BP_xls</dcterms:description>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/commfrontoffice/downloadODP/?E296A95EEEB717476A2D9D4CFF6C4A91"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/record/68439c37-5c58-4b73-99d7-221981795fdc">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2019-09-12T09:19:05</dcterms:issued>
+    <dcatapop:numberOfViews>0</dcatapop:numberOfViews>
+    <foaf:primaryTopic rdf:resource="http://data.europa.eu/88u/dataset/S2212_91_3_490_ENG"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2019-12-10T10:36:54</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/5381131f-7d84-4df7-9a5d-3789ea212be3">
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:description xml:lang="en">ebs_490_volume_AP_xls</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:title xml:lang="en">Link to ebs_490_volume_AP_xls.zip</dcterms:title>
+    <dcterms:issued xml:lang="en">2019-09-04</dcterms:issued>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/commfrontoffice/downloadODP/?EEAE46B30E3D87CAD2D9EEA6AD411ED6"/>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/9d68afdc-2056-44f1-8c23-c49b3fe129b3">
+    <dcterms:type rdf:resource="default_type_dcterms"/>
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/S2212_91_3_490_ENG"/>
+    <dcterms:title xml:lang="en">title_https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/survey/getsurveydetail/instruments/special/surveyky/2212</dcterms:title>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <schema:url>https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/survey/getsurveydetail/instruments/special/surveyky/2212</schema:url>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Kind/f4814af2-ba6c-48f5-a70b-a2cb36ae2cea">
+    <vcard:organisation-name>DG COMM</vcard:organisation-name>
+    <vcard:hasEmail rdf:resource="Eurobarometer@ec.europa.eu"/>
+    <foaf:homePage rdf:resource="http://data.europa.eu/88u/document/256028b1-b157-45e3-9e84-34e4dacf666b"/>
+    <vcard:hasAddress rdf:resource="http://www.w3.org/2006/vcard/ns#Address/fce7999a-7493-4e53-9aaa-3be9c0c1de00"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address/fce7999a-7493-4e53-9aaa-3be9c0c1de00">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <vcard:street-address>Rue de La Loi, 56, Brussels</vcard:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/distribution/19c770c8-8d61-4030-a29e-27c994ce6c35">
+    <dcatapop:numberOfDownloads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dcatapop:numberOfDownloads>
+    <dcat:accessURL rdf:resource="http://ec.europa.eu/commfrontoffice/downloadODP/?1BE9B2988225D1B0CDB5A7C2266BED5D"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ZIP"/>
+    <dcterms:issued xml:lang="en">2019-09-04</dcterms:issued>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dcterms:description xml:lang="en">ebs_490_volume_A_xls</dcterms:description>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+    <dcterms:title xml:lang="en">Link to ebs_490_volume_A_xls.zip</dcterms:title>
+    <dcterms:license rdf:resource="http://publications.europa.eu/resource/authority/licence/COM_REUSE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/PeriodOfTime/a99d66c0-93e6-4e17-b65a-ff5925c42708">
+    <schema:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-09</schema:startDate>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+    <schema:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-26</schema:endDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/88u/document/18ab59aa-e343-4b6c-8075-51bca3f15db7">
+    <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/S2212_91_3_490_ENG"/>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/OP_DATPRO"/>
+    <dcterms:title xml:lang="en">Detailed information on public opinion website</dcterms:title>
+    <schema:url xml:lang="en">https://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/survey/getsurveydetail/instruments/special/surveyky/2212</schema:url>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/documentation-type/DOCUMENTATION_MAIN"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+</rdf:RDF>
