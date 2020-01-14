@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dcatapop="http://data.europa.eu/88u/ontology/dcatapop#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:prov="http://www.w3.org/ns/prov#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema="http://schema.org/"
+   xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+>
+  <rdf:Description rdf:about="https://raw.githubusercontent.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/master/data/processed_data/mashup/mashup.xml">
+    <dcterms:title xml:lang="en">Climate change in the EU</dcterms:title>
+    <dcterms:description xml:lang="en">This project investigates the European public's opinion on the problem of climate change and attempts to correlate it with various data on actual national greenhouse gas emissions and energy usage from renewable sources.</dcterms:description>
+    <dcterms:publisher rdf:resource="https://github.com/climate-change-in-the-EU"/>
+    <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/STATISTICAL"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/HEAL"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENVI"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ENER"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.europa.eu/euodp/en/data/dataset/S1461_69_2_300"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.europa.eu/euodp/en/data/dataset/S942_71_1_EBS313"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.europa.eu/euodp/en/data/dataset/S703_72_1_EBS322"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.europa.eu/euodp/en/data/dataset/S1007_75_4_EBS372"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.europa.eu/euodp/en/data/dataset/S1084_80_2_409"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.europa.eu/euodp/en/data/dataset/S2060_83_4_435_ENG"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.europa.eu/euodp/en/data/dataset/S2140_87_1_459_ENG"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.europa.eu/euodp/en/data/dataset/S2212_91_3_490_ENG"/>
+    <prov:wasDerivedFrom rdf:resource="http://data.europa.eu/88u/dataset/rc2ELCDeTGfxdpE27gyzow"/>
+    <prov:wasDerivedFrom rdf:resource="https://data.europa.eu/euodp/en/data/dataset/kLwnawdAsL0qfRS0PzvDfw"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-15</dcterms:modified>
+    <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/data-theme/SOCI">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/data-theme/EDUC">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/data-theme/HEAL">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/data-theme/ENVI">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/data-theme/ENER">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/file-type/XML">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://creativecommons.org/licenses/by/4.0/">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+  </rdf:Description>
+</rdf:RDF>
