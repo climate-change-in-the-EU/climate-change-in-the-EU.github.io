@@ -3,17 +3,17 @@ import xml.etree.ElementTree as ET
 import lxml.etree as etree
 
 most_serious_problem = pd.read_csv(
-    "data/processed_data/special_eb/data/3_final/most_serious_problem/special_eb_most_serious_problem_final.csv")
+    "../data/processed_data/special_eb/data/3_final/most_serious_problem/special_eb_most_serious_problem_final.csv")
 personally_taken_action = pd.read_csv(
-    "data/processed_data/special_eb/data/3_final/personally_taken_action/special_eb_personally_taken_action_final.csv")
+    "../data/processed_data/special_eb/data/3_final/personally_taken_action/special_eb_personally_taken_action_final.csv")
 severity_of_problem = pd.read_csv(
-    "data/processed_data/special_eb/data/3_final/severity_of_problem/special_eb_severity_of_problem_final.csv")
+    "../data/processed_data/special_eb/data/3_final/severity_of_problem/special_eb_severity_of_problem_final.csv")
 who_is_responsible = pd.read_csv(
-    "data/processed_data/special_eb/data/3_final/who_is_responsible/special_eb_who_is_responsible_final.csv")
-share_renewable = pd.read_csv("data/original_data/statistical_data/share_renewable/share_renewable.tsv", sep="\t|,")
+    "../data/processed_data/special_eb/data/3_final/who_is_responsible/special_eb_who_is_responsible_final.csv")
+share_renewable = pd.read_csv("../data/original_data/statistical_data/share_renewable/share_renewable.tsv", sep="\t|,")
 share_renewable.drop(share_renewable.columns[[0,1]], axis=1, inplace=True)
 share_renewable['source'] = 'share_renewable'
-ghg_emissions = pd.read_csv("data/original_data/statistical_data/ghg_emissions/ghg_emissions.tsv", sep="\t")
+ghg_emissions = pd.read_csv("../data/original_data/statistical_data/ghg_emissions/ghg_emissions.tsv", sep="\t")
 ghg_emissions['source'] = 'ghg_emissions'
 
 data = [share_renewable, ghg_emissions]
@@ -57,19 +57,19 @@ for country in data_annuals['geo\\time']:
                     cur_dataset = ET.SubElement(cur_country_node, 'share_renewable')
                     i = 0
                     for datum in row[0:17]:
-                        ET.SubElement(cur_dataset, 'value', id=colnames[i]).text = str(datum)
+                        ET.SubElement(cur_dataset, 'value', id=colnames[i]).text = str(datum).rstrip(' bp')
                         i += 1
             elif row.source == 'ghg_emissions':
                 if cur_country_node.find('ghg_emissions') is None:
                     cur_dataset = ET.SubElement(cur_country_node, 'ghg_emissions')
                     i = 0
                     for datum in row[0:17]:
-                        ET.SubElement(cur_dataset, 'value', id=colnames[i]).text = str(datum)
+                        ET.SubElement(cur_dataset, 'value', id=colnames[i]).text = str(datum).rstrip(' bp')
                         i += 1
 
 tree = ET.ElementTree(root)
-tree.write('data/processed_data/mashup/mashup.xml')
-x = etree.parse('data/processed_data/mashup/mashup.xml')
+tree.write('../data/processed_data/mashup/mashup.xml')
+x = etree.parse('../data/processed_data/mashup/mashup.xml')
 x = etree.tostring(x, pretty_print=True, encoding='unicode')
-out = open('data/processed_data/mashup/mashup.xml', 'w+')
+out = open('../data/processed_data/mashup/mashup.xml', 'w+')
 out.write(x)
