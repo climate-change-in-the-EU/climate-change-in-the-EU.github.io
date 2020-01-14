@@ -1,15 +1,15 @@
 # Climate change in the EU
 
-[1. Introduction](#1.-Introduction)  
-[2. Scenario](#2.-Scenario)  
-[3. Original dataset and mashup datasets](#3.-Original-dataset-and-mashup-datasets)  
-[4. Quality analysis of the datasets](#4.-Quality-analysis-of-the-datasets)  
-[5. Legal analysis (privacy, license, purpose, etc.)](#5.-Legal-analysis-(privacy,-license,-purpose,-etc.))  
-[6. Ethics analysis](#6.-Ethics-analysis)  
-[7. Technical analysis (formats, metadata, URI, provenance)](#7.-Technical-analysis)  
-[8. Sustainability of the update the datasets over the time](#8.-Sustainability-of-the-update-the-datasets-over-the-time)  
-[9. Visualization](#9.-Visualization)  
-[10. RDF assertion of the metadata](#10.-RDF-assertion-of-the-metadata)  
+[1. Introduction](#1-introduction)  
+[2. Scenario](#2-scenario)  
+[3. Original dataset and mashup datasets](#3-original-datasets-and-mashup-datasets)  
+[4. Quality analysis of the datasets](#4-quality-analysis-of-the-datasets)  
+[5. Legal analysis (privacy, license, purpose, etc.)](#5-legal-analysis-privacy-license-purpose-etc)  
+[6. Ethics analysis](#6-ethics-analysis)  
+[7. Technical analysis (formats, metadata, URI, provenance)](#7-technical-analysis)  
+[8. Sustainability of the update the datasets over the time](#8-sustainability-of-the-update-the-datasets-over-the-time)  
+[9. Visualization](#9-visualization)  
+[10. RDF assertion of the metadata](#10-rdf-assertion-of-the-metadata)  
 
 
 ## 1. Introduction
@@ -71,7 +71,6 @@ These are:
 ### 3.2. Mashup dataset
 The mashup dataset is stored [here](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/tree/master/data/processed_data/mashup).
 
-
 ## 4. Quality analysis of the datasets
 Firstly, we deem the data from the datasets to be generally trustworthy due to their provenance from one of the central EU portals for open data, and due to being conducted on behalf of the European Commission and published by the Directorate-General for Communication of the European Commission.
 
@@ -85,12 +84,15 @@ While generally, the Special Eurobarometer data does cover the timespan between 
 The data in D2, on the other hand, is strictly annual, which allows for significantly more reliable analyses.
 
 ## 5. Legal analysis (privacy, license, purpose, etc.)
-The data in D1 is not provided under a concise formal license, instead they are handled as documents of the European Commission and thus subject to the [Commission Decision of 12 December 2011 on the reuse of Commission documents.](https://eur-lex.europa.eu/eli/dec/2011/833/oj). Compared to Creative Commons licenses, this license is quite hard to understand for lay people as is only presented in the form of the document published in the Official Journal of the European Union, which requires a good reading comprehension for legal documents.
+The data in D1 is not provided under a concise formal license, instead they are handled as documents of the European Commission and thus subject to the [Commission Decision of 12 December 2011 on the reuse of Commission documents.](https://eur-lex.europa.eu/eli/dec/2011/833/oj). 
+Compared to Creative Commons licenses, this license is quite hard to understand for lay people as is only presented in the form of the document published in the Official Journal of the European Union, which requires a good reading comprehension for legal documents.
+We deem it to be no more restrictive than the Creative Commons Attribution 4.0 International license (see below), and consider it ethically justifiable to use the data in this non-commercial project.
+In fact, the Commission has, in February 2019, [adopted a Decision](https://ec.europa.eu/newsroom/dae/document.cfm?doc_id=58807) that considers CC-BY 4.0 and CC0 the default licenses for its published data.
 
 The data in D2 is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), which allows free sharing, reusing and modifying of the resources, as long as their source is explicitly credited.
 
 ## 6. Ethics analysis
-As explained in section [4. Quality analysis of the datasets](#4.-Quality-analysis-of-the-datasets), the datasets can be deemed generally trustworthy.
+As explained in section [4. Quality analysis of the datasets](#4-quality-analysis-of-the-datasets), the datasets can be deemed generally trustworthy.
 
 However, a valid point of criticism is that the commissioner of the Eurobarometers (European Commission) is also the topic of the survey, since respondents are asked about their opinions about the EU. In their article Martin Höpner and Bojan Jurczyk, researchers of the Max Planck Institute for the Study of Societies, criticize this and list multiple instances of manipulative tendencies, suggestive questions, or unequally distributed positive/negative answer possibilities. 
 (Höpner, Martin; Jurczyk, Bojan. 2012. Kritik des Eurobarometers. Über die Verwischung der Grenze zwischen seriöser Demoskopie und interessengeleiteter Propaganda. In: Leviathan 40, 3, 326–349. [PDF](https://www.leviathan.nomos.de/fileadmin/leviathan/doc/Aufsatz_Leviathan_12_03.pdf))
@@ -122,8 +124,20 @@ For example for step 1, it was neccessary to list the names of the sheets for ea
 The Python libraries 'xlrd', 'csv', and 'pandas' have been chosen for reading in data from _XLS_ files, writing to/reading from _CSV_ files, and converging multiple tables, respectively.
 
 ### 7.2. Creating the mashup dataset
-The creation of a mashup containing all data is done by the Python file [mashup.py](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/blob/master/python_scripts/mashup.py). Using features of the powerful 'pandas' data analysis library, the data is concatenated and transformed to a single _XML_ file. 
+The creation of a mashup containing all data is done by the Python file [mashup.py](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/blob/master/python_scripts/mashup.py). 
+The data is concatenated and transformed to a single _XML_ file. 
 The _XML_ (_Extensible Markup Language_) format was chosen because it allows the creation of a structured and well human-readable file which at the same time contains data which itself is somewhat differently structured in each case of the original datasets.
+
+``mashup.py`` uses three additional libraries for processing the original data:
+1. The ``pandas`` library offers a wide array of tools for data processing and analysis. 
+In our case, the ``pandas.read_csv`` function proved to be especially useful, as it allows for importing the comma-seperated text spreadsheets as complex ``dataframe``objects that can be easily manipulated within the Python script.
+Merging the datasets while preserving all necessary information about each datum's origin and connections was therefore quite convenient.
+
+2. The ``xml.etree.ElementTree`` library is a built-in Python library that supports the creation of XML documents on the basis of ``ElementTree`` objects.
+The script makes use of this function by iteratively creating hierarchically ordered XML nodes from the cells contained in the ``dataframe`` object.
+
+3. The ``lxml`` library is another package supporting the creation and manipulation of XML documents.
+Its only use for ``mashup.py`` is to reformat the previously output XML document to give it a more easily readable appearance for the user.
 
 ## 8. Sustainability of the update the datasets over the time
 More data of the kind we have used is likely to be published somewhat regularly on the EU Open Data portal.
@@ -133,5 +147,15 @@ The mashup dataset will not be updated for the time being, as it already covers 
 We expect that an equivalent can be created for a corresponding timespan in future years, affording at most an equal amount of processing work, or indeed less work as soon as the primary data is once again available from the GESIS portal.
 
 ## 9. Visualization
+The visualization consists of an interactive map and four charts that will be shown when clicking within the borders of a country on the map.
+The interactive parts of the map cover all member states of the European Union.
+Out of the four charts, two provide an overview of answers by the public to a Eurobarometer question, and each of the other two shows data from one of the sets we merged into D2.
+Thus, only half of the Eurobarometer data we processed is currently being used for visualization. 
+
+The interactive map is built with the help of [``leaflet.js``](https://leafletjs.com), a JavaScript library providing functions for constructing overlays from maps.
+Additionally, we rely on the ``leaflet-ajax`` plugin to import the geometrical shapes of EU countries from a geoJSON dataset which is in the public domain.
+
+Plotting the graphs on demand is done by forwarding necessary information about the country area that the user has interacted with to [``plotly.js``](https://plot.ly/javascript/), another JavaScript package that helps in creating interactive maps.
+The user can add as many countries as they like to the diagrams by clicking on the corresponding map area.
 
 ## 10. RDF assertion of the metadata
