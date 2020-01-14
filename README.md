@@ -1,12 +1,19 @@
 # Climate change in the EU
 
+Authors: Lukas Henne, Elisabeth Reuhl
+
+## List of contents
 [1. Introduction](#1-introduction)  
 [2. Scenario](#2-scenario)  
 [3. Original dataset and mashup datasets](#3-original-datasets-and-mashup-datasets)  
+[3.1. Original datasets](#31-original-datasets)  
+[3.2. Mashup dataset](#32-mashup-dataset)  
 [4. Quality analysis of the datasets](#4-quality-analysis-of-the-datasets)  
-[5. Legal analysis (privacy, license, purpose, etc.)](#5-legal-analysis-privacy-license-purpose-etc)  
+[5. Legal analysis](#5-legal-analysis)  
 [6. Ethics analysis](#6-ethics-analysis)  
-[7. Technical analysis (formats, metadata, URI, provenance)](#7-technical-analysis)  
+[7. Technical analysis](#7-technical-analysis)  
+[7.1. Processing of the datasets](#71-processing-of-the-datasets)  
+[7.2. Creating the mashup dataset](#72-creating-the-mashup-dataset)  
 [8. Sustainability of the update the datasets over the time](#8-sustainability-of-the-update-the-datasets-over-the-time)  
 [9. Visualization](#9-visualization)  
 [10. RDF assertion of the metadata](#10-rdf-assertion-of-the-metadata)  
@@ -51,6 +58,8 @@ Data from the following datasets was used:
 | [S942_71_1_EBS313](https://data.europa.eu/euodp/en/data/dataset/S942_71_1_EBS313) | 2009 | 313       | Europeans’ attitudes towards climate change   | January 2009  |
 | [S1461_69_2_300](https://data.europa.eu/euodp/en/data/dataset/S1461_69_2_300) | 2008 | 300       | Europeans' attitudes towards climate change   | March 2008    |
 
+From each dataset, only the section "Volume A: Countries" is used in this project.
+
 All of these surveys contain mostly the same questions. We have picked out four questions which were present in many surveys and which we found suitable for further analysis:
 * "Which of the following do you consider to be the single most serious problem facing the world as a whole?" (**'most_serious_problem'**)
 * "And how serious a problem do you think climate change is at this moment?" (**'severity_of_problem'**)
@@ -83,7 +92,7 @@ While generally, the Special Eurobarometer data does cover the timespan between 
 
 The data in D2, on the other hand, is strictly annual, which allows for significantly more reliable analyses.
 
-## 5. Legal analysis (privacy, license, purpose, etc.)
+## 5. Legal analysis
 The data in D1 is not provided under a concise formal license, instead they are handled as documents of the European Commission and thus subject to the [Commission Decision of 12 December 2011 on the reuse of Commission documents.](https://eur-lex.europa.eu/eli/dec/2011/833/oj). 
 Compared to Creative Commons licenses, this license is quite hard to understand for lay people as is only presented in the form of the document published in the Official Journal of the European Union, which requires a good reading comprehension for legal documents.
 We deem it to be no more restrictive than the Creative Commons Attribution 4.0 International license (see below), and consider it ethically justifiable to use the data in this non-commercial project.
@@ -159,3 +168,8 @@ Plotting the graphs on demand is done by forwarding necessary information about 
 The user can add as many countries as they like to the diagrams by clicking on the corresponding map area.
 
 ## 10. RDF assertion of the metadata
+For the statistical data used (D2), no changes to the data were made, therefore the orginal metadata holds true. The metadata in the _DCAT_ (Data Catalog Vocabulary) _RDF_ vocabulary is found on the datasets' EU Open Data Portal pages (see links under D2). The _RDF_ files are also saved to the [directory](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/tree/master/data/original_data/metadata/) which is holding a copy of the original datasets.
+
+For the survey data (D1), changes have been made to the data (as described in section [7.1. Processing of the datasets](#71-processing-of-the-datasets). This metadata can be found 
+
+The mashup dataset's metadata can be found
