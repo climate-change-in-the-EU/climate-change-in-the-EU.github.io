@@ -85,6 +85,7 @@
             <li>Generally, how serious do Europeans deem the problem of climate change to be?</li>
             <li>Does the concern for climate change reflect in national consumption statistics, e.g. greenhouse gas emissions or the share of energy generated from renewable sources?</li>
           </ul>
+          <p class="lead">This website offers an interactive tool compiled for users to explore the nationally varying answers to these questions.</p>
         </div>
       </div>
     </div>
@@ -93,9 +94,10 @@
   <section id="visualization" class="bg-light">
     <div class="container">
         <h2>Visualization</h2>
+      <br/>
         <div class="row">
           <div class="col-6">
-            <div id="geomap" style="height: 70vh; width: 40vw; padding: 1vw 1vh"></div>
+            <div id="geomap" class="d-flex align-center" style="height: 70vh; width: 40vw; padding: 1vw 1vh"></div>
           </div>
           <div class="col-6">
             <div class="card">
@@ -116,17 +118,17 @@
                 </ul>
               </div>
               <div class="card-body">
-                <div class="tab-content mt-3">
-                  <div class="tab-pane active" id="eb_plot_1" role="tabpanel" aria-labelledby="eb_plot_1-tab" style="height:400px; width: 500px">
+                <div class="tab-content mx-auto">
+                  <div class="tab-pane active" id="eb_plot_1" role="tabpanel" aria-labelledby="eb_plot_1-tab" style="height:300px; width: 500px">
                     <div id="plotspace1"></div>
                   </div>
-                  <div class="tab-pane" id="eb_plot_2" role="tabpanel" aria-labelledby="eb_plot_2-tab" style="height:400px; width: 500px">
+                  <div class="tab-pane" id="eb_plot_2" role="tabpanel" aria-labelledby="eb_plot_2-tab" style="height:300px; width: 500px">
                     <div id="plotspace2"></div>
                   </div>
-                  <div class="tab-pane" id="stats_plot_1" role="tabpanel" aria-labelledby="stats_plot_1-tab" style="height:400px; width: 500px">
+                  <div class="tab-pane" id="stats_plot_1" role="tabpanel" aria-labelledby="stats_plot_1-tab" style="height:300px; width: 500px">
                     <div id="plotspace3"></div>
                   </div>
-                  <div class="tab-pane" id="stats_plot_2" role="tabpanel" aria-labelledby="stats_plot_2-tab" style="height:400px; width: 500px">
+                  <div class="tab-pane" id="stats_plot_2" role="tabpanel" aria-labelledby="stats_plot_2-tab" style="height:300px; width: 500px">
                     <div id="plotspace4"></div>
                   </div>
               </div>
@@ -179,10 +181,10 @@
                   var layout = {
                     autosize: false,
                     width: 500,
-                    height: 400,
+                    height: 300,
                     xaxis: {
                       type: 'category',
-                      title: 'Eurobarometer Survey'
+                      title: 'Eurobarometer survey'
                     },
                     yaxis: {
                       title: 'severity (1-10)'
@@ -191,6 +193,7 @@
                       itemclick: 'toggleothers',
                       itemdoubleclick: 'toggle',
                     },
+                    margin: { t: 10 },
                     hoverinfo: 'text+y',
                     hovermode: 'closest'
                   };
@@ -198,6 +201,7 @@
                   var trace = [{
                     x: Object.keys(surveys),
                     y: Object.values(surveys),
+                    line: { width: 3 },
                     name: inputid
                   }]
                   Plotly.plot(eb_plot_1_div, trace, layout)
@@ -220,7 +224,6 @@
                     for (i = 0; i < data.eurobarometer.survey.length; i++) {
                       var survey = data.eurobarometer.survey[i];
                       if (Array.isArray(survey.question)) {
-                        eb_plot_2
                         surveys[survey.id] = survey.question[0].response;
                       } else {
                         surveys[survey.id] = survey.question.response;
@@ -229,7 +232,7 @@
                     var layout = {
                       autosize: false,
                       width: 500,
-                      height: 400,
+                      height: 300,
                       xaxis: {
                         type: 'category',
                         title: 'Eurobarometer Survey'
@@ -242,6 +245,7 @@
                         itemclick: 'toggleothers',
                         itemdoubleclick: 'toggle'
                       },
+                      margin: { t: 10 },
                       hoverinfo: 'text+y',
                       hovermode: 'closest'
                     };
@@ -249,6 +253,7 @@
                     var trace = [{
                       x: Object.keys(surveys),
                       y: Object.values(surveys),
+                      line: { width: 3 },
                       name: inputid
                     }]
                     Plotly.plot(eb_plot_2_div, trace, layout)
@@ -273,9 +278,9 @@
                       values[years[year].id] = years[year].text;
                     }
                     var layout = {
-                      autosize: false,
+                      autosize: true,
                       width: 500,
-                      height: 400,
+                      height: 300,
                       xaxis: {
                         type: 'category',
                         title: 'year'
@@ -287,12 +292,14 @@
                         itemclick: 'toggleothers',
                         itemdoubleclick: 'toggle'
                       },
+                      margin: { t: 10 },
                       hoverinfo: 'text+y',
                       hovermode: 'closest'
                     };
                     var trace = [{
                       x: Object.keys(values),
                       y: Object.values(values),
+                      line: { width: 3 },
                       name: inputid
                     }]
                     Plotly.plot(stats_plot_1_div, trace, layout);
@@ -319,7 +326,7 @@
                   var layout = {
                     autosize: false,
                     width: 500,
-                    height: 400,
+                    height: 300,
                     xaxis: {
                       type: 'category',
                       title: 'year'
@@ -332,12 +339,14 @@
                       itemclick: 'toggleothers',
                       itemdoubleclick: 'toggle'
                     },
+                    margin: { t: 10 },
                     hoverinfo: 'text+y',
                     hovermode: 'closest'
                   };
                   var trace = [{
                     x: Object.keys(values),
                     y: Object.values(values),
+                    line: { width: 3 },
                     name: inputid
                   }]
                   Plotly.plot(stats_plot_2_div, trace, layout);
@@ -383,44 +392,64 @@
   <section id="original-datasets">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="col-lg-10 mx-auto">
           <h2>Original datasets</h2>
           <div class="card-deck">
             <div class="card">
-              <div class="card-header">
-                <h5 class="card-title">Eurobarometers on climate change</h5>
+              <div class="card-header d-flex align-items-center justify-content-center">
+                <h5 class="card-title">Eurobarometer surveys on climate change</h5>
               </div>
-              <div class="card-body">
-                <div class="card-text">
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1461_69_2_300">Eurobarometer 300</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S942_71_1_EBS313">Eurobarometer 313</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S703_72_1_EBS322">Eurobarometer 322</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1007_75_4_EBS372">Eurobarometer 372</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1084_80_2_409">Eurobarometer 409</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2060_83_4_435_ENG">Eurobarometer 435</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2140_87_1_459_ENG">Eurobarometer 459</a><br/>
-                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2212_91_3_490_ENG">Eurobarometer 490</a><br/>
-                </div>
-              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1461_69_2_300">Eurobarometer 300 (2008)</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S942_71_1_EBS313">Eurobarometer 313 (2009)</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S703_72_1_EBS322">Eurobarometer 322 (2009)</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1007_75_4_EBS372">Eurobarometer 372 (2011)</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S1084_80_2_409">Eurobarometer 409 (2014)</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2060_83_4_435_ENG">Eurobarometer 435 (2015)</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2140_87_1_459_ENG">Eurobarometer 459 (2017)</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/S2212_91_3_490_ENG">Eurobarometer 490 (2019)</a>
+                </li>
+              </ul>
             </div>
             <div class="card">
-              <div class="card-header">
+              <div class="card-header d-flex align-items-center justify-content-center">
                 <h5 class="card-title">Data on greenhouse gas emissions</h5>
               </div>
               <div class="card-body">
                 <div class="card-text">
-                  <p><a href="https://data.europa.eu/euodp/en/data/dataset/rc2ELCDeTGfxdpE27gyzow">Eurostat data on Greenhouse gas emissions per capita</a></p>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/rc2ELCDeTGfxdpE27gyzow">Eurostat data on Greenhouse gas emissions per capita</a>
                 </div>
+              </div>
+              <div class="card-footer">
+                Covering EU countries in the time between 2000 and 2017
               </div>
             </div>
             <div class="card">
-              <div class="card-header">
+              <div class="card-header d-flex align-items-center justify-content-center">
                 <h5 class="card-title">Share of renewable energy</h5>
               </div>
               <div class="card-body">
                 <div class="card-text">
-                  <p><a href="https://data.europa.eu/euodp/en/data/dataset/kLwnawdAsL0qfRS0PzvDfw">Eurostat data on the share of renewable energy in gross final energy consumption</a></p>
+                  <a href="https://data.europa.eu/euodp/en/data/dataset/kLwnawdAsL0qfRS0PzvDfw">Eurostat data on the share of renewable energy in gross final energy consumption</a>
                 </div>
+              </div>
+              <div class="card-footer">
+                Covering EU countries in the time between 2004 and 2017
               </div>
           </div>
         </div>
@@ -433,7 +462,8 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Output datasets</h2>
-          <p class="lead"></p>
+          <p class="lead">A Python script <a href="https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/blob/master/python_scripts/mashup.py">mashup.py</a> was created to automatically process the input datasets, clean the data and consolidate them into the mashup dataset, <a href="https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/blob/master/data/processed_data/mashup/mashup.xml">mashup.xml</a>.</p>
+          <p class="lead">Ahead of the consolidation, data from the Eurobarometer surveys was processed and output in CSV format. These intermediate files can also be found in the project's <a href="https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/tree/master/data/processed_data/special_eb/data/3_final">project's Github repository</a>.</p>
         </div>
       </div>
     </div>
@@ -444,7 +474,8 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Documentation</h2>
-          <p class="lead">The project was documented extensively along the development process. The documentation can be found within the project's <a href="https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io">Github repository</a></p>
+          <p class="lead">The project was documented extensively during and after the main development process. New content will be added as development continues.</p>
+          <p class="lead">The documentation can be found in the project's <a href="https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io">Github repository</a>, as can all resources pertaining to the project.</p>
         </div>
       </div>
     </div>
@@ -455,10 +486,8 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>License</h2>
-          <p class="lead">This website is licensed under the Creative Commons 4.0 Share-Alike license. The <a href="https://www.github.com/"</p>
+          <p class="lead">This website is licensed under the Creative Commons 4.0 Share-Alike license. The <a href="https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/blob/master/README.md">project documentation</a> includes further information on the license terms of individual datasets.</p>
           <p class="lead"><i>Scrolling Nav</i> Bootstrap template is licensed under The MIT License (MIT), &copy; 2013-2019 Blackrock Digital LLC.</p>
-          <p class="lead">Datasets licensed under the Creative Commons 4.0 License:</p>
-          <p class="lead">Datasets licensed according to the European Commission's legal guidelines:</p>
         </div>
       </div>
     </div>
