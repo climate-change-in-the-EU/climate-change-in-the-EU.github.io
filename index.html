@@ -11,7 +11,7 @@
   <title>Europinion on Climate Change</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/scrolling-nav.css" rel="stylesheet">
@@ -34,7 +34,7 @@
 <body id="page-top">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-flex flex-column" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Europinion on Climate Change</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,25 +105,22 @@
               <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs" id="vis-list" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link active" href="#eb_plot_1" role="tab" aria-controls="eb_plot_1" aria-selected="true">Most important problem facing the world today</a>
+                    <a class="nav-link active" href="#eb_plot_1" role="tab" aria-controls="eb_plot_1" aria-selected="true">Severity of the climate change problem</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#eb_plot_2" role="tab" aria-controls="eb_plot_2" aria-selected="false">Severity of the climate change problem</a>
+                    <a class="nav-link" href="#eb_plot_2" role="tab" aria-controls="eb_plot_2" aria-selected="false">Most important problem facing the world today</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#stats_plot_1" role="tab" aria_controls="stats_plot_1" aria-selected="false">Greenhouse gas emissions per capita</a>
                   </li>
-                  <li>
+                  <li class="nav-item">
                     <a class="nav-link" href="#stats_plot_2" role="tab" aria_controls="stats_plot_2" aria-selected="false">Share of energy consumption from renewable sources</a>
                   </li>
                 </ul>
               </div>
               <div class="card-body">
-                <div id="eb_plot_1"></div>
-              </div>
-              <div class="card-body">
                 <div class="tab-content mt-3">
-                  <div class="tab-pane active" id="eb_plot_1" role="tabpanel" style="height:400px; width: 500px">
+                  <div class="tab-pane active" id="eb_plot_1" role="tabpanel" aria-labelledby="eb_plot_1-tab" style="height:400px; width: 500px">
                     <div id="plotspace1"></div>
                   </div>
                   <div class="tab-pane" id="eb_plot_2" role="tabpanel" aria-labelledby="eb_plot_2-tab" style="height:400px; width: 500px">
@@ -152,7 +149,7 @@
               stats_plot_2_div = document.getElementById('plotspace4');
 
               var eb_plot_1 = function(inputid) {
-                d3.xml("processed_data/mashup/mashup.xml")
+                d3.xml("data/processed_data/mashup/mashup.xml")
                         .then(function (data) {
                           var country_id = inputid;
                           var dataobj = xmlToJson.parse(data).root.country;
@@ -186,7 +183,7 @@
                     yaxis: {},
                     legend: {
                       itemclick: 'toggleothers',
-                      itemdoubleclick: 'toggle'
+                      itemdoubleclick: 'toggle',
                     },
                     hoverinfo: 'text+y',
                     hovermode: 'closest'
@@ -194,14 +191,15 @@
 
                   var trace = [{
                     x: Object.keys(surveys),
-                    y: Object.values(surveys)
+                    y: Object.values(surveys),
+                    name: inputid
                   }]
                   Plotly.plot(eb_plot_1_div, trace, layout)
                 });
               };
 
               var eb_plot_2 = function(inputid) {
-                d3.xml("processed_data/mashup/mashup.xml")
+                d3.xml("data/processed_data/mashup/mashup.xml")
                         .then(function(data) {
                           var country_id = inputid;
                           var dataobj =  xmlToJson.parse(data).root.country;
@@ -213,7 +211,7 @@
                   var surveys = {};
                   for (i = 0; i < data.eurobarometer.survey.length; i++) {
                     var survey = data.eurobarometer.survey[i];
-                    if (Array.isArray(survey.question)) {
+                    if (Array.isArray(survey.question)) {eb_plot_2
                       surveys[survey.id] = survey.question[0].response;
                     } else {
                       surveys[survey.id] = survey.question.response;
@@ -238,9 +236,84 @@
 
                   var trace = [{
                     x: Object.keys(surveys),
-                    y: Object.values(surveys)
+                    y: Object.values(surveys),
+                    name: inputid
                   }]
                   Plotly.plot( eb_plot_2_div, trace, layout)
+                });
+              };
+
+              var stats_plot_1 = function(inputid) {
+                d3.xml("data/processed_data/mashup/mashup.xml")
+                        .then(function(data) {
+                          var country_id = inputid;
+                          var dataobj =  xmlToJson.parse(data).root.country;
+                          var country_data = dataobj.filter(obj => {
+                            return obj.id === country_id
+                          })[0];
+                          return country_data;
+                        }).then(function(data) {
+                          var years = data.ghg_emissions.value;
+                          var values = {};
+                          for (year in years) {
+                            values[years[year].id] = years[year].text;
+                          }
+                          var layout = {
+                            title: 'National greenhouse gas emissions in tons per capita',
+                            xaxis: {
+                              type: 'category',
+                              title: 'year'
+                            },
+                            legend: {
+                              itemclick: 'toggleothers',
+                              itemdoubleclick: 'toggle'
+                            },
+                            hoverinfo: 'text+y',
+                            hovermode: 'closest'
+                          };
+                          var trace = [{
+                            x: Object.keys(values),
+                            y: Object.values(values),
+                            name: inputid
+                          }]
+                          Plotly.plot( stats_plot_1_div, trace, layout);
+                });
+              };
+
+              var stats_plot_2 = function(inputid) {
+                d3.xml("data/processed_data/mashup/mashup.xml")
+                        .then(function(data) {
+                          var country_id = inputid;
+                          var dataobj =  xmlToJson.parse(data).root.country;
+                          var country_data = dataobj.filter(obj => {
+                            return obj.id === country_id
+                          })[0];
+                          return country_data;
+                        }).then(function(data) {
+                          var years = data.share_renewable.value;
+                          var values = {};
+                          for (year in years) {
+                            values[years[year].id] = years[year].text;
+                          }
+                          var layout = {
+                            title: 'Share of national energy consumption from renewable sources',
+                            xaxis: {
+                              type: 'category',
+                              title: 'year'
+                            },
+                            legend: {
+                              itemclick: 'toggleothers',
+                              itemdoubleclick: 'toggle'
+                            },
+                            hoverinfo: 'text+y',
+                            hovermode: 'closest'
+                          };
+                          var trace = [{
+                            x: Object.keys(values),
+                            y: Object.values(values),
+                            name: inputid
+                          }]
+                          Plotly.plot( stats_plot_2_div, trace, layout);
                 });
               };
 
@@ -252,6 +325,8 @@
                   id = poly[0].feature.properties.iso_a2;
                   eb_plot_1(id);
                   eb_plot_2(id);
+                  stats_plot_1(id);
+                  stats_plot_2(id);
               }
               L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
