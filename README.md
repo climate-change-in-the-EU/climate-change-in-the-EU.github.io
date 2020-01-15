@@ -170,6 +170,6 @@ The user can add as many countries as they like to the diagrams by clicking on t
 ## 10. RDF assertion of the metadata
 For the statistical data used (D2), no changes to the data were made, therefore the orginal metadata holds true. The metadata in the _DCAT_ (Data Catalog Vocabulary) _RDF_ vocabulary is found on the datasets' EU Open Data Portal pages (see links under D2). The _RDF_ files are also saved to the [directory](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/tree/master/data/original_data/metadata/) which is holding a copy of the original datasets.
 
-For the survey data (D1), changes have been made to the data (as described in section [7.1. Processing of the datasets](#71-processing-of-the-datasets). This metadata can be found 
+For the survey data (D1), changes have been made to the data (as described in section [7.1. Processing of the datasets](#71-processing-of-the-datasets). This metadata can be found [here](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/tree/master/data/processed_data/special_eb/metadata).
 
-The mashup dataset's metadata can be found
+The mashup dataset's metadata can be found [here](https://github.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/blob/master/data/processed_data/mashup/mashup_metadata.rdf).
