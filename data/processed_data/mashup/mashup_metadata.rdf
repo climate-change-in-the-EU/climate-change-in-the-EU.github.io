@@ -13,7 +13,10 @@
   <rdf:Description rdf:about="https://raw.githubusercontent.com/climate-change-in-the-EU/climate-change-in-the-EU.github.io/master/data/processed_data/mashup/mashup.xml">
     <dcterms:title xml:lang="en">Climate change in the EU</dcterms:title>
     <dcterms:description xml:lang="en">This project investigates the European public's opinion on the problem of climate change and attempts to correlate it with various data on actual national greenhouse gas emissions and energy usage from renewable sources.</dcterms:description>
+    <dcterms:creator>Lukas Henne</dcterms:creator>
+    <dcterms:creator>Elisabeth Reuhl</dcterms:creator>
     <dcterms:publisher rdf:resource="https://github.com/climate-change-in-the-EU"/>
+    <dcterms:temporal rdf:resource="http://purl.org/dc/terms/PeriodOfTime/87ec6f88-91bb-432a-b881-b397101050e5"/>
     <dcterms:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/STATISTICAL"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
@@ -34,6 +37,11 @@
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-15</dcterms:modified>
     <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
     <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/PeriodOfTime/87ec6f88-91bb-432a-b881-b397101050e5">
+    <schema:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000</schema:startDate>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+    <schema:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019</schema:endDate>
   </rdf:Description>
   <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/data-theme/SOCI">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
